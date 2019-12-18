@@ -6,7 +6,8 @@
     <body>
         <h1>{{title}}</h1>
         <p> Dagens citat: </p>
-        <p> {{quote}} </p>
+        <p> "{{quote}}" </p>
         <p> - {{author}}</p>
+        <img src="{{image}}" alt="En bild"></img>
     </body>
 </html>
