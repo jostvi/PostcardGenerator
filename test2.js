@@ -53,8 +53,8 @@ app.get('/quote', (req, res) => {
                 helper.standardCall(url)
         
                 .then(res3 => {
-                    var img = manipulator.generate(res3.hits[0].largeImageURL, res1.quote.body);
-                    console.log(img);
+                    manipulator.generate(res3.hits[0].largeImageURL, res1.quote.body);
+                    console.log(res2);
                     //console.log(res3);
                     res.render('response.hjs', {
                     title: 'QuoteGenerator',
@@ -71,7 +71,5 @@ app.get('/quote', (req, res) => {
         .catch(err => { res.send(err); })
       
 })
-
-app.get('/pic', )
 
 

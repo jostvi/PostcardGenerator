@@ -1,4 +1,5 @@
 const request = require('request');
+const manipulator = require('../imagemanipulation/imagemanipulation');
 
 module.exports = {
 
@@ -8,6 +9,14 @@ module.exports = {
                 if (err) reject(err);
                 resolve(body); 
             });
+        })
+    },
+
+    uglyCall : function(image, quote) {
+        return new Promise((resolve, reject) => {
+            
+            var response = manipulator.generate(image, quote);
+            resolve(response);
         })
     }
 }

@@ -1,16 +1,13 @@
 
 const jimp = require('jimp')
 
-let imgRaw = 'imagemanipulation/raw/colmar_3.jpg';
-let imgLogo = 'imagemanipulation/raw/stamp.png';
-
 let imgActive = 'imagemanipulation/active/image.jpg';
-let imgExported = 'imagemanipulation/export/image1.jpg';
+let imgExported = 'public/images/image1.jpg';
 
 
 module.exports = {
-  generate : function(image, quote){
-    console.log('Manipulator: ' + image + '\n' + quote)
+  generate : function(image, quote) {
+
     jimp.read(image)
     
       .then(tpl => {
@@ -65,11 +62,10 @@ module.exports = {
   
       .then(tpl => {
           console.log('exported file: ' + imgExported);
-          return imgExported;
       })
   
       .catch(err => {
-          console.error(err);
+        console.error(err);
       });
   }
 }
