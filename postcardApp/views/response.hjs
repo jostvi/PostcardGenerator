@@ -9,6 +9,6 @@
         <p> Dagens citat: </p>
         <p> "{{quote}}" </p>
         <p> - {{author}}</p>
-        <img src='/images/image1.jpg' alt='En bild'></img>
+        <img src="{{url}}", alt='En bild'></img>
     </body>
 </html>

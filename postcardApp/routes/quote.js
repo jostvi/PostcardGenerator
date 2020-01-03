@@ -30,15 +30,15 @@ router.get('/', (req, res) => {
             .then(res3 => {
                 console.log(res3.hits[0])
                 manipulator.generate(res3.hits[0].largeImageURL, res1.quote.body)
-              //  helper.uglyCall(res3.hits[0].largeImageURL, res1.quote.body)
-              // .then(bajs => {
-              //     console.log(bajs);
+                .then(result => {
+                   console.log('Quote:' + result);
                     res.render('response.hjs', {
                         title: 'QuoteGenerator',
                         quote: res1.quote.body,
-                        author: res1.quote.author
+                        author: res1.quote.author,
+                        url: result
                         })
-                // })
+                 })
             })      
             .catch(err => { res.send(err); })
     })

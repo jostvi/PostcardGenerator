@@ -1,14 +1,23 @@
-
+// const ul = require('../../cloudinary-test/imageupload')
 const jimp = require('jimp')
+const cloudinary = require('cloudinary').v2;
 
 let imgActive = 'imagemanipulation/active/image.jpg';
 let imgExported = 'public/images/image1.jpg';
 
 
-module.exports = {
-  generate : function(image, quote) {
 
-    jimp.read(image)
+cloudinary.config({
+  cloud_name: 'dqhlic2nx',
+  api_key: '922488389614978',
+  api_secret: 'V3uoIVVMor9OcTrsxwikdc5VkX4'
+});
+    
+module.exports = {
+
+  generate : function(image, quote) {
+    return new Promise((resolve, reject) => {
+      jimp.read(image)
     
       .then(tpl => {
           tpl 
@@ -23,16 +32,6 @@ module.exports = {
       .then(tpl => (tpl.clone().write(imgActive)))
   
       .then(() => (jimp.read(imgActive)))
-  
-      /* .then(tpl => (
-          jimp.read(imgLogo).then(logoTpl => {
-            logoTpl
-              .resize(64, 52)
-              .opacity(0.8)
-              .rotate(-25);
-            return tpl.composite(logoTpl, 900, 30, [jimp.BLEND_DESTINATION_OVER, 0.2, 0.2]);
-          })
-        ) */
   
       .then(tpl => (
           jimp.loadFont(jimp.FONT_SANS_64_WHITE)
@@ -58,16 +57,32 @@ module.exports = {
           }, textData.maxWidth, textData.maxHeight);
         })
   
-      .then(tpl => (tpl.quality(100).write(imgExported)))
+        .then(tpl => {
+          tpl.quality(100).write(imgExported)
+          cloudinary.uploader.upload(imgExported, function (error, result) {
+            //url som returneras kan användas för att komma åt bilden
+            resolve(result.url)
+            if (error) {
+              console.log(error)
+            }
+           // else 
+             // return result;
+          })
+         // .then(url => {
+          //  console.log(url)
+         // })
+        })
   
-      .then(tpl => {
-          console.log('exported file: ' + imgExported);
-      })
+      //.then(tpl => {
+      //    console.log('exported file: ' + imgExported);
+      //})
   
       .catch(err => {
         console.error(err);
       });
-  }
+  
+    })
+  }  
 }
 
 

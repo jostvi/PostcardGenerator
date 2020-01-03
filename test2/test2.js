@@ -1,6 +1,6 @@
 const express = require('express');
 const request = require('request');
-const helper = require('../API_helper');
+const helper = require('./API_helper');
 const pd = require('paralleldots');
 const manipulator = require('./imagemanipulation/imagemanipulation');
 const app = express();
