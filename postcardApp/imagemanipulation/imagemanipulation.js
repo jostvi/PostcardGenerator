@@ -59,24 +59,14 @@ module.exports = {
   
         .then(tpl => {
           tpl.quality(100).write(imgExported)
-          cloudinary.uploader.upload(imgExported, function (error, result) {
+          cloudinary.uploader.upload(imgExported, {tags: ['quote']}, function (error, result) {
             //url som returneras kan användas för att komma åt bilden
             resolve(result.url)
             if (error) {
               console.log(error)
             }
-           // else 
-             // return result;
           })
-         // .then(url => {
-          //  console.log(url)
-         // })
         })
-  
-      //.then(tpl => {
-      //    console.log('exported file: ' + imgExported);
-      //})
-  
       .catch(err => {
         console.error(err);
       });
