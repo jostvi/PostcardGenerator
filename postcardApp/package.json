@@ -7,11 +7,13 @@
   },
   "dependencies": {
     "cloudinary": "^1.18.1",
-    "cookie-parser": "~1.4.4",
+    "cookie-parser": "^1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "hjs": "~0.0.6",
     "http-errors": "~1.6.3",
+    "init": "^0.1.2",
+    "jimp": "^0.9.3",
     "morgan": "~1.9.1"
   }
 }
