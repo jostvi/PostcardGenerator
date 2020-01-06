@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <p>Welcome to {{ title }}</p>
+        {{#images.urlList}}
+            <img src='{{ url }}' alt='testing testing' class="bigImage">
+        {{/images.urlList}}
+    
+  </body>
+</html>
