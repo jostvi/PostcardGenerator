@@ -28,7 +28,8 @@ router.get('/', (req, res) => {
 
             helper.standardCall(url)
             .then(res3 => {
-                console.log(res3.hits[0])
+                console.log(res3.totalHits)
+                // FIXA! Måste kolla så res3.hits är >= 10
                 manipulator.generate(res3.hits[Math.floor(Math.random() * 11)].largeImageURL, res1.quote.body)
                 .then(result => {
                    console.log('Quote:' + result);
