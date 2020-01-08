@@ -2,7 +2,7 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-.container {
+.image-gallery-container {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -11,12 +11,7 @@ body {
   max-width: 300px;
   padding: 1%;
 }
-@media (min-width: 30em) {
-  .photo-box, .text-box {
-      text-align: left;
-  }
+@media (min-width: 3em) {
 
-  .photo-box-thin {
-      height: 250px;
   }
 }
