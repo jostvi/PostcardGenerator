@@ -15,7 +15,7 @@ cloudinary.config({
     
 module.exports = {
 
-  generate : function(image, quote) {
+  generate : function(image, quote, tag) {
     return new Promise((resolve, reject) => {
       jimp.read(image)
     
@@ -59,7 +59,7 @@ module.exports = {
   
         .then(tpl => {
           tpl.quality(100).write(imgExported)
-          cloudinary.uploader.upload(imgExported, {tags: ['quote']}, function (error, result) {
+            cloudinary.uploader.upload(imgExported, {tags: [tag]}, function (error, result) {
             //url som returneras kan användas för att komma åt bilden
             resolve(result.url)
             if (error) {

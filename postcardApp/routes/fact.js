@@ -47,7 +47,7 @@ router.get('/', (req, res) => {
             helper.standardCall(url)
             .then(res3 => {
                 console.log(res3.hits[0])
-                manipulator.generate(res3.hits[Math.floor(Math.random() * 11)].largeImageURL, res1.text)
+                manipulator.generate(res3.hits[Math.floor(Math.random() * 11)].largeImageURL, res1.text, "fact")
                 .then(result => {
                    //console.log('Fact:' + result);
                     res.render('fact.hjs', {

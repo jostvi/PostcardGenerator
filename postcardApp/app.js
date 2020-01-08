@@ -28,6 +28,12 @@ app.use('/quote', quoteRouter);
 app.use('/gallery', galleryRouter)
 app.use('/fact', factRouter)
 
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Request-With, Content-Type, Accept");
+//   next();
+// })
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
