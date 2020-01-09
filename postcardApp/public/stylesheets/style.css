@@ -4,17 +4,29 @@ body {
   background-color: rgb(245, 230, 220) !important;
 }
 h1 {
-  padding-top: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 /* Startsidan */
 .carousel-inner{
   overflow:hidden;
-  height: 10%;
+  height: 500px;
+}
+#carouselExampleIndicators {
+  height:500px;
 }
 
 .carousel-item {
-  margin: -10% 0% -10% 12.5%;
+  height: 550px;
+  margin-left: 12.5%;
+ }
+
+ .item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 550px;
 }
 
 .carousel-control-prev-icon,
@@ -121,7 +133,20 @@ h1 {
   }
 
 
-@media (min-width: 3em) {
+@media (max-width: 800px) {
+  #carouselExampleIndicators {
+    height:380px;
 
 }
+@media (max-width: 615px) {
+  #carouselExampleIndicators {
+    height:280px;
 
+}
+@media (max-width: 450px) {
+  #carouselExampleIndicators {
+    height:200px;
+
+}
+}
+}

@@ -36,12 +36,9 @@ app.use('/fact', factRouter)
 app.use('/api/gallery', apiGalleryRouter)
 app.use('/api/quote_postcard', apiQuoteRouter)
 app.use('/api/fact_postcard', apiFactRouter)
-<<<<<<< HEAD
 app.use('/about', aboutRouter)
-=======
 //OBS! tas bort sen
 app.use('/test', testRouter)
->>>>>>> cdcb4a5ccf1c4ef17ea249cb0829955f28bf2f91
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
