@@ -1,6 +1,5 @@
 // Väntar på att sidan ska bli redo för att köra vårt JavaScript
 $(document).ready(function () {
-
     $("img.bigImage").on("click", function () {
         // Hämtar adressen till bilden som användaren klickade på
         var src = $(this).attr("src");

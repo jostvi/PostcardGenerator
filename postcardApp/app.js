@@ -12,6 +12,8 @@ var factRouter = require('./routes/fact')
 var apiGalleryRouter = require('./routes/api/gallery')
 var apiQuoteRouter = require('./routes/api/quote_postcard')
 var apiFactRouter = require('./routes/api/fact_postcard')
+//OBS! tas bort sen, bara för att kunna testa lite grejer
+var testRouter = require('./routes/test')
 
 var app = express();
 
@@ -34,6 +36,8 @@ app.use('/fact', factRouter)
 app.use('/api/gallery', apiGalleryRouter)
 app.use('/api/quote_postcard', apiQuoteRouter)
 app.use('/api/fact_postcard', apiFactRouter)
+//OBS! tas bort sen
+app.use('/test', testRouter)
 
 // app.use(function(req, res, next) {
 //   res.header("Access-Control-Allow-Origin", "*");
