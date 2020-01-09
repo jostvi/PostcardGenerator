@@ -1,17 +1,127 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(245, 230, 220) !important;
 }
-.image-gallery-container {
-  display: flex;
-  justify-content: flex-start;
+h1 {
+  padding-top: 10%;
+}
+
+/* Startsidan */
+.carousel-inner{
+  overflow:hidden;
+  height: 10%;
+}
+
+.carousel-item {
+  margin: -10% 0% -10% 12.5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none !important;
+}
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 3em;
+  color: red;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 3em;
+  color: red;
+}
+.carousel-indicators li {
+  background-color: rgba(0, 0, 0, 0.418) !important;
+  width: 20px !important;
+  height: 5px !important;
+}
+.carousel-indicators .active {
+  background-color: rgb(255, 0, 0) !important;
+}
+
+
+.button-container {
+  display: inline-block;
+  justify-content: center;
   flex-wrap: wrap;
+  padding-top: 5%;
+  text-align: center;
 }
-.bigImage {
-  max-width: 300px;
-  padding: 1%;
+.meme-a {
+  margin: 5%;
 }
+.meme-image {
+  max-width: 18.4%;
+  height:auto;
+}
+
+
+/* Bildgalleriet */
+.image-gallery-container {
+  display: inline-block;
+  flex-wrap: wrap;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* Navbar */
+
+.bg-light {
+  background-color:rgb(245, 230, 220) !important;
+  box-shadow: 0 0 30px 30px rgb(245, 230, 220);
+}
+  
+.navbar-light .navbar-brand {
+    color: rgba(255, 0, 0, 0.9);
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(255, 0, 0, 0.623);
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: rgba(255, 0, 0, 0.9);
+  font-weight: 900;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  background-color: rgba(221, 221, 221, 0);
+  color: rgb(255, 0, 0);
+  font-style: italic;
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: rgb(255, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgba(221, 221, 221, 0);
+  color: rgb(255, 0, 0);
+  font-style: italic;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  font-weight: 900;
+}
+
+  .bigImage {
+    max-width: 300px;
+    padding: 1%;
+  }
+
+
 @media (min-width: 3em) {
 
-  }
+}
 
