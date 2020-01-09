@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var quoteRouter = require('./routes/quote');
 var galleryRouter = require('./routes/gallery')
 var factRouter = require('./routes/fact')
+var aboutRouter = require('./routes/about')
 var apiGalleryRouter = require('./routes/api/gallery')
 var apiQuoteRouter = require('./routes/api/quote_postcard')
 var apiFactRouter = require('./routes/api/fact_postcard')
@@ -36,6 +37,7 @@ app.use('/fact', factRouter)
 app.use('/api/gallery', apiGalleryRouter)
 app.use('/api/quote_postcard', apiQuoteRouter)
 app.use('/api/fact_postcard', apiFactRouter)
+app.use('/about', aboutRouter)
 //OBS! tas bort sen
 app.use('/test', testRouter)
 
