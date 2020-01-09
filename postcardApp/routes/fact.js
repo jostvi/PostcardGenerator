@@ -38,23 +38,29 @@ router.get('/', (req, res) => {
         .then(res2 => { 
             var url = 'https://pixabay.com/api/?key=14668696-1050eb2ce23d8700022954b86' +
             '&q=' + res2 + '&image_type=photo&orientation=horizontal';
-            console.log(url)
-            console.log(res2);
+            // console.log(url)
+            // console.log(res2);
           /*   var url = 'https://pixabay.com/api/?key=14668696-1050eb2ce23d8700022954b86' +
             '&q=' + res2.split(" ")[0] + '&image_type=photo&orientation=horizontal';
             console.log(res2); */
 
             helper.standardCall(url)
             .then(res3 => {
-                console.log(res3.hits[0])
-                manipulator.generate(res3.hits[Math.floor(Math.random() * 11)].largeImageURL, res1.text, "fact")
+                var roof = 9;
+                // console.log(res3.hits[0])
+                if(res3.totalHits < roof)
+                roof = res3totalHits + 1;
+                manipulator.generate(res3.hits[Math.floor(Math.random() * roof)].largeImageURL, res1.text, "fact")
                 .then(result => {
                    //console.log('Fact:' + result);
-                    res.render('fact.hjs', {
-                        title: 'FactGenerator',
-                        fact: res1.text,
+                    // res.render('fact.hjs', {
+                    //     title: 'FactGenerator',
+                    //     fact: res1.text,
+                    //     url: result
+                    //     })
+                    res.send({
                         url: result
-                        })
+                    })
                  })
             })      
             .catch(err => { res.send(err); })
