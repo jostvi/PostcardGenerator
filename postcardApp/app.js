@@ -13,6 +13,8 @@ var aboutRouter = require('./routes/about')
 var apiGalleryRouter = require('./routes/api/gallery')
 var apiQuoteRouter = require('./routes/api/quote_postcard')
 var apiFactRouter = require('./routes/api/fact_postcard')
+//OBS! tas bort sen, bara för att kunna testa lite grejer
+var testRouter = require('./routes/test')
 
 var app = express();
 
@@ -34,7 +36,12 @@ app.use('/fact', factRouter)
 app.use('/api/gallery', apiGalleryRouter)
 app.use('/api/quote_postcard', apiQuoteRouter)
 app.use('/api/fact_postcard', apiFactRouter)
+<<<<<<< HEAD
 app.use('/about', aboutRouter)
+=======
+//OBS! tas bort sen
+app.use('/test', testRouter)
+>>>>>>> cdcb4a5ccf1c4ef17ea249cb0829955f28bf2f91
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
