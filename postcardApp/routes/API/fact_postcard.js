@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 const imageGallery = require('../../getimages/getImages.js')
 
-
-/* GET home page. */
+//returnerar ett json-objekt (eller är det en sträng?) som innehåller en lista med url:er till alla vykort med taggen "fact"
+//OBS! döp om routen till fact_postcards och ändra koden
 router.get('/', (req, res, next) => {
 
     imageGallery.getFactImages()

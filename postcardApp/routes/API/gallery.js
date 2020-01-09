@@ -3,7 +3,7 @@ var router = express.Router();
 const imageGallery = require('../../getimages/getImages.js')
 
 
-/* GET home page. */
+//döp om routen till postcard_gallery eller all_postcards
 router.get('/', (req, res, next) => {
 
     imageGallery.getImages()

@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 const imageGallery = require('../../getimages/getImages.js')
 
-
-/* GET home page. */
+//returnerar ett json-objekt (eller är det en sträng?) som innehåller en lista med url:er till alla vykort med taggen "quote"
+//OBS! döp om routen till quote_postcards
 router.get('/', (req, res, next) => {
 
     imageGallery.getQuoteImages()
