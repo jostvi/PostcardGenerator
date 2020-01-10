@@ -10,9 +10,10 @@
     <h1>{{title}}</h1>
     <p> Dagens citat: </p>
     <p id="quote"> "{{quote}}" </p>
-    <p> - {{author}}</p>
+    <p id="author"> - {{author}}</p>
      <button id="getimg" type="button">Hämta bild</button>
       <button id="nextBtn" type="button">Nästa</button>
+      <button id="createBtn" type="button">Skapa kort</button>
      <img id="img" src="" alt='En bild' height="300" width="500"></img> 
 
     <!-- Optional JavaScript -->

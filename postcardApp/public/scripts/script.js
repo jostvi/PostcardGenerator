@@ -59,7 +59,7 @@ $(document).ready(function () {
 		post.author = data.author
 			
 			console.log(JSON.stringify(data))
-			document.getElementById("quote").innerHTML = data.quote;
+            document.getElementById("quote").innerHTML = data.quote
 			document.getElementById("author").innerHTML = ' - ' + data.author;
 			document.getElementById("postcard").src = imgList[0];
 			
@@ -92,10 +92,12 @@ $(document).ready(function () {
 	})
 
 	$('button#createBtn').click(function () {
+        post.quote = document.getElementById("quote").innerHTML
+        post.author = document.getElementById("author").innerHTML
 		post.url = imgList[count];
 		console.log(JSON.stringify(post))
 		$.post('http://localhost:3000/createPostcard', post, function (data, status) {
-			document.getElementById("postcard").src = data.url;
+			document.getElementById("img").src = data.url;
 		})
 	})
 
