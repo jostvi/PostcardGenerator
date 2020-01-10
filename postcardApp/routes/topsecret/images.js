@@ -9,8 +9,8 @@ router.get('/', (req, res) => {
     console.log("quote:" + quote)
     wordpos = new WordPOS();
     wordpos.getNouns(quote, (keys) => {
-        console.log('wordpos: ' + keys)
-        pixabay.getImagesByKeyword(keys, res)
+        key = keys[Math.floor(Math.random() * keys.length)]
+        pixabay.getImagesByKeyword(key, res)
         .then((result) => {
             console.log("ute igen...")
             // console.log(result)
