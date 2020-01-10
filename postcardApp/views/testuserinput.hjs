@@ -20,16 +20,7 @@
 
     <p id="preview-text">ID passed: {{ output }}</p>
 
-    <script>
-        $("input#submit-btn").on("click", function () {
-        var userInput = $(this).attr("name");
-        $("p#preview-text").replaceWith(userInput);
-
-        })
-
-
-    </script>
-
+   
     <img src='https://res.cloudinary.com/dqhlic2nx/image/upload/v1578649020/puaeieyjswx4fdgeof9g.jpg' alt='Vykort'
         class="bigImage">
     <!-- Optional JavaScript -->
@@ -42,6 +33,16 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="/scripts/script.js"></script>
+     <script>
+        $("input#submit-btn").on("click", function () {
+        var userInput = $(this).attr("name");
+        $("p#preview-text").replaceWith(userInput);
+            
+        })
+
+
+    </script>
+
 </body>
 
 </html>

@@ -47,6 +47,7 @@ app.use('/api/fact_postcard', apiFactRouter)
 app.use('/about', aboutRouter)
 app.use('/createPostcard', createPostcardRouter)
 app.use('/topsecret/images', imageRouter)
+app.use('/userinput', userInputRouter)
 //OBS! tas bort sen
 app.use('/test', testRouter)
 app.use('/testuserinput', testUserInputRouter)
