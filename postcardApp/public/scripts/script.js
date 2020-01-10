@@ -66,8 +66,8 @@ $(document).ready(function () {
 
 	$('button#getimg').click(function () {
         let quote = document.getElementById("quote").innerHTML
-
         console.log(quote)
+        
         $.get('http://localhost:3000/topsecret/images', { quote : quote, keyCount : keyCount },
 			function (data, status) {
 				count = 0
