@@ -28,13 +28,22 @@ module.exports = {
         
               return tpl
       })
+      //alternativ: färg, svart text
+     /*  .then(tpl => {
+        tpl 
+            .resize(1024, 768)
+            .quality(60)
+            .brightness(0.6)
+      
+            return tpl
+    }) */
   
       .then(tpl => (tpl.clone().write(imgActive)))
   
       .then(() => (jimp.read(imgActive)))
   
       .then(tpl => (
-          jimp.loadFont(jimp.FONT_SANS_64_WHITE)
+          jimp.loadFont(jimp.FONT_SANS_64_BLACK)
           .then(font => ([tpl, font]))
       ))
   

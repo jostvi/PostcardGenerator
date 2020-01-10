@@ -25,6 +25,5 @@ function getImagesByKeyword(keyword) {
         })
     })};
 
-getImagesByKeyword("test")
 module.exports.getImagesByKeyword = getImagesByKeyword
 
