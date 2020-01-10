@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     helper.standardCall('https://uselessfacts.jsph.pl//random.json?language=en')
     .then(res1 => { 
         console.log(res1.text)
-        var quote = res1.text.replace("`", "'");
+        var quote = res1.text.replace(/`/g, "'");
         wordpos = new WordPOS();
         wordpos.getNouns(quote, function(result){
             console.log(result);
@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
     .catch((error) => {console.log(error)
     })
         .then(res2 => { 
-            var url = 'https://pixabay.com/api/?key=14668696-1050eb2ce23d8700022954b86' +
+            var url = 'https://pixabay.com/api/?key=14872871-f2fbfb7523dc879ce639dc47e' +
             '&q=' + res2 + '&image_type=photo&orientation=horizontal';
             console.log(url)
             console.log(res2)

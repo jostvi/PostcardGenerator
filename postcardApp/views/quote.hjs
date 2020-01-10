@@ -13,7 +13,7 @@
     <p> - {{author}}</p>
      <button id="getimg" type="button">Hämta bild</button>
       <button id="nextBtn" type="button">Nästa</button>
-      <button id ="saveimg" type="button">Spara vykort</button>
+      <button onclick="saveImage()">Spara vykort</button>
     <img id="img" src="" alt='En bild' height="300" width="500">
 
     <!-- Optional JavaScript -->
@@ -26,6 +26,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="/scripts/script.js"></script>
+    <script type="text/javascript" src="/scripts/javascript.js"></script>
 </body>
 
 </html>

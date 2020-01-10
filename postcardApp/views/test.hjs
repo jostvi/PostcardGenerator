@@ -13,17 +13,23 @@
     <p> Keyword: </p>
     <p> {{ keyword }}</p>
 
-    <img src="{{ images.img1.url }}" , alt='En bild' , width="600" id="imgClickAndChange">
-    <button onclick="changeImage()">New image</button>
+    <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578674321/siz23oykrdpmalioluxp.jpg" , id="img", alt='En bild' , width="600" id="imgClickAndChange">
+    <button onclick="saveImage()">Spara vykort</button>
+    <button id ="saveimg" type="button">Spara vykort</button>
 
 
 
 </body>
 <script language="javascript">
 
-    function changeImage(images) {
-
-        document.getElementById("imgClickAndChange").src = "{{ images.img2.url}}";
+    function saveImage() {
+        var a = document.createElement('a');
+        imgurl = document.getElementById("img").src
+        a.href = imgurl;
+        a.download = "postcard.png";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
     }
 </script>
 
