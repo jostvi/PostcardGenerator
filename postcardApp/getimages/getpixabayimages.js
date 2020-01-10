@@ -12,7 +12,7 @@ async function getImagesByKeyword(keyword, res) {
 
     var url = 'https://pixabay.com/api/?key=14668696-1050eb2ce23d8700022954b86' +
         '&q=' + keyword + '&image_type=photo&orientation=horizontal'
-    console.log(url)
+        
     try {
         response = await helper.standardCall(url)
 
@@ -29,6 +29,5 @@ async function getImagesByKeyword(keyword, res) {
     return images
 };
 
-// getImagesByKeyword("test")
 module.exports.getImagesByKeyword = getImagesByKeyword
 

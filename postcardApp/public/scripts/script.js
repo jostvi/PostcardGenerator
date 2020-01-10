@@ -2,11 +2,12 @@
 $(document).ready(function () {
     var post = { 
         quote: "",
-        author: "",
         url: ""
         },
         count = 0,
+        keyCount = 0;
         imgList = [];
+
     $("img.bigImage").on("click", function () {
         // Hämtar adressen till bilden som användaren klickade på
         var src = $(this).attr("src");
@@ -53,8 +54,7 @@ $(document).ready(function () {
 				imgList.push(item.url)
 			})
 			$.preload(imgList);
-			post.quote = data.quote
-			post.author = data.author
+			post.quote = data.quote + "\n-" + data.author 
 
 			console.log(JSON.stringify(data))
             document.getElementById("quote").innerHTML = data.quote
@@ -65,15 +65,20 @@ $(document).ready(function () {
 	})
 
 	$('button#getimg').click(function () {
-		let quote = document.getElementById("quote").innerHTML
-		console.log(quote)
-		$.get('http://localhost:3000/topsecret/images', { quote: quote },
+        let quote = document.getElementById("quote").innerHTML
+
+        console.log(quote)
+        $.get('http://localhost:3000/topsecret/images', { quote : quote, keyCount : keyCount },
 			function (data, status) {
 				count = 0
 				imgList = []
 				data.urlList.forEach(function (item) {
 					imgList.push(item.url)
-				})
+                })
+                keyMax = data.keys
+                if(++keyCount == keyMax)
+                    keyCount = 0
+                console.log(keyMax)
 				$.preload(imgList);;
 				document.getElementById("preview-image").src = imgList[0];
 			})
@@ -90,8 +95,8 @@ $(document).ready(function () {
 	})
 
 	$('button#createBtn').click(function () {
-        post.quote = document.getElementById("quote").innerHTML
-        post.author = document.getElementById("author").innerHTML
+        post.quote = document.getElementById("quote").innerHTML + "\n" +
+        document.getElementById("author").innerHTML
 		post.url = imgList[count];
 		console.log(JSON.stringify(post))
 		$.post('http://localhost:3000/createPostcard', post, function (data, status) {

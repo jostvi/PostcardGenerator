@@ -6,10 +6,11 @@ const pixabay = require('../../getImages/getpixabayimages.js');
 
 router.get('/', (req, res) => {
     quote = req.query.quote
-    console.log("quote:" + quote)
+    count = req.query.keyCount
+    console.log("keys: " + count)
     wordpos = new WordPOS();
     wordpos.getNouns(quote, (keys) => {
-        key = keys[Math.floor(Math.random() * keys.length)]
+        key = keys[count]
         pixabay.getImagesByKeyword(key, res)
         .then((result) => {
             console.log("ute igen...")
@@ -17,7 +18,7 @@ router.get('/', (req, res) => {
 
             res.send({
                 urlList: result.urlList,
-                keys: keys
+                keys: keys.length
             }
             )
         })
