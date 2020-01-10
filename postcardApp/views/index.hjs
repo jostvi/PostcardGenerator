@@ -82,25 +82,33 @@
   </div>
 
   <!-- Knappar för olika sorters vykort. Behöver få rubriker i själva bilden-->
-  <form action="/my/link/location" method="get" <div class="button-container">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578489421/zornh34kf8bb31xpajgc.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
+  <div class="button-container w-75 p-3">
+<div class="card-deck">
+  <div class="card meme-image">
+    <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578489421/zornh34kf8bb31xpajgc.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Vykort med quote</h5>
+      <p class="card-text">Testtext</p>
+    <a href="/quote" class="btn btn-primary">Skapa</a>
     </div>
-    <a href="/quote" class="meme-a"><img
-        src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578489421/zornh34kf8bb31xpajgc.jpg"
-        class="meme-image"></a>
-    <a href="/fact" class="meme-a"><img
-        src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578489421/zornh34kf8bb31xpajgc.jpg"
-        class="meme-image"></a>
-    <a href="/user" class="meme-a"><img
-        src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578489421/zornh34kf8bb31xpajgc.jpg"
-        class="meme-image"></a>
+  </div>
+  <div class="card meme-image">
+    <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578489421/zornh34kf8bb31xpajgc.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Vykort med fakta</h5>
+      <p class="card-text">Testtext</p>
+    <a href="/fact" class="btn btn-primary">Skapa</a>
+    </div>
+  </div>
+  <div class="card meme-image">
+    <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578489421/zornh34kf8bb31xpajgc.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Vykort med egen text</h5>
+      <p class="card-text">Testtext</p>
+    <a href="/userinput" class="btn btn-primary">Skapa</a>
+    </div>
+  </div>
+</div>
     </div>
 
 

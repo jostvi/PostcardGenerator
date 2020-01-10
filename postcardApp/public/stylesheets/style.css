@@ -59,15 +59,8 @@ h1 {
   display: inline-block;
   justify-content: center;
   flex-wrap: wrap;
-  padding-top: 5%;
+  padding: 5%;
   text-align: center;
-}
-.meme-a {
-  margin: 5%;
-}
-.meme-image {
-  max-width: 18.4%;
-  height:auto;
 }
 
 
@@ -201,6 +194,7 @@ cursor:pointer;
     margin: 50px;
       
 }
+
 
 
 @media (max-width: 800px) {
