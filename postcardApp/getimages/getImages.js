@@ -8,6 +8,7 @@ cloudinary.config({
 
 //OBS! bör kanske döpas om till getPostcards så att det inte blandas ihop med själva bildhanteringen
 //Bearbeta returen redan här så att varje funktion returnera ett json objekt?
+//OBS! begränsa antalet resultat? ha nåt default värde kanske?
 function getImages() {
     return new Promise ((resolve, reject) => {
       cloudinary.api.resources( { max_results: 500 },
@@ -48,6 +49,10 @@ function getQuoteImages() {
         resolve(result)
       })
     })};
+    //test
+    //getImages()
+    //.then(res => console.log(res.resources[Math.floor(Math.random() * res.resources.length)].url))
+  
   
   module.exports.getImages = getImages
   module.exports.getQuoteImages = getQuoteImages
