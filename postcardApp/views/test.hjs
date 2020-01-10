@@ -1,27 +1,30 @@
- <!DOCTYPE html>
- <html>
-    <head>
-        <title>{{title}}</title>
-        <link rel='stylesheet' href='/stylesheets/style.css' />
-    </head>
-    <body>
-        <h1>{{title}}</h1>
-        <p> Test: </p>
-        <p> "{{quote}}" </p>
-        <p> Keyword: </p>
-        <p> {{ keyword }}</p>
-        
-        <img src="{{ images.img1.url }}", alt='En bild', width="600" id="imgClickAndChange">
-        <button onclick="changeImage()">New image</button>
-        
-    
-       
-    </body>
-    <script language="javascript">
-  
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>{{title}}</h1>
+    <p> Test: </p>
+    <p> "{{quote}}" </p>
+    <p> Keyword: </p>
+    <p> {{ keyword }}</p>
+
+    <img src="{{ images.img1.url }}" , alt='En bild' , width="600" id="imgClickAndChange">
+    <button onclick="changeImage()">New image</button>
+
+
+
+</body>
+<script language="javascript">
+
     function changeImage(images) {
-        
-        document.getElementById("imgClickAndChange").src="{{ images.img2.url}}";
+
+        document.getElementById("imgClickAndChange").src = "{{ images.img2.url}}";
     }
-    </script>
+</script>
+
 </html>

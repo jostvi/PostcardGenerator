@@ -12,6 +12,8 @@ var galleryRouter = require('./routes/gallery')
 var factRouter = require('./routes/fact')
 var aboutRouter = require('./routes/about')
 var createPostcardRouter = require('./routes/createPostcard')
+var userInputRouter = require('./routes/userinput')
+var testUserInputRouter = require('./routes/testuserinput')
 var apiGalleryRouter = require('./routes/api/gallery')
 var apiQuoteRouter = require('./routes/api/quote_postcard')
 var apiFactRouter = require('./routes/api/fact_postcard')
@@ -47,6 +49,8 @@ app.use('/createPostcard', createPostcardRouter)
 app.use('/topsecret/images', imageRouter)
 //OBS! tas bort sen
 app.use('/test', testRouter)
+app.use('/testuserinput', testUserInputRouter)
+
 
 // app.use(function(req, res, next) {
 //   res.header("Access-Control-Allow-Origin", "*");
