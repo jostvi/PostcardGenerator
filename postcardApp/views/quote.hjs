@@ -51,6 +51,7 @@
     <p> Dagens citat: </p>
     <p id="quote"> "{{quote}}" </p>
     <p id="author"> - {{author}}</p>
+<<<<<<< HEAD
     <button id="getimg" type="button">Hämta bild</button>
     <button id="nextBtn" type="button">Nästa</button>
     <button id="createBtn" type="button">Skapa kort</button>
@@ -66,6 +67,12 @@
                 </div>
             </div>
     </div>
+=======
+     <button id="getimg" type="button">Hämta bild</button>
+      <button id="nextBtn" type="button">Nästa</button>
+      <button id="createBtn" type="button">Skapa kort</button>
+     <img id="img" src="" alt='En bild' height="300" width="500"></img> 
+>>>>>>> 3d0cadf840f435c231c893dce14f7649bd0ebacd
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->
