@@ -12,9 +12,9 @@ var galleryRouter = require('./routes/gallery')
 var factRouter = require('./routes/fact')
 var aboutRouter = require('./routes/about')
 var createPostcardRouter = require('./routes/createPostcard')
-var apiGalleryRouter = require('./routes/api/gallery')
-var apiQuoteRouter = require('./routes/api/quote_postcard')
-var apiFactRouter = require('./routes/api/fact_postcard')
+var apiGalleryRouter = require('./routes/api/v1/postcards/gallery')
+var apiRandomRouter = require('./routes/api/v1/postcards/random')
+var apiCreateRouter = require('./routes/api/v1/postcards/create')
 //OBS! tas bort sen, bara för att kunna testa lite grejer
 var testRouter = require('./routes/test')
 
@@ -38,9 +38,9 @@ app.use('/users', usersRouter);
 app.use('/quote', quoteRouter);
 app.use('/gallery', galleryRouter)
 app.use('/fact', factRouter)
-app.use('/api/gallery', apiGalleryRouter)
-app.use('/api/quote_postcard', apiQuoteRouter)
-app.use('/api/fact_postcard', apiFactRouter)
+app.use('/api/v1/postcards/gallery', apiGalleryRouter)
+app.use('/api/v1/postcards/random', apiRandomRouter)
+app.use('/api/v1/postcards/create', apiCreateRouter)
 app.use('/about', aboutRouter)
 app.use('/createPostcard', createPostcardRouter)
 //OBS! tas bort sen
