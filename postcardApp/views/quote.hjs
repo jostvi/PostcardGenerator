@@ -54,6 +54,7 @@
     <button id="getimg" type="button">Hämta bild</button>
     <button id="nextBtn" type="button">Nästa</button>
     <button id="createBtn" type="button">Skapa kort</button>
+    <button id ="saveimg" type="button">Spara vykort</button>
     </div>
     <img id="preview-image" src="" alt='En bild' height="300" width="500"></img>
 
@@ -66,13 +67,6 @@
                 </div>
             </div>
     </div>
-
-     <button id="getimg" type="button">Hämta bild</button>
-      <button id="nextBtn" type="button">Nästa</button>
-      <button onclick="saveImage()">Spara vykort</button>
-      <button id="createBtn" type="button">Skapa kort</button>
-     <img id="img" src="" alt='En bild' height="300" width="500"></img> 
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->
