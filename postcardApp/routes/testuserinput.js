@@ -8,8 +8,8 @@ router.get('/', (req, res, next) => {
         title: 'Postcard Generator'
     })
 });
-router.get('/:id', function (req, res, next) {
-    res.render('testuserinput', {output: req.params.id});
+router.get('/', function (req, res, next) {
+    res.render('testuserinput', {output: req.params});
 });
 
 module.exports = router;

@@ -46,7 +46,7 @@
         </div>
     </nav>
     <h1>{{title}}</h1>
-    <form class="float-left" action="" method="post">
+    <form class="float-left" action="/testuserinput" method="post">
         <div class="form-group form-control-lg">
             <label for="exampleInputEmail1">Ange egen text</label>
             <input type="text" maxlength="300" id="userinput" name="sample-text" class="form-control"
