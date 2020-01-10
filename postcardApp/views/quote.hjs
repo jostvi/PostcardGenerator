@@ -13,8 +13,13 @@
     <p id="author"> - {{author}}</p>
      <button id="getimg" type="button">Hämta bild</button>
       <button id="nextBtn" type="button">Nästa</button>
+<<<<<<< HEAD
       <button id="createBtn" type="button">Skapa kort</button>
      <img id="img" src="" alt='En bild' height="300" width="500"></img> 
+=======
+      <button id ="saveimg" type="button">Spara vykort</button>
+    <img id="img" src="" alt='En bild' height="300" width="500">
+>>>>>>> 4669e5b280e29477dcdf34cb3e465d73e00b1e34
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->

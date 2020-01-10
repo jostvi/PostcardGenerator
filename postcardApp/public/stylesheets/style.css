@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: rgb(245, 230, 220) !important;
+  background-color: rgb(255, 255, 255) !important;
 }
 h1 {
   padding-top: 5%;
@@ -54,13 +54,22 @@ h1 {
   background-color: rgb(255, 0, 0) !important;
 }
 
-
 .button-container {
   display: inline-block;
   justify-content: center;
   flex-wrap: wrap;
   padding: 5%;
 }
+
+.card{
+  background-color: rgba(255, 255, 255, 0.445);
+  border: none;
+}
+
+.text-center{
+padding-top: 2%;
+}
+
 
 
 /* Bildgalleriet */
@@ -185,7 +194,7 @@ cursor:pointer;
 }
 
 .preview-text h3{
-   color: rgb(19, 170, 216);
+   color: rgb(0, 0, 0);
    font-family: Arial, Helvetica, sans-serif;
    display: inline-table;
     vertical-align:middle;
@@ -193,8 +202,6 @@ cursor:pointer;
     margin: 50px;
       
 }
-
-
 
 @media (max-width: 800px) {
   #carouselExampleIndicators {
