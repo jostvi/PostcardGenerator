@@ -15,6 +15,12 @@ var createPostcardRouter = require('./routes/createPostcard')
 var apiGalleryRouter = require('./routes/api/v1/postcards/gallery')
 var apiRandomRouter = require('./routes/api/v1/postcards/random')
 var apiCreateRouter = require('./routes/api/v1/postcards/create')
+var userInputRouter = require('./routes/userinput')
+var testUserInputRouter = require('./routes/testuserinput')
+var apiGalleryRouter = require('./routes/api/gallery')
+var apiQuoteRouter = require('./routes/api/quote_postcard')
+var apiFactRouter = require('./routes/api/fact_postcard')
+var imageRouter = require('./routes/topsecret/images')
 //OBS! tas bort sen, bara för att kunna testa lite grejer
 var testRouter = require('./routes/test')
 
@@ -43,8 +49,11 @@ app.use('/api/v1/postcards/random', apiRandomRouter)
 app.use('/api/v1/postcards/create', apiCreateRouter)
 app.use('/about', aboutRouter)
 app.use('/createPostcard', createPostcardRouter)
+app.use('/topsecret/images', imageRouter)
 //OBS! tas bort sen
 app.use('/test', testRouter)
+app.use('/testuserinput', testUserInputRouter)
+
 
 // app.use(function(req, res, next) {
 //   res.header("Access-Control-Allow-Origin", "*");
