@@ -72,8 +72,6 @@ h1 {
 padding-top: 2%;
 }
 
-
-
 /* Bildgalleriet */
 .image-gallery-container {
   display: inline-block;
@@ -83,7 +81,6 @@ padding-top: 2%;
 }
 
 /* Navbar */
-
 .bg-light {
   background-color:rgb(245, 230, 220) !important;
   box-shadow: 0 0 30px 30px rgb(245, 230, 220);
@@ -178,7 +175,7 @@ padding-top: 2%;
 cursor:pointer;
  position: relative;
  display: block;
-
+ margin-bottom: 3%;
 }
 
 .preview-text{
@@ -191,9 +188,8 @@ cursor:pointer;
    background-color: rgba(255, 255, 255, 0.651);
     vertical-align:bottom;
     line-height:380px;
-    border-style: solid;
-    border-width: 5px;
-}
+    box-shadow: 10px 10px #0000009a;
+  }
 
 .preview-text h3{
    color: rgb(0, 0, 0);
