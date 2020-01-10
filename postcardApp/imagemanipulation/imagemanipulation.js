@@ -25,9 +25,11 @@ module.exports = {
 
   generate : function(url, quote, tag) {
     return new Promise((resolve, reject) => {
+      console.log("before read")
+      console.log(url)
       jimp.read(url)
-    
-      .then(tpl => {
+      
+      /* .then(tpl => { console.log("image read")
           tpl 
               .resize(1024, 768)
               .quality(60)
@@ -35,16 +37,16 @@ module.exports = {
               .brightness(0.3)
         
               return tpl
-      })
-      //alternativ: färg, svart text
-     /*  .then(tpl => {
+      }) */
+      
+    .then(tpl => {
         tpl 
             .resize(1024, 768)
             .quality(60)
             .brightness(0.6)
       
             return tpl
-    }) */
+    })
   
       .then(tpl => (tpl.clone().write(imgActive)))
   

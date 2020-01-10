@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: rgb(255, 255, 255) !important;
+  background-color:rgb(245, 230, 220) !important;
 }
 h1 {
   padding-top: 5%;
@@ -18,7 +18,7 @@ h1 {
 }
 
 .carousel-item {
-  height: 550px;
+  height: 500px;
   margin-left: 12.5%;
  }
 
@@ -27,6 +27,8 @@ h1 {
   top: 0;
   left: 0;
   min-height: 550px;
+  margin-bottom: 100px;
+
 }
 
 .carousel-control-prev-icon,
