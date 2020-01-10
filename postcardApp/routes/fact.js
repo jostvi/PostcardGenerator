@@ -9,8 +9,9 @@ router.get('/', (req, res) => {
     helper.standardCall('https://uselessfacts.jsph.pl//random.json?language=en')
     .then(res1 => { 
         console.log(res1.text)
+        var quote = res1.text.replace("`", "'");
         wordpos = new WordPOS();
-        wordpos.getNouns(JSON.stringify(res1.text), function(result){
+        wordpos.getNouns(quote, function(result){
             console.log(result);
     })
     .catch((error) => {console.log(error)
@@ -35,12 +36,12 @@ router.get('/', (req, res) => {
                 // console.log(res3.hits[0])
                 if(res3.totalHits < roof)
                     roof = res3totalHits + 1;
-                manipulator.generate(res3.hits[Math.floor(Math.random() * roof)].largeImageURL, res1.text, "fact")
+                manipulator.generate(res3.hits[Math.floor(Math.random() * roof)].largeImageURL, quote, "fact")
                 .then(result => {
                    //console.log('Fact:' + result);
                     res.render('fact.hjs', {
                         title: 'FactGenerator',
-                        fact: res1.text,
+                        fact: quote,
                         url: result
                         })
                  })
