@@ -47,43 +47,37 @@
         </div>
     </nav>
 
+
+    </div>
     <h1>{{title}}</h1>
+
+
     <p> Dagens citat: </p>
     <p id="quote"> "{{quote}}" </p>
     <p id="author"> - {{author}}</p>
-<<<<<<< HEAD
-    <button id="getimg" type="button">Hämta bild</button>
-    <button id="nextBtn" type="button">Nästa</button>
-    <button id="createBtn" type="button">Skapa kort</button>
     </div>
-    <img id="preview-image" src="" alt='En bild' height="300" width="500"></img>
 
-    <div class="preview float-right">
-        <h2 id="preview-header">Förhandsvisning</h1>
-            <div class="preview-image-box">
-                <img id="preview-image" src="" width="500" height="380" /></img>
-                <div id="preview-text" class="preview-text">
-                    <h3 id="preview-text"> {{quote}}</h3>
-                </div>
+    <h2 id="preview-header">Förhandsvisning</h1>
+        <div class="preview-image-box">
+            <img id="preview-image" src="" width="500" height="380" /></img>
+            <div id="preview-text" class="preview-text">
+                <h3 id="preview-text"> "{{quote}}"</h3>
             </div>
-    </div>
-=======
-     <button id="getimg" type="button">Hämta bild</button>
-      <button id="nextBtn" type="button">Nästa</button>
-      <button id="createBtn" type="button">Skapa kort</button>
-     <img id="img" src="" alt='En bild' height="300" width="500"></img> 
->>>>>>> 3d0cadf840f435c231c893dce14f7649bd0ebacd
+        </div>
+            <button id="getimg" class="btn btn-primary" type="button">Hämta bild</button>
+    <button id="nextBtn" class="btn btn-primary" type="button">Nästa</button>
+    <button id="createBtn" class="btn btn-primary" type="button">Skapa kort</button>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/scripts/script.js"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/scripts/script.js"></script>
 </body>
 
 </html>
