@@ -1,7 +1,8 @@
 const helper = require('../API_helper');
-
+const pixaKeyJohan = '14668696-1050eb2ce23d8700022954b86'
+const pixaKeyChristina = '14668696-1050eb2ce23d8700022954b86'
 //route för imagesByKeyword??? som anropas från klienten;  for loop och sen lägga allt i en och samma array, men hur skickar vi med keywords???
-// var kwAarray = ['test', 'flower', 'people']
+
 
 async function getImagesByKeyword(keyword, res) {
     let response
@@ -10,9 +11,8 @@ async function getImagesByKeyword(keyword, res) {
     console.log("inne...")
     console.log(keyword)
 
-    var url = 'https://pixabay.com/api/?key=14668696-1050eb2ce23d8700022954b86' +
-        '&q=' + keyword + '&image_type=photo&orientation=horizontal'
-        
+    var url = 'https://pixabay.com/api/?key='+pixaKeyChristina+'&q='+keyword+'&image_type=photo&orientation=horizontal'
+
     try {
         response = await helper.standardCall(url)
 
@@ -22,7 +22,7 @@ async function getImagesByKeyword(keyword, res) {
         }
     } catch (err) {
         console.log(err)
-        return res.status(500).send()
+        return res.status(500).send("Inget largeImageURL igen???")
     }
     // console.log(images)
     console.log("returning")

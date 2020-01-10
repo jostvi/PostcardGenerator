@@ -53,7 +53,7 @@
 
 
     <p> Dagens citat: </p>
-    <p id="quote"> "{{quote}}" </p>
+    <p id="text"> "{{quote}}" </p>
     <p id="author"> - {{author}}</p>
     </div>
 
@@ -64,10 +64,10 @@
                 <h3 id="preview-text"> "{{quote}}"</h3>
             </div>
         </div>
-    <button id="getimg" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
-    <button id="nextBtn" class="btn btn-primary" type="button">Nästa</button>
-    <button id="createBtn" class="btn btn-primary" type="button" onclick="changeButton()">Skapa kort</button>
-    <button id ="saveimg" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
+    <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
+    <button id="next-image" class="btn btn-primary" type="button">Nästa</button>
+    <button id="create-postcard" class="btn btn-primary" type="button" onclick="changeButton()">Skapa kort</button>
+    <button id ="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->

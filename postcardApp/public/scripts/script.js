@@ -1,18 +1,13 @@
-// Väntar på att sidan ska bli redo för att köra vårt JavaScript
+
 $(document).ready(function () {
     var post = { 
-        quote: "",
-        url: ""
-        },
+        text: "",
+        url: "" ,
+        tag: "" },
         count = 0,
-<<<<<<< HEAD
-		imgList = [];
-		
-=======
         keyCount = 0;
         imgList = [];
 
->>>>>>> c9d266c13840d4b2af05aab509a63fee0d164b97
     $("img.bigImage").on("click", function () {
         var src = $(this).attr("src");
         $("body").prepend("<img src='" + src + "' style='position: fixed; width: 60%; top: 10%; left: 20%; z-index: 2000; border: 10px solid #fff; background-color: white; display: none;' id='imageModal'>")
@@ -29,44 +24,10 @@ $(document).ready(function () {
         })
     })
 
-    $('button#galleryBtn').click(function () {
-		$.get('http://localhost:3000/api/gallery', function (data, status) {
-			count = 0
-			imgList = []
-			data.urlList.forEach(function (item) {
-				imgList.push(item.url)
-			})
-			$.preload(imgList);
+	$('button#get-image').click(function () {
+        let text = document.getElementById("text").innerHTML
 
-			document.getElementById("quote").innerHTML = "";
-			document.getElementById("author").innerHTML = "";
-			document.getElementById("postcard").src = imgList[0];
-		})
-	})
-
-	$('button#quoteBtn').click(function () {
-		$.get('http://localhost:3000/quote', function (data, status) {
-			count = 0
-			imgList = []
-			data.urlList.forEach(function (item) {
-				imgList.push(item.url)
-			})
-			$.preload(imgList);
-			post.quote = data.quote + "\n-" + data.author 
-
-			console.log(JSON.stringify(data))
-            document.getElementById("quote").innerHTML = data.quote
-			document.getElementById("author").innerHTML = ' - ' + data.author;
-			document.getElementById("postcard").src = imgList[0];
-
-		})
-	})
-
-	$('button#getimg').click(function () {
-        let quote = document.getElementById("quote").innerHTML
-        console.log(quote)
-        
-        $.get('http://localhost:3000/topsecret/images', { quote : quote, keyCount : keyCount },
+        $.get('http://localhost:3000/topsecret/images', { text : text, keyCount : keyCount },
 			function (data, status) {
 				count = 0
 				imgList = []
@@ -76,45 +37,43 @@ $(document).ready(function () {
                 keyMax = data.keys
                 if(++keyCount == keyMax)
                     keyCount = 0
-                console.log(keyMax)
 				$.preload(imgList);;
 				document.getElementById("preview-image").src = imgList[0];
 			})
 
 	})
 
-	$('button#factBtn').click(function () {
-		$.get('http://localhost:3000/fact', function (data, status) {
-			document.open();
-			document.write(data);
-			document.close();
-			console.log(data)
-		})
-	})
+	$('button#create-postcard').click(function () {
+        author = document.getElementById("author")
+        if(author != null) {
+            post.text = document.getElementById("text").innerHTML + "\n\n" + author.innerHTML
+            post.tag = "quote"
+        }
+        else {
+            post.text = document.getElementById("text").innerHTML
+            post.tag = "fact"
+        }
 
-	$('button#createBtn').click(function () {
-        post.quote = document.getElementById("quote").innerHTML + "\n" +
-        document.getElementById("author").innerHTML
-		post.url = imgList[count];
-		console.log(JSON.stringify(post))
+        post.url = imgList[count];
+        
+        console.log(JSON.stringify(post))
+        
 		$.post('http://localhost:3000/createPostcard', post, function (data, status) {
-			document.getElementById("preview-image").src = data.url;
+            alert(data.url)
 		})
 	})
 
-	$('button#nextBtn').click(function () {
+	$('button#next-image').click(function () {
 		if (++count == imgList.length)
 			count = 0;
 		document.getElementById("preview-image").src = imgList[count];
 	})
 })
 
-$("input")
-	.keyup(function () {
+$("input").keyup(function () {
 		var value = $(this).val();
 		$("h3").text(value);
-	})
-	.keyup();
+	}).keyup();
 
 
 jQuery.preload = function (array) {

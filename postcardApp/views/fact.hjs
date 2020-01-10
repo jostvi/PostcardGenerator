@@ -47,8 +47,12 @@
     </nav>
     <h1>{{title}}</h1>
     <p> Onödig fakta: </p>
-    <p> "{{fact}}" </p>
-    <img src="{{url}}" , alt='En bild'></img>
+    <p id="text"> "{{fact}}" </p>
+    <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
+    <button id="next-image" class="btn btn-primary" type="button">Nästa</button>
+    <button id="create-postcard" class="btn btn-primary" type="button" onclick="changeButton()">Skapa kort</button>
+    <button id ="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
+    <img id="preview-image" src="" , alt='En bild'></img>
 
     <p></p>
 
@@ -63,6 +67,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="/scripts/script.js"></script>
+    <script type="text/javascript" src="/scripts/javascript.js"></script>
 </body>
 
 </html>
