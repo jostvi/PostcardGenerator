@@ -15,6 +15,7 @@ var createPostcardRouter = require('./routes/createPostcard')
 var apiGalleryRouter = require('./routes/api/gallery')
 var apiQuoteRouter = require('./routes/api/quote_postcard')
 var apiFactRouter = require('./routes/api/fact_postcard')
+var imageRouter = require('./routes/topsecret/images')
 //OBS! tas bort sen, bara för att kunna testa lite grejer
 var testRouter = require('./routes/test')
 
@@ -43,6 +44,7 @@ app.use('/api/quote_postcard', apiQuoteRouter)
 app.use('/api/fact_postcard', apiFactRouter)
 app.use('/about', aboutRouter)
 app.use('/createPostcard', createPostcardRouter)
+app.use('/topsecret/images', imageRouter)
 //OBS! tas bort sen
 app.use('/test', testRouter)
 

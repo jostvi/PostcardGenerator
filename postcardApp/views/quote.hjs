@@ -2,19 +2,24 @@
  <html>
     <head>
         <title>{{title}}</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+        <script src="/scripts/script.js"></script>
         <link rel='stylesheet' href='/stylesheets/style.css' />
     </head>
     <body>
         <h1>{{title}}</h1>
         <p> Dagens citat: </p>
-        <p> "{{quote}}" </p>
+        <p id="quote">{{quote}}</p>
         <p> - {{author}}</p>
-        <p hidden>{{#keys}}{{/keys}}</p>
-         <div class="image-gallery-container">
-    {{#images.urlList}}
+   <!--     <p hidden>{{#keys}}{{/keys}}</p>
+        <div class="image-gallery-container">
+         {{#images.urlList}}
     <img src='{{ url }}' alt='Vykort' class="bigImage">
     {{/images.urlList}}
-  </div>
-     <!--   <img src="{{images}}", alt='En bild'></img> -->
+  </div> -->
+      <button id="getimg" type="button">Hämta bild</button>
+      <button id="nextBtn" type="button">Nästa</button>
+      <p id="response"></p>
+        <img id="img" alt='En bild' height="300" width="500"></img> 
     </body>
 </html>

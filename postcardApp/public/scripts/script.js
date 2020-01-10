@@ -1,3 +1,11 @@
+var post = { 
+	quote: "",
+	author: "",
+	url: ""
+	},
+	count = 0,
+    imgList = [];
+    
 // Väntar på att sidan ska bli redo för att köra vårt JavaScript
 $(document).ready(function () {
     $("img.bigImage").on("click", function () {
@@ -22,4 +30,97 @@ $(document).ready(function () {
             }, 500);
         })
     })
-});
+
+    $('button#galleryBtn').click(function () {
+		$.get('http://localhost:3000/api/gallery', function (data, status) {
+			count = 0
+			imgList = []
+			data.urlList.forEach(function(item) {
+				imgList.push(item.url)
+			})
+		$.preload(imgList);
+
+			document.getElementById("quote").innerHTML = "";
+			document.getElementById("author").innerHTML = "";
+			document.getElementById("postcard").src = imgList[0];
+		})
+	})
+
+	$('button#quoteBtn').click(function () {
+		$.get('http://localhost:3000/quote', function (data, status) {
+			count = 0
+			imgList = []
+			data.urlList.forEach(function(item) {
+				imgList.push(item.url)
+			})
+		$.preload(imgList);
+		post.quote = data.quote
+		post.author = data.author
+			
+			console.log(JSON.stringify(data))
+			document.getElementById("quote").innerHTML = data.quote;
+			document.getElementById("author").innerHTML = ' - ' + data.author;
+			document.getElementById("postcard").src = imgList[0];
+			
+		})
+    })
+    
+    $('button#getimg').click(function () {
+        let quote = document.getElementById("quote").innerHTML
+        console.log(quote)
+        $.get('http://localhost:3000/topsecret/images', { quote : quote }, 
+         function (data, status) {
+            count = 0
+			imgList = []
+			data.urlList.forEach(function(item) {
+				imgList.push(item.url)
+			})
+		$.preload(imgList);;
+			document.getElementById("img").src = imgList[0];
+        })
+        
+    })
+
+	$('button#factBtn').click(function () {
+		$.get('http://localhost:3000/fact', function (data, status) {
+			document.open();
+			document.write(data);
+			document.close();
+			console.log(data)
+		})
+	})
+
+	$('button#createBtn').click(function () {
+		post.url = imgList[count];
+		console.log(JSON.stringify(post))
+		$.post('http://localhost:3000/createPostcard', post, function (data, status) {
+			document.getElementById("postcard").src = data.url;
+		})
+	})
+
+	$('button#nextBtn').click(function () {
+			if(++count == imgList.length)
+				count = 0;
+			document.getElementById("img").src = imgList[count];
+		})
+	})
+	
+	
+	jQuery.preload = function(array) {
+		var length = array.length,
+			document = window.document,
+			body = document.body,
+			isIE = 'fileSize' in document,
+			object;
+		while (length--) {
+			if (isIE) {
+				new Image().src = array[length];
+				continue;
+			}
+			object = document.createElement('object');
+			object.data = array[length];
+			object.width = object.height = 0;
+			body.appendChild(object);
+        }
+    }
+
