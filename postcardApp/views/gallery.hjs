@@ -29,8 +29,8 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="/quote">Quote</a>
-            <a class="dropdown-item" href="#">Fakta</a>
-            <a class="dropdown-item" href="#">Egen text</a>
+            <a class="dropdown-item" href="/fact">Fakta</a>
+            <a class="dropdown-item" href="/userinput">Egen text</a>
           </div>
         </li>
         <li class="nav-item active">

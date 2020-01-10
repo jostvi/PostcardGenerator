@@ -9,12 +9,6 @@
         <p> Dagens citat: </p>
         <p> "{{quote}}" </p>
         <p> - {{author}}</p>
-        <p hidden>{{#keys}}{{/keys}}</p>
-         <div class="image-gallery-container">
-    {{#images.urlList}}
-    <img src='{{ url }}' alt='Vykort' class="bigImage">
-    {{/images.urlList}}
-  </div>
-     <!--   <img src="{{images}}", alt='En bild'></img> -->
+        <img src="{{url}}", alt='En bild'></img>
     </body>
 </html>

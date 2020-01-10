@@ -42,14 +42,11 @@ async function getImagesByKeyword(keywords, res) {
             return res.status(500).send()
         }
 
-<<<<<<< HEAD
-=======
     }
     console.log("returning")
     return images
 };
 
 // getImagesByKeyword("test")
->>>>>>> 53ec59ebe0d5b1d7982777df90e5de4bf62e2350
 module.exports.getImagesByKeyword = getImagesByKeyword
 

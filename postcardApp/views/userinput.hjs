@@ -29,7 +29,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="/quote">Quote</a>
-                        <a class="dropdown-item active" href="/fact">Fakta</a>
+                        <a class="dropdown-item" href="/fact">Fakta</a>
                         <a class="dropdown-item" href="/userinput">Egen text</a>
                     </div>
                 </li>
@@ -46,11 +46,30 @@
         </div>
     </nav>
     <h1>{{title}}</h1>
-    <p> Onödig fakta: </p>
-    <p> "{{fact}}" </p>
-    <img src="{{url}}" , alt='En bild'></img>
+    <form class="float-left" action="" method="post">
+        <div class="form-group form-control-lg">
+            <label for="exampleInputEmail1">Ange egen text</label>
+            <input type="text" maxlength="300" id="userinput" name="sample-text" class="form-control"
+                placeholder="Skriv in en egen text">
+                        <button type="submit" class="btn btn-primary">
+OK</button>
 
-    <p></p>
+        </div>
+    </form>
+    <div class="preview float-right">
+        <h3 id="preview-header">Förhandsgranskning</h1>
+        <div class="preview-image">
+            <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578575620/fjf09ezqlr3hfjb2jpjt.jpg"
+                width="500" height="380" />
+
+            <div class="preview-text">
+                <h3>Procupines can float in water. That is perfect when you are so small and cute. </h3>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- <img src="{{url}}" , alt='En bild'></img> -->
 
 
     <!-- Optional JavaScript -->

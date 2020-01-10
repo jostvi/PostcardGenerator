@@ -29,8 +29,8 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="/quote">Quote</a>
-                        <a class="dropdown-item" href="#">Fakta</a>
-                        <a class="dropdown-item" href="#">Egen text</a>
+                        <a class="dropdown-item" href="/fact">Fakta</a>
+                        <a class="dropdown-item" href="/userinput">Egen text</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -63,13 +63,17 @@
             att kreditera fotografen. Det är här ifrån bilderna som används i vykorten hämtas.
         </li>
         <li>
-            <strong>ParallelDots Keywords</strong>. För att kunna matcha citatet med en relaterad bild använder vi oss av det här APIet. Genom att skicka in citatet så returneras ett antal keywords från citatet, som vi sedan använder för att söka efter en bild som är lämplig.
+            <strong>ParallelDots Keywords</strong>. För att kunna matcha citatet med en relaterad bild använder vi oss
+            av det här APIet. Genom att skicka in citatet så returneras ett antal keywords från citatet, som vi sedan
+            använder för att söka efter en bild som är lämplig.
         </li>
         <li>
-            <strong>FavQs</strong> används för att generera slumpmässiga citat, som infogas över bilden för att skapa vykortet.
+            <strong>FavQs</strong> används för att generera slumpmässiga citat, som infogas över bilden för att skapa
+            vykortet.
         </li>
         <li>
-            <strong>UselessFacts</strong>. Ett API som tillhandahåller slumpmässiga fakta när man anropar det, vilket vi gör när användaren väljer att generera ett vykort med fakta.
+            <strong>UselessFacts</strong>. Ett API som tillhandahåller slumpmässiga fakta när man anropar det, vilket vi
+            gör när användaren väljer att generera ett vykort med fakta.
         </li>
     </ul>
 

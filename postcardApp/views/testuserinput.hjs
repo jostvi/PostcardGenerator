@@ -1,0 +1,8 @@
+<h1>You accessed this page via a GET request</h1>
+<form id="user-input-text" method="GET" action="/testuserinput">
+    <label for="userinput">Ange text på vykortet</label>
+    <input type="text" maxlength="300" id="userinput" name="sample-text"><br>
+    <input type="submit" value="OK">
+</form>
+
+<p>ID passed: {{ output }}</p>

@@ -98,12 +98,19 @@ h1 {
   font-weight: 900;
 }
 
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover, .dropdown-item:hover  {
   background-color: rgba(221, 221, 221, 0);
   color: rgb(255, 0, 0);
   font-style: italic;
 }
-
+.dropdown-menu {
+  background-color: rgb(245, 230, 220);
+  font-size: 14px;
+  border: none;
+}
+.dropdown-item {
+  color: red;
+}
 
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -132,6 +139,69 @@ h1 {
     padding: 1%;
   }
 
+  /* Form */
+
+  .btn {
+    margin-top: 10px;
+  }
+
+  /*Preview*/
+
+#preview-header{
+  font-size: 1.25rem;
+}
+
+.preview-wrapper{
+  width:500px;
+  height:380px;
+  position: relative;
+ padding: 0;
+ margin: 0;
+ text-align: center;
+
+}
+
+.preview {
+  width:500px;
+  height:380px;
+  position: relative;
+ padding: 0;
+ margin: 0;
+ text-align: center;
+
+}
+
+.preview-image{
+cursor:pointer;
+ position: relative;
+ display: block;
+
+}
+
+.preview-text{
+   position: absolute;
+   top: 0; right: 0;
+   bottom: 0; left: 0;
+   width: 500px;
+   height: 380px; 
+   text-align: center;
+   background-color: rgba(255, 255, 255, 0.651);
+    vertical-align:bottom;
+    line-height:380px;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.preview-text h3{
+   color: rgb(19, 170, 216);
+   font-family: Arial, Helvetica, sans-serif;
+   display: inline-table;
+    vertical-align:middle;
+    line-height:100%;      
+    margin: 50px;
+      
+}
+
 
 @media (max-width: 800px) {
   #carouselExampleIndicators {
@@ -149,5 +219,4 @@ h1 {
 
 }
 }
-}
-}
+}}
