@@ -44,11 +44,29 @@ async function getImagesByKeyword(keywords, res) {
         // console.log(images)
 
 
+<<<<<<< HEAD
     }
     console.log("returning")
     return images
 };
 
 // getImagesByKeyword("test")
+=======
+
+function getImagesByKeyword(keyword) {
+        var url = 'https://pixabay.com/api/?key=14668696-1050eb2ce23d8700022954b86' +
+        '&q=' + keyword + '&image_type=photo&orientation=horizontal'
+        helper.standardCall(url)
+        .then((result) => {
+            return new Promise ((resolve, reject) => {
+                var imageArray = [result.hits[0].largeImageURL, result.hits[1].largeImageURL, result.hits[2].largeImageURL]
+                console.log(imageArray)
+                resolve(imageArray)
+            })
+        .catch((error) => {console.log(error)
+        })
+    })};
+
+>>>>>>> 322963f8b593d9b8b12c1ebe8696df43df02affb
 module.exports.getImagesByKeyword = getImagesByKeyword
 

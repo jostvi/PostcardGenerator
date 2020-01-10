@@ -82,7 +82,7 @@
   </div>
 
   <!-- Knappar för olika sorters vykort. Behöver få rubriker i själva bilden-->
-  <div class="button-container w-75 p-3">
+  <div class="button-container center w-75 p-3">
     <div class="card-deck">
       <div class="card meme-image">
         <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578489421/zornh34kf8bb31xpajgc.jpg"
@@ -113,7 +113,6 @@
       </div>
     </div>
   </div>
-
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->

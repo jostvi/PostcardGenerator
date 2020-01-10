@@ -9,4 +9,8 @@ router.get('/', (req, res, next) => {
     })
 });
 
+router.get('/:id', function (req, res, next) {
+    res.render('testuserinput', {output: req.params.id});
+});
+
 module.exports = router;
