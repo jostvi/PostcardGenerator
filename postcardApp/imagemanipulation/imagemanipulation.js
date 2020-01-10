@@ -5,21 +5,19 @@ const cloudinary = require('cloudinary').v2;
 let imgActive = 'imagemanipulation/active/image.jpg';
 let imgExported = 'public/images/image1.jpg';
 
-
-
 cloudinary.config({
   cloud_name: 'dqhlic2nx',
   api_key: '922488389614978',
   api_secret: 'V3uoIVVMor9OcTrsxwikdc5VkX4'
 });
-    
+ 
 function checkIf(quote) {
-  console.log(quote.length)
-  if (quote.length < 250)
+  console.log("Quote.length: " + quote.length)
+  if(quote.length < 200) 
     font = jimp.FONT_SANS_64_BLACK
-  else 
-  font = jimp.FONT_SANS_32_BLACK
-  console.log(font)
+  else
+    font = jimp.FONT_SANS_32_BLACK
+  console.log("Font: " + font)
   return font
 }
 
