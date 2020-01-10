@@ -75,7 +75,7 @@ $(document).ready(function () {
 					imgList.push(item.url)
 				})
 				$.preload(imgList);;
-				document.getElementById("img").src = imgList[0];
+				document.getElementById("preview-image").src = imgList[0];
 			})
 
 	})
@@ -95,14 +95,14 @@ $(document).ready(function () {
 		post.url = imgList[count];
 		console.log(JSON.stringify(post))
 		$.post('http://localhost:3000/createPostcard', post, function (data, status) {
-			document.getElementById("img").src = data.url;
+			document.getElementById("preview-image").src = data.url;
 		})
 	})
 
 	$('button#nextBtn').click(function () {
 		if (++count == imgList.length)
 			count = 0;
-		document.getElementById("img").src = imgList[count];
+		document.getElementById("preview-image").src = imgList[count];
 	})
 })
 

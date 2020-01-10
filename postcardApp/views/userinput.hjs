@@ -46,15 +46,12 @@
         </div>
     </nav>
     <h1>{{title}}</h1>
-        <div class="float-left form-group form-control-lg">
-            <label for="sample-text">Ange egen text</label>
-            <input type="text" maxlength="300" id="userinput" name="sample-text" value=" " class="form-control"
-                placeholder="Skriv in en egen text">
+    <div class="float-left form-group form-control-lg">
+        <label for="sample-text">Ange egen text</label>
+        <input type="text" maxlength="300" id="userinput" name="sample-text" value=" " class="form-control"
+            placeholder="Skriv in en egen text">
+    </div>
 
- 
-
-        </div>
-    </form>
     <div class="preview float-right">
         <h2 id="preview-header">Förhandsvisning</h1>
             <div class="preview-image-box">

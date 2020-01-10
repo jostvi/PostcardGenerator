@@ -18,7 +18,7 @@ h1 {
 }
 
 .carousel-item {
-  height: 550px;
+  height: 500px;
   margin-left: 12.5%;
  }
 
@@ -27,6 +27,8 @@ h1 {
   top: 0;
   left: 0;
   min-height: 550px;
+  margin-bottom: 100px;
+
 }
 
 .carousel-control-prev-icon,
