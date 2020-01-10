@@ -46,24 +46,23 @@
         </div>
     </nav>
     <h1>{{title}}</h1>
-    <form class="float-left" action="/testuserinput" method="post">
-        <div class="form-group form-control-lg">
-            <label for="exampleInputEmail1">Ange egen text</label>
-            <input type="text" maxlength="300" id="userinput" name="sample-text" class="form-control"
+        <div class="float-left form-group form-control-lg">
+            <label for="sample-text">Ange egen text</label>
+            <input type="text" maxlength="300" id="userinput" name="sample-text" value=" " class="form-control"
                 placeholder="Skriv in en egen text">
-            <button type="submit" class="btn btn-primary">OK</button>
+
+ 
 
         </div>
     </form>
     <div class="preview float-right">
-        <h3 id="preview-header">Förhandsgranskning</h1>
+        <h2 id="preview-header">Förhandsvisning</h1>
             <div class="preview-image-box">
                 <img id="preview-image"
                     src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578649020/puaeieyjswx4fdgeof9g.jpg"
                     width="500" height="380" />
-
                 <div id="preview-text" class="preview-text">
-                    <h3>Sov gott inatt</h3>
+                    <h3 id="preview-text">Sov gott inatt</h3>
                 </div>
             </div>
     </div>

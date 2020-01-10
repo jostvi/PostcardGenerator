@@ -82,14 +82,14 @@
   </div>
 
   <!-- Knappar för olika sorters vykort. Behöver få rubriker i själva bilden-->
-  <div class="button-container center w-75 p-3">
+<div class="text-center">
+  <div class="button-container w-75 p-3">
     <div class="card-deck">
       <div class="card meme-image">
         <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578489421/zornh34kf8bb31xpajgc.jpg"
           class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Vykort med quote</h5>
-          <p class="card-text">Testtext</p>
           <a href="/quote" class="btn btn-primary">Skapa</a>
         </div>
       </div>
@@ -98,7 +98,6 @@
           class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Vykort med fakta</h5>
-          <p class="card-text">Testtext</p>
           <a href="/fact" class="btn btn-primary">Skapa</a>
         </div>
       </div>
@@ -107,12 +106,12 @@
           class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Vykort med egen text</h5>
-          <p class="card-text">Testtext</p>
           <a href="/userinput" class="btn btn-primary">Skapa</a>
         </div>
       </div>
     </div>
   </div>
+</div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->
