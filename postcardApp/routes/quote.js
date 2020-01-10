@@ -8,16 +8,18 @@ const pixaKey = '14668696-1050eb2ce23d8700022954b86';
 const pixabay = require('../getImages/getpixabayimages.js');
 
 router.get('/', (req, res) => {
+
     helper.standardCall('https://favqs.com/api/qotd')
         .then(res1 => {
             pd.apiKey = 'gSLgAnmknvK9FbxLwV3vIpH9GhSNp74R6CFtvPbLbRw';
             pd.keywords(res1.quote.body)
-                .then((response) => {
+                .then((res) => {
                     // console.log(res1.quote.body)
-                    // console.log(response);
-                    let keyword = JSON.parse(response);
+                    // console.log(res);
+                    let keyword = JSON.parse(res);
                     let sorted = keyword.keywords.sort((a, b) =>
                         Number(b.confidence_score) - Number(a.confidence_score));
+                
                     return sorted;
                 })
                 .catch((error) => {
@@ -25,11 +27,26 @@ router.get('/', (req, res) => {
                 })
                 .then(sorted => {
                     console.log(sorted)
-                    let result = pixabay.getImagesByKeyword(sorted, res)
+                    pixabay.getImagesByKeyword(sorted, res)
                     .then((result) => {
                         console.log("ute igen...")
-                        console.log(result)
-                        res.send(result);
+                      // console.log(result)
+                      
+                    res.send( {
+                        quote: res1.quote.body,
+                        author: res1.quote.author,
+                        urlList: result.urlList,
+                        keys: sorted
+                        }
+                    )
+                    // res.render('quote.hjs', {
+                    //     title: 'QuoteGenerator',
+                    //     quote: res1.quote.body,
+                    //     author: res1.quote.author,
+                    //     images: result.urlList,
+                    //     keys: sorted
+                    //     })
+                      
                     })
 
                     // var url = 'https://pixabay.com/api/?key=' + pixaKey + '&q=' +

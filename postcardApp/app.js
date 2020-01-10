@@ -2,6 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser')
 var logger = require('morgan');
 var cors = require('cors');
 var indexRouter = require('./routes/index');
@@ -10,6 +11,7 @@ var quoteRouter = require('./routes/quote');
 var galleryRouter = require('./routes/gallery')
 var factRouter = require('./routes/fact')
 var aboutRouter = require('./routes/about')
+var createPostcardRouter = require('./routes/createPostcard')
 var apiGalleryRouter = require('./routes/api/gallery')
 var apiQuoteRouter = require('./routes/api/quote_postcard')
 var apiFactRouter = require('./routes/api/fact_postcard')
@@ -28,6 +30,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
+app.use(bodyParser.urlencoded({ extended : false }))
+app.use(bodyParser.json())
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -38,6 +42,7 @@ app.use('/api/gallery', apiGalleryRouter)
 app.use('/api/quote_postcard', apiQuoteRouter)
 app.use('/api/fact_postcard', apiFactRouter)
 app.use('/about', aboutRouter)
+app.use('/createPostcard', createPostcardRouter)
 //OBS! tas bort sen
 app.use('/test', testRouter)
 

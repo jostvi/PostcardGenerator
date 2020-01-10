@@ -15,9 +15,9 @@ cloudinary.config({
     
 module.exports = {
 
-  generate : function(image, quote, tag) {
+  generate : function(url, quote, tag) {
     return new Promise((resolve, reject) => {
-      jimp.read(image)
+      jimp.read(url)
     
       .then(tpl => {
           tpl 
