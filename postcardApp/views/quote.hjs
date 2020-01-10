@@ -11,7 +11,9 @@
     <p> Dagens citat: </p>
     <p> "{{quote}}" </p>
     <p> - {{author}}</p>
-    <!-- <img src="{{url}}" , alt='En bild'></img> -->
+    <button id="getimg" type="button">Hämta bild</button>
+    <button id="nextBtn" type="button">Nästa</button>
+    <img id="img" alt='En bild' height="300" width="500"></img>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->

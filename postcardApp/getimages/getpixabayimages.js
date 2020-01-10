@@ -23,16 +23,14 @@ function getImagesByKeyword(keyword) {
             })
         .catch((error) => {console.log(error)
         })
+        
     })};
 
-<<<<<<< HEAD
-=======
-    }
-    console.log("returning")
-    return images
-};
+//     }
+//     console.log("returning")
+//     return images
+// };
 
 // getImagesByKeyword("test")
->>>>>>> e24f27b35ef005e7776d1d4a25c216441c071114
 module.exports.getImagesByKeyword = getImagesByKeyword
 

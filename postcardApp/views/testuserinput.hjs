@@ -18,7 +18,7 @@
         <input type="submit" id="submit-btn" value="OK">
     </form>
 
-    <p id="preview-text">ID passed: {{ output }}</p>
+    <p id="preview-text">ID passed:</p>
 
    
     <img src='https://res.cloudinary.com/dqhlic2nx/image/upload/v1578649020/puaeieyjswx4fdgeof9g.jpg' alt='Vykort'
@@ -37,7 +37,7 @@
         $("input#submit-btn").on("click", function () {
         var userInput = $(this).attr("name");
         $("p#preview-text").replaceWith(userInput);
-            
+
         })
 
 
