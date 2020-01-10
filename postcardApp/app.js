@@ -41,6 +41,7 @@ app.use('/users', usersRouter);
 app.use('/quote', quoteRouter);
 app.use('/gallery', galleryRouter)
 app.use('/fact', factRouter)
+app.use('/userinput', userInputRouter)
 app.use('/api/gallery', apiGalleryRouter)
 app.use('/api/quote_postcard', apiQuoteRouter)
 app.use('/api/fact_postcard', apiFactRouter)
