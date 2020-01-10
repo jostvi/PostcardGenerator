@@ -31,8 +31,11 @@ router.get('/', (req, res) => {
             console.log(res2)
             helper.standardCall(url)
             .then(res3 => {
-                console.log(res3.hits[0])
-                manipulator.generate(res3.hits[Math.floor(Math.random() * 11)].largeImageURL, res1.text)
+                var roof = 9;
+                // console.log(res3.hits[0])
+                if(res3.totalHits < roof)
+                    roof = res3totalHits + 1;
+                manipulator.generate(res3.hits[Math.floor(Math.random() * roof)].largeImageURL, res1.text, "fact")
                 .then(result => {
                    //console.log('Fact:' + result);
                     res.render('fact.hjs', {

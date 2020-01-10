@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <title>Postcard generator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <nav class="navbar transparent fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Postcard generator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Hem</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Skapa nytt vykort
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/quote">Quote</a>
+                        <a class="dropdown-item" href="#">Fakta</a>
+                        <a class="dropdown-item" href="#">Egen text</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/gallery">Bildgalleri</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/about">Om oss <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">API</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>Om tjänsten</h1>
+    <p>Vi saknade en tjänst som genererade traditionella vykort på ett kul och smidigt sätt. Därför bestämde vi oss
+        för att utveckla en tjänst där en användare genererar en text, antingen en egen eller en datorgenererad, och
+        sedan plockar ut en bild baserad på textinnehållet.</p>
+    <p>Vykortet kan delas med vänner på sociala medier, sparas som bildfil på datorn eller skrivas ut på ett fint papper
+        och skickas iväg som traditionellt vykort. </p>
+
+    <h3>Om oss</h3>
+    <p>Christina Knepper, Johan Steen Vingren, Agnes Hägerstrand, Axel Hägglund och Iris Brinkborg har utvecklat
+        tjänsten som en del av kursen <em>Storskaliga webbtjänster</em> på Malmö universitet 2020. </p>
+    <h3>APIer som används</h3>
+    <ul>
+        <li>
+            <strong>Pixabay</strong> erbjuder bilder som inte är upphovsrättsskyddade, och därmed fria att använda utan
+            att kreditera fotografen. Det är här ifrån bilderna som används i vykorten hämtas.
+        </li>
+        <li>
+            <strong>ParallelDots Keywords</strong>. För att kunna matcha citatet med en relaterad bild använder vi oss av det här APIet. Genom att skicka in citatet så returneras ett antal keywords från citatet, som vi sedan använder för att söka efter en bild som är lämplig.
+        </li>
+        <li>
+            <strong>FavQs</strong> används för att generera slumpmässiga citat, som infogas över bilden för att skapa vykortet.
+        </li>
+        <li>
+            <strong>UselessFacts</strong>. Ett API som tillhandahåller slumpmässiga fakta när man anropar det, vilket vi gör när användaren väljer att generera ett vykort med fakta.
+        </li>
+    </ul>
+
+
+</body>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script type="text/javascript" src="/scripts/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+</body>
+
+</html>
