@@ -44,14 +44,12 @@ async function getImagesByKeyword(keywords, res) {
         // console.log(images)
 
 
-<<<<<<< HEAD
     }
     console.log("returning")
     return images
 };
 
 // getImagesByKeyword("test")
-=======
 
 function getImagesByKeyword(keyword) {
         var url = 'https://pixabay.com/api/?key=14668696-1050eb2ce23d8700022954b86' +
@@ -67,6 +65,5 @@ function getImagesByKeyword(keyword) {
         })
     })};
 
->>>>>>> 322963f8b593d9b8b12c1ebe8696df43df02affb
 module.exports.getImagesByKeyword = getImagesByKeyword
 
