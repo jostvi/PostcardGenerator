@@ -287,11 +287,9 @@ h3 {
   #carouselExampleIndicators {
     height:280px;
     margin-top: 15%;
-}
+}}
 @media (max-width: 450px) {
   #carouselExampleIndicators {
     height:200px;
 
-}
-}
 }}

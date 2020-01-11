@@ -78,9 +78,22 @@ $(document).ready(function () {
             document.getElementById('spinner2').style.display = 'none';
             document.getElementById('next-image').disabled = true;
             document.getElementById('get-image').disabled = true;
+            //document.getElementById("fb-button").setAttribute('data-href', data.url)
         })
         
-	})
+    })
+    
+   /* OBS! här ska vykorts-url skickas in som parameter, hur får vi tag i det?  
+    $('button#save-image').click(function(url) {
+        var a = document.createElement('a');
+        imgurl = data.url//document.getElementById("preview-image").src
+        a.href = imgurl;
+        a.target="_blank"
+        a.download = "postcard.png";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }) */
 
 	$('button#next-image').click(function () {
 		if (++count == imgList.length)
