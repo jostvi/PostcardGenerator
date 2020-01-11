@@ -1,11 +1,13 @@
 body {
-  padding: 50px;
   font-size: 1.5rem;
   background-color:rgb(245, 230, 220) !important;
 }
 h1 {
-  padding-top: 0%;
+  padding-top: 5%;
   padding-bottom: 5%;
+}
+h2 {
+  margin: 50px 0px 20px 0px;
 }
 
 /* Startsidan */
@@ -151,7 +153,7 @@ padding-top: 2%;
   /* quote, userinput and fact pages */
 .postcard-wrapper {
   margin: 0 auto;
-  margin-top: 5%;
+  margin-top: 60px;
 }
 
   /* Preview */
@@ -252,6 +254,10 @@ h3 {
 }
 }
 @media (max-width: 1000px){
+  .postcard-wrapper {
+    margin: 0 auto;
+    margin-top: 80px;
+  }
 
   h3 {
     font-size: 1.5rem;
@@ -284,10 +290,7 @@ h3 {
     height:380px;
   }
 
-    .postcard-wrapper {
-      margin: 0 auto;
-      margin-top: 10%;
-    }
+
 }
 @media (max-width: 615px) {
   #carouselExampleIndicators {

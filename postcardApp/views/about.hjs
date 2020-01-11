@@ -52,10 +52,10 @@
     <p>Vykortet kan delas med vänner på sociala medier, sparas som bildfil på datorn eller skrivas ut på ett fint papper
         och skickas iväg som traditionellt vykort. </p>
 
-    <h3>Om oss</h3>
+    <h2>Om oss</h2>
     <p>Christina Knepper, Johan Steen Vingren, Agnes Hägerstrand, Axel Hägglund och Iris Brinkborg har utvecklat
         tjänsten som en del av kursen <em>Storskaliga webbtjänster</em> på Malmö universitet 2020. </p>
-    <h3>APIer som används</h3>
+    <h2>APIer som används</h2>
     <ul>
         <li>
             <strong>Pixabay</strong> erbjuder bilder som inte är upphovsrättsskyddade, och därmed fria att använda utan
