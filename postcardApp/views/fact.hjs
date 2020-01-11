@@ -42,43 +42,31 @@
             </ul>
         </div>
     </nav>
-<<<<<<< HEAD
     <div class="postcard-wrapper w-75">
 
-        <h1>{{title}}</h1>
-        <p>Onödig fakta: </p>
-        <p id="text">{{fact}}</p>
-
+        <h1>Vykort med fakta</h1>
         <h2 id="preview-header w-100">Förhandsvisning</h2>
         <div class="preview-image-box">
             <img id="preview-image" src="" width="500" height="380" /></img>
             <div id="preview-text" class="preview-text">
-                <h3 id="preview-text"> {{fact}}</h3>
+                <h3 id="text"> {{fact}}</h3>
             </div>
         </div>
         <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
+        <button id="spinner1" class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Hämtar...
+        </button>
         <button id="next-image" class="btn btn-primary" type="button">Nästa</button>
         <button id="create-postcard" class="btn btn-primary" type="button" onclick="changeButton()">Skapa kort</button>
+        <button id="spinner2" class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Skapar...
+        </button>
         <button id="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
     </div>
-=======
-    <h1>{{title}}</h1>
-    <p> Onödig fakta: </p>
-    <p id="text"> "{{fact}}" </p>
-    <img id="preview-image" src="" , alt='En bild'></img>
-    <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
-    <button id="spinner1" class="btn btn-primary" type="button" disabled>
-        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-        Hämtar...
-    </button>
-    <button id="next-image" class="btn btn-primary" type="button">Nästa</button>
-    <button id="create-postcard" class="btn btn-primary" type="button" onclick="changeButton()">Skapa kort</button>
-    <button id="spinner2" class="btn btn-primary" type="button" disabled>
-        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-        Skapar...
-    </button>
-    <button id ="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
->>>>>>> d3ddbab28496b1ed5546e09b4625b7229ba29c6a
+
+
 
 
     <!-- Optional JavaScript -->

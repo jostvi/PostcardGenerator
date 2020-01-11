@@ -49,16 +49,13 @@
 
     <div class="postcard-wrapper w-75">
 
-        <h1>{{title}}</h1>
-        <p> Dagens citat: </p>
-        <p id="text"> "{{quote}}" </p>
-        <p id="author"> - {{author}}</p>
-
+        <h1>Vykort med citat</h1>
+  
         <h2 id="preview-header w-100">Förhandsvisning</h2>
         <div class="preview-image-box">
             <img id="preview-image" src="" width="500" height="380" /></img>
             <div id="preview-text" class="preview-text">
-                <h3 id="preview-text"> "{{quote}}"<br> - {{author}}</h3>
+                <h3 id="text"> "{{quote}}"<br> - {{author}}</h3>
             </div>
         </div>
     <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>

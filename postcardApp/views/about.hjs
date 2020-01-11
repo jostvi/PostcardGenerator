@@ -43,6 +43,8 @@
         </div>
     </nav>
 
+    <div class="postcard-wrapper w-75">
+
     <h1>Om tjänsten</h1>
     <p>Vi saknade en tjänst som genererade traditionella vykort på ett kul och smidigt sätt. Därför bestämde vi oss
         för att utveckla en tjänst där en användare genererar en text, antingen en egen eller en datorgenererad, och
@@ -73,6 +75,7 @@
             gör när användaren väljer att generera ett vykort med fakta.
         </li>
     </ul>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->

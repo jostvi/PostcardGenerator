@@ -17,7 +17,7 @@
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse ml-auto mr-1" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -42,50 +42,36 @@
             </ul>
         </div>
     </nav>
-    <h1>{{title}}</h1>
-    <p>Output: {{output}}</p>
-    <div class="float-left form-group form-control-lg">
+
+    <div class="postcard-wrapper w-75">
+
+        <h1>Vykort med egen text</h1>
+        <form>
         <label for="sample-text">Ange egen text</label>
         <input type="text" maxlength="300" id="userinput" name="sample-text" value=" " class="form-control"
             placeholder="Skriv in en egen text">
-    </div>
-
-   <div class="postcard-wrapper w-75">
-        <h2 id="preview-header">Förhandsvisning</h1>
-            <div class="preview-image-box">
-                <img id="preview-image"
-                    src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578649020/puaeieyjswx4fdgeof9g.jpg"
-                    width="500" height="380" />
-                <div id="preview-text" class="preview-text">
-                    <h3 id="preview-text">Sov gott inatt</h3>
-                </div>
-            </div>
-    </div>
-    </div>
-
-        <div class="postcard-wrapper w-75">
-
-        <h1>{{title}}</h1>
-        <p id="text"></p>
-        <div class="form-group form-control-lg">
-        <label for="sample-text">Ange egen text</label>
-        <input type="text" maxlength="300" id="userinput" name="sample-text" value="" class="form-control"
-            placeholder="Skriv in en egen text">
-        </div>
-
-
+        </form>
         <h2 id="preview-header w-100">Förhandsvisning</h2>
         <div class="preview-image-box">
             <img id="preview-image" src="" width="500" height="380" /></img>
             <div id="preview-text" class="preview-text">
-                <h3 id="preview-text"> {{quote}}</h3>
+                <h3 id="text"> {{userinput}}</h3>
             </div>
         </div>
         <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
+        <button id="spinner1" class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Hämtar...
+        </button>
         <button id="next-image" class="btn btn-primary" type="button">Nästa</button>
         <button id="create-postcard" class="btn btn-primary" type="button" onclick="changeButton()">Skapa kort</button>
+        <button id="spinner2" class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Skapar...
+        </button>
         <button id="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
     </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->
