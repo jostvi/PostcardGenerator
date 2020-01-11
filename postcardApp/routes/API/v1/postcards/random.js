@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 const imageGallery = require('../../../../getimages/getImages.js')
+//getImages ska döpas om till getPostcards
+//OBS! Effektivisera koden, gör en ifsats som gör en check på taggen!!!
+//kolla upp vilken information som ska skickas med i api responsen
 
 router.get('/', (req, res, next) => {
     var tag = req.query.tag;
