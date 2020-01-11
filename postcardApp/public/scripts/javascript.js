@@ -5,6 +5,8 @@ window.onload = function() {
     document.getElementById('preview-image').style.visibility = 'hidden'
     document.getElementById('spinner1').style.display = 'none';
     document.getElementById('spinner2').style.display = 'none';
+   
+    
   };
 
 
@@ -14,6 +16,7 @@ function enableButton() {
 }
 //översätt detta till jquery så att man kan utnyttja data.url
 function saveImage() {
+    
     var a = document.createElement('a');
     imgurl = data.url//document.getElementById("preview-image").src
     a.href = imgurl;

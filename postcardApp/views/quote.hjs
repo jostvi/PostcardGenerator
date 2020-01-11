@@ -11,6 +11,10 @@
 </head>
 
 <body>
+{{!-- Facebook share button plugin --}}
+{{!-- <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v5.0"></script> --}}
+
 
     <nav class="navbar transparent fixed-top navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/">Postcard generator</a>
@@ -70,12 +74,14 @@
         Hämtar...
     </button>
     <button id="next-image" class="btn btn-primary" type="button">Nästa</button>
-    <button id="create-postcard" class="btn btn-primary" type="button" onclick="changeButton()">Skapa kort</button>
+    <button id="create-postcard" class="btn btn-primary" type="button">Skapa kort</button>
     <button id="spinner2" class="btn btn-primary" type="button" disabled>
         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
         Skapar...
     </button>
-    <button id ="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
+    <button id ="save-image" class="btn btn-primary" type="button">Spara vykort</button>
+    {{!-- OBS! se till att vykorts-url läggs till i data-href --}}
+   {{!--  <div class="fb-share-button" id="fb-button" data-href="" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Dela</a></div> --}}
     
 
         <!-- Optional JavaScript -->
