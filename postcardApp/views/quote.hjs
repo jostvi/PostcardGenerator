@@ -50,14 +50,8 @@
     <div class="postcard-wrapper w-75">
 
         <h1>{{title}}</h1>
-
-    <p> Dagens citat: </p>
-    <p id="text"> "{{quote}}" </p>
-    <p id="author"> - {{author}}</p>
-    </div>
-
         <p> Dagens citat: </p>
-        <p id="quote"> "{{quote}}" </p>
+        <p id="text"> "{{quote}}" </p>
         <p id="author"> - {{author}}</p>
 
         <h2 id="preview-header w-100">Förhandsvisning</h2>
@@ -67,10 +61,11 @@
                 <h3 id="preview-text"> "{{quote}}"<br> - {{author}}</h3>
             </div>
         </div>
-    <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
-    <button id="next-image" class="btn btn-primary" type="button">Nästa</button>
-    <button id="create-postcard" class="btn btn-primary" type="button" onclick="changeButton()">Skapa kort</button>
-    <button id ="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
+        <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
+        <button id="next-image" class="btn btn-primary" type="button">Nästa</button>
+        <button id="create-postcard" class="btn btn-primary" type="button" onclick="changeButton()">Skapa kort</button>
+        <button id="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->

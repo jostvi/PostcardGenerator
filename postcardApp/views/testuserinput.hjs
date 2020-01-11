@@ -18,9 +18,6 @@
         <input type="submit" id="submit-btn" value="OK">
     </form>
 
-<<<<<<< HEAD
-    <p id="preview-text">ID passed:</p>
-=======
     <p>ID passed: </p>
     <p id="preview-text">{{ output }}</p>
 
@@ -42,9 +39,7 @@
         $("#backgroundModal").fadeIn(500);
         // Visar bilden genom en animation
         $("#imageModal").fadeIn(500); --}} 
->>>>>>> 322963f8b593d9b8b12c1ebe8696df43df02affb
 
-   
     <img src='https://res.cloudinary.com/dqhlic2nx/image/upload/v1578649020/puaeieyjswx4fdgeof9g.jpg' alt='Vykort'
         class="bigImage">
     <!-- Optional JavaScript -->
@@ -57,27 +52,15 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="/scripts/script.js"></script>
-<<<<<<< HEAD
-     <script>
-        $("input#submit-btn").on("click", function () {
-        var userInput = $(this).attr("name");
-        $("p#preview-text").replaceWith(userInput);
-
-        })
-
-
-    </script>
-
-=======
  
-        <script>
+    <script>
+
         $("input#submit-btn").on("click", function () {
         var userinput= document.getElementById("#userinput").attr("name")
         $("p#preview-text").replaceWith(userInput);
         })
 
     </script>
->>>>>>> 322963f8b593d9b8b12c1ebe8696df43df02affb
 </body>
 
 </html>

@@ -43,6 +43,7 @@
         </div>
     </nav>
     <h1>{{title}}</h1>
+    <p>Output: {{output}}</p>
     <div class="float-left form-group form-control-lg">
         <label for="sample-text">Ange egen text</label>
         <input type="text" maxlength="300" id="userinput" name="sample-text" value=" " class="form-control"
@@ -60,6 +61,30 @@
                 </div>
             </div>
     </div>
+    </div>
+
+        <div class="postcard-wrapper w-75">
+
+        <h1>{{title}}</h1>
+        <p id="text"></p>
+        <div class="form-group form-control-lg">
+        <label for="sample-text">Ange egen text</label>
+        <input type="text" maxlength="300" id="userinput" name="sample-text" value="" class="form-control"
+            placeholder="Skriv in en egen text">
+        </div>
+
+
+        <h2 id="preview-header w-100">Förhandsvisning</h2>
+        <div class="preview-image-box">
+            <img id="preview-image" src="" width="500" height="380" /></img>
+            <div id="preview-text" class="preview-text">
+                <h3 id="preview-text"> {{quote}}</h3>
+            </div>
+        </div>
+        <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
+        <button id="next-image" class="btn btn-primary" type="button">Nästa</button>
+        <button id="create-postcard" class="btn btn-primary" type="button" onclick="changeButton()">Skapa kort</button>
+        <button id="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
     </div>
 
     <!-- Optional JavaScript -->
