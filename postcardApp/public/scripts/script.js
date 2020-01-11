@@ -27,44 +27,44 @@ $(document).ready(function () {
 	$('button#get-image').click(function () {
         document.getElementById('get-image').style.display = 'none';
         document.getElementById('spinner1').style.display = 'inline';
-        let text = document.getElementById("text").innerHTML
-
+        let text = document.getElementById('text').innerHTML
+        
         $.get('http://localhost:3000/topsecret/images', { text : text, keyCount : keyCount },
-			function (data, status) {
+			function (data) {
+                if(data === 'error')
+                    return
 				count = 0
 				imgList = []
 				data.urlList.forEach(function (item) {
-                    imgList.push(item.url)
-                    
+                    imgList.push(item.url)   
                 })
                 keyMax = data.keys
                 if(++keyCount == keyMax)
                     keyCount = 0
 				$.preload(imgList);
-                document.getElementById("preview-image").src = imgList[0];
+                document.getElementById('preview-image').src = imgList[0];
                 document.getElementById('preview-image').style.visibility = 'visible';
-                
-
             })
             //trodde att detta skulle leda till att spinnern först slutar snurra när bilden faktiskt visas upp, men det funkar ändå inte...
             .done(function() {
                 
                 document.getElementById('get-image').style.display = 'inline';
-                document.getElementById('spinner1').style.display = 'none';
+                document.getElementById('spinner1').style.display = 'none';  
             })
-
 	})
 
 	$('button#create-postcard').click(function () {
         document.getElementById('create-postcard').style.display = 'none';
         document.getElementById('spinner2').style.display = 'inline';
-        author = document.getElementById("author")
-        if(author != null) {
-            post.text = document.getElementById("text").innerHTML + "\n" + author.innerHTML
+        var text = document.getElementById('text').innerHTML,
+            author = document.getElementById('author').innerHTML
+       
+        if(author != "") {
+            post.text = text + "\n" + author
             post.tag = "quote"
         }
         else {
-            post.text = document.getElementById("text").innerHTML
+            post.text = text
             post.tag = "fact"
         }
 
@@ -72,9 +72,10 @@ $(document).ready(function () {
         
         console.log(JSON.stringify(post))
         //Ska vi ändra anropet till /api/v1/postcards/create?
-		$.post('http://localhost:3000/createPostcard', post, function (data, status) {
-            alert(data.url)
-            document.getElementById("save-image").style.display = 'inline'
+		$.post('http://localhost:3000/createPostcard', post, function (data) {
+            if(data === 'error')
+                    return
+            document.getElementById('save-image').style.display = 'inline'
             document.getElementById('spinner2').style.display = 'none';
             document.getElementById('next-image').disabled = true;
             document.getElementById('get-image').disabled = true;

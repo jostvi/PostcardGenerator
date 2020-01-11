@@ -13,8 +13,8 @@ function getImagesByKeyword(keyword) {
             .then(response => {
                 var images = { urlList: [] }
                 for (i = 0; i < 8; i++) {
-                    console.log(response.hits[i].largeImageURL)         // Måste felhanteras! 
-                    images.urlList.push({ url: response.hits[i].largeImageURL })    // Måste felhanteras!
+                    console.log(response.hits[i].largeImageURL)
+                    images.urlList.push({ url: response.hits[i].largeImageURL })
                 }
                 console.log("returning")
                 resolve(images)

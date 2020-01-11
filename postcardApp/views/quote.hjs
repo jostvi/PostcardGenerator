@@ -11,14 +11,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-{{!-- Facebook share button plugin --}}
-{{!-- <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v5.0"></script> --}}
-
-
-=======
->>>>>>> cdb67b651679a9c4382e3b8fd13de60eb6debffd
     <nav class="navbar transparent fixed-top navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/">Postcard generator</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -33,7 +25,7 @@
                         Skapa nytt vykort <span class="sr-only">(current)</span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="/quote">Quote</a>
+                        <a class="dropdown-item" href="/quote">Citat</a>
                         <a class="dropdown-item" href="/fact">Fakta</a>
                         <a class="dropdown-item" href="/userinput">Egen text</a>
                     </div>
@@ -58,26 +50,10 @@
         <div class="preview-image-box w-100">
             <img id="preview-image" src="" width="500" height="380" />
             <div id="preview-text" class="preview-text">
-                <h3 id="text"> "{{quote}}"<br> - {{author}}</h3>
+                <h3 id="text"> "{{quote}}"</h3>
             </div>
+           
         </div>
-<<<<<<< HEAD
-    <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
-    <button id="spinner1" class="btn btn-primary" type="button" disabled>
-        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-        Hämtar...
-    </button>
-    <button id="next-image" class="btn btn-primary" type="button">Nästa</button>
-    <button id="create-postcard" class="btn btn-primary" type="button">Skapa kort</button>
-    <button id="spinner2" class="btn btn-primary" type="button" disabled>
-        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-        Skapar...
-    </button>
-    <button id ="save-image" class="btn btn-primary" type="button">Spara vykort</button>
-    {{!-- OBS! se till att vykorts-url läggs till i data-href --}}
-   {{!--  <div class="fb-share-button" id="fb-button" data-href="" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Dela</a></div> --}}
-    
-=======
         <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
         <button id="spinner1" class="btn btn-primary" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -90,8 +66,8 @@
             Skapar...
         </button>
         <button id="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
+        <p hidden id="author" - {{author}} ></p>  <!-- Tillfällig, ska placeras i preview box -->
     </div>
->>>>>>> cdb67b651679a9c4382e3b8fd13de60eb6debffd
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->
