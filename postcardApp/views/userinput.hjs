@@ -17,7 +17,7 @@
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse ml-auto mr-1" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -44,7 +44,6 @@
     </nav>
 
     <div class="postcard-wrapper w-75">
-
         <h1>Vykort med egen text</h1>
         <form>
         <label for="userinput">Ange egen text</label>
@@ -53,7 +52,7 @@
         </form>
         <h2 id="preview-header">Förhandsvisning</h2>
         <div class="preview-image-box w-100">
-            <img id="preview-image" src="" width="500" height="380" />
+            <img id="preview-image" src="" />
             <div id="preview-text" class="preview-text">
                 <h3 id="text">{{userinput}}</h3>
             </div>
@@ -71,7 +70,6 @@
         </button>
         <button id="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
     </div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->
