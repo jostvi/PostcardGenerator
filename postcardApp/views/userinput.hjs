@@ -52,7 +52,7 @@
         </form>
         <h2 id="preview-header">Förhandsvisning</h2>
         <div class="preview-image-box w-100">
-            <img id="preview-image" src="" width="500" height="380" />
+            <img id="preview-image" src="" />
             <div id="preview-text" class="preview-text">
                 <h3 id="text">{{userinput}}</h3>
             </div>
