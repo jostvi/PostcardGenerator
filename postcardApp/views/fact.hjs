@@ -42,6 +42,17 @@
             </ul>
         </div>
     </nav>
+<<<<<<< HEAD
+=======
+    <h1>{{title}}</h1>
+    <p> Onödig fakta: </p>
+    <p id="text"> "{{fact}}" </p>
+    <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
+    <button id="next-image" class="btn btn-primary" type="button">Nästa</button>
+    <button id="create-postcard" class="btn btn-primary" type="button" onclick="changeButton()">Skapa kort</button>
+    <button id ="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
+    <img id="preview-image" src="" , alt='En bild'></img>
+>>>>>>> 1f10f3104ed0f87fa6ee5a5dcaf54460c3872008
 
     <div class="postcard-wrapper w-75">
 
@@ -64,6 +75,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="/scripts/script.js"></script>
+    <script type="text/javascript" src="/scripts/javascript.js"></script>
 </body>
 
 </html>

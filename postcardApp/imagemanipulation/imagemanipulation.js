@@ -11,9 +11,9 @@ cloudinary.config({
   api_secret: 'V3uoIVVMor9OcTrsxwikdc5VkX4'
 });
  
-function checkIf(quote) {
-  console.log("Quote.length: " + quote.length)
-  if(quote.length < 200) 
+function checkIf(text) {
+  console.log("Quote.length: " + text.length)
+  if(text.length < 200) 
     font = jimp.FONT_SANS_64_BLACK
   else
     font = jimp.FONT_SANS_32_BLACK
@@ -23,7 +23,7 @@ function checkIf(quote) {
 
 module.exports = {
 
-  generate : function(url, quote, tag) {
+  generate : function(url, text, tag) {
     return new Promise((resolve, reject) => {
       console.log("before read")
       console.log(url)
@@ -53,7 +53,7 @@ module.exports = {
       .then(() => (jimp.read(imgActive)))
   
       .then(tpl => (
-          jimp.loadFont(checkIf(quote))
+          jimp.loadFont(checkIf(text))
           .then(font => ([tpl, font]))
       ))
   
@@ -62,7 +62,7 @@ module.exports = {
           tpl = data[0];
           font = data[1];
           let textData = {
-            text: quote,
+            text: text,
             maxWidth: 800,
             maxHeight: 500,
             placementX: 100,

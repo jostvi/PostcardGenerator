@@ -1,13 +1,13 @@
 window.onload = function() {
-    document.getElementById('saveimg').style.display = 'none';
-    document.getElementById('createBtn').disabled = true;
-    document.getElementById('nextBtn').disabled = true;
+    document.getElementById('save-image').style.display = 'none';
+    document.getElementById('create-postcard').disabled = true;
+    document.getElementById('next-image').disabled = true;
   };
 
 
 function enableButton() {
-    document.getElementById('createBtn').disabled = false;
-    document.getElementById('nextBtn').disabled = false;
+    document.getElementById('create-postcard').disabled = false;
+    document.getElementById('next-image').disabled = false;
 }
 function saveImage() {
     var a = document.createElement('a');
@@ -21,7 +21,7 @@ function saveImage() {
 }
 
 function changeButton() {
-    document.getElementById("createBtn").style.display = 'none';
-    document.getElementById("saveimg").style.display = 'inline'
+    document.getElementById("create-postcard").style.display = 'none';
+    document.getElementById("save-image").style.display = 'inline'
 
 }
