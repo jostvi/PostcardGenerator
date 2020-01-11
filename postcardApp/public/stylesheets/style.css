@@ -1,24 +1,22 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
   background-color:rgb(245, 230, 220) !important;
 }
 h1 {
-  padding-top: 5%;
+  padding-top: 0%;
   padding-bottom: 5%;
 }
 
 /* Startsidan */
 .carousel-inner{
   overflow:hidden;
-  height: 500px;
 }
 #carouselExampleIndicators {
-  height:500px;
+  margin-top: 10%;
 }
 
 .carousel-item {
-  height: 500px;
   margin-left: 12.5%;
  }
 
@@ -26,7 +24,6 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  min-height: 550px;
   margin-bottom: 100px;
 
 }
@@ -78,6 +75,7 @@ padding-top: 2%;
   flex-wrap: wrap;
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: 10%;
 }
 
 /* Navbar */
@@ -110,6 +108,11 @@ padding-top: 2%;
 }
 .dropdown-item {
   color: red;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 /* Style the links inside the navigation bar */
@@ -145,7 +148,13 @@ padding-top: 2%;
     margin-top: 10px;
   }
 
-  /*Preview*/
+  /* quote, userinput and fact pages */
+.postcard-wrapper {
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+  /* Preview */
 
 #preview-header{
   font-size: 1.25rem;
@@ -191,7 +200,7 @@ cursor:pointer;
     box-shadow: 10px 10px 8px grey;
   }
 
-.preview-text h3{
+h3{
    color: rgb(0, 0, 0);
    font-family: Arial, Helvetica, sans-serif;
    display: inline-table;
@@ -200,21 +209,32 @@ cursor:pointer;
     margin: 50px;
       
 }
+/* Userinput */
+form{
+  margin-bottom: 5%;
+}
+
+#userinput{
+  width: 500px;
+}
 
 @media (max-width: 800px) {
   #carouselExampleIndicators {
     height:380px;
+  }
 
+    .postcard-wrapper {
+      margin: 0 auto;
+      margin-top: 10%;
+    }
 }
 @media (max-width: 615px) {
   #carouselExampleIndicators {
     height:280px;
-
-}
+    margin-top: 15%;
+}}
 @media (max-width: 450px) {
   #carouselExampleIndicators {
     height:200px;
 
-}
-}
 }}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 
 <head>
     <title>{{title}}</title>
@@ -11,11 +11,14 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 {{!-- Facebook share button plugin --}}
 {{!-- <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v5.0"></script> --}}
 
 
+=======
+>>>>>>> cdb67b651679a9c4382e3b8fd13de60eb6debffd
     <nav class="navbar transparent fixed-top navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/">Postcard generator</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -24,9 +27,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Hem</a>
-                </li>
                 <li class="nav-item active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -51,23 +51,17 @@
         </div>
     </nav>
 
+    <div class="postcard-wrapper w-75">
 
-    </div>
-    <h1>{{title}}</h1>
-
-
-    <p> Dagens citat: </p>
-    <p id="text"> "{{quote}}" </p>
-    <p id="author"> - {{author}}</p>
-    </div>
-
-    <h2 id="preview-header">Förhandsvisning</h1>
-        <div class="preview-image-box">
-            <img id="preview-image" src="" width="500" height="380" /></img>
+        <h1>Vykort med citat</h1>
+        <h2 id="preview-header">Förhandsvisning</h2>
+        <div class="preview-image-box w-100">
+            <img id="preview-image" src="" width="500" height="380" />
             <div id="preview-text" class="preview-text">
-                <h3 id="preview-text"> "{{quote}}"<br> - {{author}}</h3>
+                <h3 id="text"> "{{quote}}"<br> - {{author}}</h3>
             </div>
         </div>
+<<<<<<< HEAD
     <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
     <button id="spinner1" class="btn btn-primary" type="button" disabled>
         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -83,6 +77,21 @@
     {{!-- OBS! se till att vykorts-url läggs till i data-href --}}
    {{!--  <div class="fb-share-button" id="fb-button" data-href="" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Dela</a></div> --}}
     
+=======
+        <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
+        <button id="spinner1" class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Hämtar...
+        </button>
+        <button id="next-image" class="btn btn-primary" type="button">Nästa</button>
+        <button id="create-postcard" class="btn btn-primary" type="button" onclick="changeButton()">Skapa kort</button>
+        <button id="spinner2" class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Skapar...
+        </button>
+        <button id="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
+    </div>
+>>>>>>> cdb67b651679a9c4382e3b8fd13de60eb6debffd
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->
@@ -93,8 +102,8 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
-        <script type="text/javascript" src="/scripts/script.js"></script>
-        <script type="text/javascript" src="/scripts/javascript.js"></script>
+        <script src="/scripts/script.js"></script>
+        <script src="/scripts/javascript.js"></script>
 </body>
 
 </html>
