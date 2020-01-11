@@ -5,14 +5,9 @@ $(document).ready(function () {
         url: ""
         },
         count = 0,
-<<<<<<< HEAD
-		imgList = [];
-		
-=======
         keyCount = 0;
         imgList = [];
 
->>>>>>> c9d266c13840d4b2af05aab509a63fee0d164b97
     $("img.bigImage").on("click", function () {
         var src = $(this).attr("src");
         $("body").prepend("<img src='" + src + "' style='position: fixed; width: 60%; top: 10%; left: 20%; z-index: 2000; border: 10px solid #fff; background-color: white; display: none;' id='imageModal'>")
