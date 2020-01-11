@@ -46,7 +46,7 @@ $(document).ready(function () {
 	$('button#create-postcard').click(function () {
         author = document.getElementById("author")
         if(author != null) {
-            post.text = document.getElementById("text").innerHTML + "\n\n" + author.innerHTML
+            post.text = document.getElementById("text").innerHTML + "\n" + author.innerHTML
             post.tag = "quote"
         }
         else {

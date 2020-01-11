@@ -5,11 +5,11 @@ const helper = require('../API_helper');
 router.get('/', (req, res) => {
 
     helper.standardCall('https://favqs.com/api/qotd')
-        .then(res1 => {
+        .then(result => {
             res.render('quote.hjs', {
                 title: 'QuoteGenerator',
-                quote: res1.quote.body,
-                author: res1.quote.author
+                quote: result.quote.body,
+                author: result.quote.author
             })
         })
         .catch(err => {

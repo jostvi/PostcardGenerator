@@ -61,7 +61,7 @@
         <div class="preview-image-box">
             <img id="preview-image" src="" width="500" height="380" /></img>
             <div id="preview-text" class="preview-text">
-                <h3 id="preview-text"> "{{quote}}"</h3>
+                <h3 id="preview-text"> "{{quote}}"<br> - {{author}}</h3>
             </div>
         </div>
     <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>

@@ -7,23 +7,30 @@ const pixabay = require('../../getImages/getpixabayimages.js');
 router.get('/', (req, res) => {
     text = req.query.text
     count = req.query.keyCount
-    console.log("keys: " + count)
+    console.log("key: " + count)
     wordpos = new WordPOS();
-    wordpos.getNouns(text, (keys) => {
-        key = keys[count]
-        pixabay.getImagesByKeyword(key, res)
-        .then((result) => {
-            console.log("ute igen...")
-            // console.log(result)
-
+    wordpos.getNouns(text, (keys) => { 
+        key = keys[count] 
+        console.log(key)
+        pixabay.getImagesByKeyword(key)
+        .then(result => {
             res.send({
                 urlList: result.urlList,
                 keys: keys.length
-            }
-            )
-        })
-        .catch(err => { res.send(err) })
+            })
+        }) 
     })
+       
+        
+    //     .then((result) => {
+    //         console.log("ute igen...")
+    //         // console.log(result)
+
+           
+    //         )
+    //     })
+    //     .catch(err => { res.send(err) })
+    // })
 });
 
 module.exports = router;
