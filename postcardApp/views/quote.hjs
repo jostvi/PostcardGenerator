@@ -65,9 +65,18 @@
             </div>
         </div>
     <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
+    <button id="spinner1" class="btn btn-primary" type="button" disabled>
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        Hämtar...
+    </button>
     <button id="next-image" class="btn btn-primary" type="button">Nästa</button>
     <button id="create-postcard" class="btn btn-primary" type="button" onclick="changeButton()">Skapa kort</button>
+    <button id="spinner2" class="btn btn-primary" type="button" disabled>
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        Skapar...
+    </button>
     <button id ="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
+    
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->
