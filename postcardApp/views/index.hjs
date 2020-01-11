@@ -78,36 +78,36 @@
   </div>
 
   <!-- Knappar för olika sorters vykort. Behöver få rubriker i själva bilden-->
-<div class="text-center">
-  <div class="button-container w-75 p-3">
-    <div class="card-deck">
-      <div class="card meme-image">
-        <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578757362/wzskfi1h9modynhkj0dh.jpg"
-          class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Vykort med quote</h5>
-          <a href="/quote" class="btn btn-primary">Skapa</a>
+  <div class="text-center">
+    <div class="button-container w-75 p-3">
+      <div class="card-deck">
+        <div class="card meme-image">
+          <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578757362/wzskfi1h9modynhkj0dh.jpg"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Vykort med quote</h5>
+            <a href="/quote" class="btn btn-primary">Skapa</a>
+          </div>
         </div>
-      </div>
-      <div class="card meme-image">
-        <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578674321/siz23oykrdpmalioluxp.jpg"
-          class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Vykort med fakta</h5>
-          <a href="/fact" class="btn btn-primary">Skapa</a>
+        <div class="card meme-image">
+          <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578674321/siz23oykrdpmalioluxp.jpg"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Vykort med fakta</h5>
+            <a href="/fact" class="btn btn-primary">Skapa</a>
+          </div>
         </div>
-      </div>
-      <div class="card meme-image">
-        <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578489421/zornh34kf8bb31xpajgc.jpg"
-          class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Vykort med egen text</h5>
-          <a href="/userinput" class="btn btn-primary">Skapa</a>
+        <div class="card meme-image">
+          <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578489421/zornh34kf8bb31xpajgc.jpg"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Vykort med egen text</h5>
+            <a href="/userinput" class="btn btn-primary">Skapa</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->
@@ -118,7 +118,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-  <script type="text/javascript" src="/scripts/script.js"></script>
+  <script src="/scripts/script.js"></script>
 </body>
 
 </html>

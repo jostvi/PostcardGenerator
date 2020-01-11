@@ -47,15 +47,15 @@
 
         <h1>Vykort med egen text</h1>
         <form>
-        <label for="sample-text">Ange egen text</label>
-        <input type="text" maxlength="300" id="userinput" name="sample-text" value=" " class="form-control"
+        <label for="userinput">Ange egen text</label>
+        <input type="text" maxlength="300" id="userinput" name="userinput" value="" class="form-control"
             placeholder="Skriv in en egen text">
         </form>
-        <h2 id="preview-header w-100">Förhandsvisning</h2>
-        <div class="preview-image-box">
-            <img id="preview-image" src="" width="500" height="380" /></img>
+        <h2 id="preview-header">Förhandsvisning</h2>
+        <div class="preview-image-box w-100">
+            <img id="preview-image" src="" width="500" height="380" />
             <div id="preview-text" class="preview-text">
-                <h3 id="text"> {{userinput}}</h3>
+                <h3 id="text">{{userinput}}</h3>
             </div>
         </div>
         <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
@@ -82,7 +82,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/scripts/script.js"></script>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/javascript.js"></script>
 
 </body>
 
