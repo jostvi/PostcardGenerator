@@ -13,10 +13,10 @@ function enableButton() {
     document.getElementById('next-image').disabled = false;
 }
 //översätt detta till jquery så att man kan utnyttja data.url
-function saveImage() {
+function saveImage(imgurl) {
     
     var a = document.createElement('a');
-    imgurl = data.url//document.getElementById("preview-image").src
+    imgurl = imgurl//document.getElementById("preview-image").src
     a.href = imgurl;
     a.target="_blank"
     a.download = "postcard.png";

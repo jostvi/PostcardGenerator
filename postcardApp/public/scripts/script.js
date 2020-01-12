@@ -7,6 +7,7 @@ $(document).ready(function () {
         count = 0,
         keyCount = 0;
         imgList = [];
+        postcardUrl = "";
 
     $("img.bigImage").on("click", function () {
         var src = $(this).attr("src");
@@ -108,9 +109,15 @@ $(document).ready(function () {
             document.getElementById('spinner2').style.display = 'none';
             document.getElementById('next-image').disabled = true;
             document.getElementById('get-image').disabled = true;
+            postcardUrl = data.url
+    
         })
         
-	})
+    })
+    
+    $('button#save-image').click(function () {
+        saveImage(postcardUrl)
+    })
 
 	$('button#next-image').click(function () {
 		if (++count == imgList.length)
@@ -118,6 +125,7 @@ $(document).ready(function () {
 		document.getElementById("preview-image").src = imgList[count];
 	})
 })
+
 
 $("input").keyup(function () {
 		var value = $(this).val();
