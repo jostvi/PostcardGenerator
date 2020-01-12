@@ -16,7 +16,7 @@ function enableButton() {
 function saveImage(imgurl) {
     
     var a = document.createElement('a');
-    imgurl = imgurl//document.getElementById("preview-image").src
+    imgurl = imgurl
     a.href = imgurl;
     a.target="_blank"
     a.download = "postcard.png";
