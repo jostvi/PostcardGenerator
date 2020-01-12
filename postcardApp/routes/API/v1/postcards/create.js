@@ -48,7 +48,7 @@ router.post('/', (req, res) => {
             url: result
         })
     })
-    .catch(() => { res.send('error') })
+    .catch(err => { res.send('error') })
 
     }
 
