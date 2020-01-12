@@ -10,7 +10,6 @@ $(document).ready(function () {
         imgList = [];
         postcardUrl = "";
     
-    
 
     $("img.bigImage").on("click", function () {
         var src = $(this).attr("src");

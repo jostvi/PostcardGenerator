@@ -66,6 +66,13 @@ h2 {
   background-color: rgba(255, 255, 255, 0.445);
   border: none;
 }
+.p-3 {
+  padding: 0rem!important;
+}
+.card-deck{
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
 
 .text-center{
 padding-top: 2%;
@@ -298,18 +305,13 @@ h3 {
 
 @media (max-width: 800px) {
   #carouselExampleIndicators {
-    height:380px;
+    height:420px;
   }
 
 
 }
 @media (max-width: 615px) {
   #carouselExampleIndicators {
-    height:280px;
+    height:320px;
     margin-top: 15%;
-}}
-@media (max-width: 450px) {
-  #carouselExampleIndicators {
-    height:200px;
-
 }}
