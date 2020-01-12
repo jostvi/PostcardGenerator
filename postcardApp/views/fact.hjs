@@ -61,7 +61,7 @@
         <div class="preview-image-box  w-100">
             <img id="preview-image" src="" width="1000" height="760" />
             <div id="preview-text" class="preview-text">
-                <h3 id="text"> {{fact}}</h3>
+                <h3 id="text">{{fact}}</h3>
             </div>
         </div>
     </div>
