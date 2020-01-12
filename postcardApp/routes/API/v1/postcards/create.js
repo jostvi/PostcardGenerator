@@ -18,45 +18,45 @@ router.post('/', (req, res) => {
     if (req.body.url === undefined) {
         text = req.body.text;
         console.log(text);
-        
+
         wordpos = new WordPOS();
-        wordpos.getNouns(text, (keys) => { 
-        key = keys[Math.floor(Math.random()*keys.length)]
-        console.log(key)
-        pixabay.getImagesByKeyword(key)
-        .then(result => {
-            console.log(result)
-            url = result.urlList[0].url
-    
-            return url
-        }).then(url => {
-            manipulator.generate(url, req.body.text, "user generated")
+        wordpos.getNouns(text, (keys) => {
+            key = keys[Math.floor(Math.random() * keys.length)]
+            console.log(key)
+            pixabay.getImagesByKeyword(key)
+                .then(result => {
+                    console.log(result)
+                    url = result.urlList[0].url
 
-        .then(url => {
-    
-        res.send({
-            url
-        })
-    })
-    .catch(err => { res.send(404) })
-    })
-})
-}
-    else {
-    console.log(req.body.url)
-    console.log(req.body.text)
-    console.log(req.body.tag)
-     //lägg till felhantering i manipulator om det är ett felaktigt url, just nu skickas ingen felkod
-    manipulator.generate(req.body.url, req.body.text, req.body.tag)
-    .then(result => {
-        res.send({
-            url: result
-        })
-    })
-    .catch(err => { res.send(404) })
+                    return url
+                }).then(url => {
+                    manipulator.generate(url, req.body.text, "user generated")
 
+                        .then(url => {
+
+                            res.send({
+                                url
+                            })
+                        })
+                        .catch(err => { res.send(404) })
+                })
+        })
     }
-
+    else {
+        console.log(req.body.url)
+        console.log(req.body.text)
+        console.log(req.body.tag)
+        //lägg till felhantering i manipulator om det är ett felaktigt url, just nu skickas ingen felkod
+        manipulator.generate(req.body.url, req.body.text, req.body.tag)
+            .then(result => {
+                res.send({
+                    url: result
+                })
+            })
+            .catch(err => {
+                res.send('error')
+            })
+    }
 })
 
 module.exports = router;

@@ -46,20 +46,20 @@ $(document).ready(function () {
                 count = 0
                 imgList = []
 
+                if (data === 'error') {
+                    alert('Fel vid hämtning av bild\nVänligen ladda om sidan')
+                    stopSpinner()
+                    return
+                }
+
+                data.urlList.forEach(function (item) {
+                    imgList.push(item.url)
+                })
+                $.preload(imgList)
+
                 if (++keyCount == keyMax)
                     keyCount = 0
 
-                try {
-                    data.urlList.forEach(function (item) {
-                        imgList.push(item.url)
-                    })
-                    $.preload(imgList);
-                } catch (TypeError) {
-                    alert('Fel vid hämtning av bild\nFörsök igen!')
-                    stopSpinner()
-                    keyCount--
-                    return
-                }
                 keyMax = data.keys
 
                 if (keyMax == 1)
@@ -89,14 +89,12 @@ $(document).ready(function () {
 
         post.url = imgList[count];
 
-        console.log(JSON.stringify(post))
         $.post('http://localhost:3000/api/v1/postcards/create/', post, function (data) {
             if (data === 'error') {
-                alert('Någonting gick fel\nFörsök igen')
-                stopSpinner()
+                alert('Någonting gick fel\nVänligen ladda om sidan')
                 return
             }
-        
+
             postcardUrl = data.url
             document.getElementById('spinner2').style.display = 'none';
             document.getElementById('next-image').disabled = true;
@@ -104,7 +102,7 @@ $(document).ready(function () {
             document.getElementById('save-image').style.display = 'inline';
             document.getElementById('preview-text').style.visibility = 'hidden'
             document.getElementById('preview-image').src = postcardUrl;
-        
+
         })
 
     })
@@ -117,12 +115,7 @@ $(document).ready(function () {
 
     $('button#save-image').click(function () {
         saveImage(postcardUrl)
-    })
-
-    $('button#next-image').click(function () {
-        if (++count == imgList.length)
-            count = 0;
-        document.getElementById("preview-image").src = imgList[count];
+        location.reload()
     })
 })
 
