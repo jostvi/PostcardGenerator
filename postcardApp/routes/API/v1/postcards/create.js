@@ -10,14 +10,18 @@ const manipulator = require('../../../../imagemanipulation/imagemanipulation');
 
 
 router.post('/', (req, res) => {
+    if (req.body.text === undefined) {
+        res.send(404, "Text is a required parameter for this route!")
+    }
+
     console.log(req.body.url)
     if (req.body.url === undefined) {
-        text = req.body.text
-        console.log(text)
+        text = req.body.text;
+        console.log(text);
         
-        WordPOS = new WordPOS();
-        WordPOS.getNouns(text, (keys) => { 
-        key = keys[0] //OBS! ändra till random
+        wordpos = new WordPOS();
+        wordpos.getNouns(text, (keys) => { 
+        key = keys[Math.floor(Math.random()*keys.length)]
         console.log(key)
         pixabay.getImagesByKeyword(key)
         .then(result => {
@@ -49,11 +53,10 @@ router.post('/', (req, res) => {
             url: result
         })
     })
-    .catch(err => { res.send('error') })
+    .catch(err => { res.send(404) })
 
     }
 
 })
-//}) 
 
 module.exports = router;

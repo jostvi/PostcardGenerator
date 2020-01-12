@@ -29,16 +29,6 @@ module.exports = {
       console.log(url)
       jimp.read(url)
       
-      /* .then(tpl => { console.log("image read")
-          tpl 
-              .resize(1024, 768)
-              .quality(60)
-              .greyscale()
-              .brightness(0.3)
-        
-              return tpl
-      }) */
-      
     .then(tpl => {
         tpl 
             .resize(1024, 768)
@@ -79,7 +69,6 @@ module.exports = {
         .then(tpl => {
           tpl.quality(100).write(imgExported)
             cloudinary.uploader.upload(imgExported, {tags: [tag]}, function (error, result) {
-            //url som returneras kan användas för att komma åt bilden
             resolve(result.url)
             if (error) {
               console.log(error)
@@ -87,7 +76,7 @@ module.exports = {
           })
         })
       .catch(err => {
-        console.error(err);
+        reject(err);
       });
   
     })

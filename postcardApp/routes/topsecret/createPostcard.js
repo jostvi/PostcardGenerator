@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const manipulator = require('../imagemanipulation/imagemanipulation');
+const manipulator = require('../../imagemanipulation/imagemanipulation');
 
 router.post('/', (req, res) => {
     console.log(req.body)
@@ -12,7 +12,7 @@ router.post('/', (req, res) => {
             url: result
         })
     })
-    .catch(err => { res.send('error') })
+    .catch(err => { res.send('err') })
 }) 
 
 module.exports = router;

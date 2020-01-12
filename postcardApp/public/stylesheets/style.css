@@ -167,6 +167,11 @@ padding-top: 2%;
   height: 760px; 
 }
 
+#postcard {
+  width: 1000px;
+  height: 760px; 
+}
+
 .preview-wrapper{
   width: 1000px;
   height: 760px;

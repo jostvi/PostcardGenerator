@@ -23,7 +23,7 @@ router.get('/', (req, res, next) => {
        
       })
       .catch((error) => {
-        console.log(error)
+        res.send(404)
       })
       .then(images => {
         //console.log(images);
@@ -43,10 +43,9 @@ router.get('/', (req, res, next) => {
        
       })
       .catch((error) => {
-        console.log(error)
+        res.send(404)
       })
       .then(images => {
-        //console.log(images);
         res.send(images)
       })
     }
@@ -64,10 +63,9 @@ router.get('/', (req, res, next) => {
        
       })
       .catch((error) => {
-        console.log(error)
+        res.send(404)
       })
       .then(images => {
-        //console.log(images);
         res.send(images)
       })
     });

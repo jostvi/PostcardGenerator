@@ -45,14 +45,14 @@
     </nav>
 
     <div class="postcard-wrapper w-75">
-        <h1>Vykort med citat</h1>
+        <h1 id="header">Vykort med citat</h1>
         <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
         <button id="spinner1" class="btn btn-primary" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             Hämtar...
         </button>
         <button id="next-image" class="btn btn-primary" type="button">Nästa</button>
-        <button id="create-postcard" class="btn btn-primary" type="button" onclick="changeButton()">Skapa kort</button>
+        <button id="create-postcard" class="btn btn-primary" type="button">Skapa kort</button>
         <button id="spinner2" class="btn btn-primary" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             Skapar...
