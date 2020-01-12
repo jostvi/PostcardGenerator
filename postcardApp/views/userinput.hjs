@@ -47,9 +47,9 @@
     <div class="postcard-wrapper w-75">
         <h1 id="header">Vykort med egen text</h1>
         <label for="userinput">Ange egen text på engelska</label>
-        <input type="userinput" maxlength="300" id="userinput" name="userinput" value="" class="form-control"
+        <input type="text" maxlength="300" id="userinput" name="userinput" value="" class="form-control"
             placeholder="Write your text in English">
-        <button id="get-userinput-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
+        <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
         <button id="spinner1" class="btn btn-primary" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             Hämtar...
@@ -63,12 +63,11 @@
         <button id="save-image" class="btn btn-primary" type="button">Spara vykort</button>
         <h2 id="preview-header">Förhandsvisning</h2>
         <div class="preview-image-box w-100">
-            <img id="preview-image" src="" onload="stopUserSpinner()">
+            <img id="preview-image" src="" onload="stopSpinner()">
             <div id="preview-text" class="preview-text">
-                <h3 id="text">{{userinput}}</h3>
+                <h3 id="text"></h3>
             </div>
         </div>
-       
     </div>
 
     <!-- Optional JavaScript -->

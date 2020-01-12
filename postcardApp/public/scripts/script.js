@@ -1,17 +1,30 @@
-
 $(document).ready(function () {
-    
-    var post = { 
+    var post = {
         text: "",
-        url: "" ,
-        tag: "" },
+        url: "",
+        tag: ""
+    },
         count = 0,
+<<<<<<< HEAD
         keyCount = 0;
         keyMax = 0;
         imgList = [];
+=======
+        keyCount = 0,
+        keyMax = 0,
+        imgList = [],
+>>>>>>> de29f3349b0b77f06a809d7641570f20a5f7f0ea
         postcardUrl = "";
-    
-    
+
+    let text = document.getElementById('text'),
+        author = document.getElementById('author')
+
+    if (text.textContent.length > 200) {
+        text.style.fontSize = '75%'
+        if (author != null)
+            author.style.fontSize = '75%'
+    }
+
 
     $("img.bigImage").on("click", function () {
         var src = $(this).attr("src");
@@ -32,7 +45,7 @@ $(document).ready(function () {
     $('button#get-image').click(function () {
         document.getElementById('get-image').style.display = 'none';
         document.getElementById('spinner1').style.display = 'inline';
-        let text = document.getElementById('text').innerHTML
+        let text = document.getElementById('text').textContent
 
         $.get('http://localhost:3000/topsecret/images', { text: text, keyCount: keyCount },
             function (data) {
@@ -49,6 +62,7 @@ $(document).ready(function () {
                     $.preload(imgList);
                 } catch (TypeError) {
                     alert('Fel vid hämtning av bild\nFörsök igen!')
+                    stopSpinner()
                     keyCount--
                     return
                 }
@@ -56,22 +70,25 @@ $(document).ready(function () {
 
                 if (keyMax == 1)
                     document.getElementById('get-image').disabled = true;
-               
+
                 document.getElementById('preview-image').src = imgList[0];
                 document.getElementById('preview-image').style.visibility = 'visible';
             })
+<<<<<<< HEAD
             //trodde att detta skulle leda till att spinnern först slutar snurra när bilden faktiskt visas upp, men det funkar ändå inte...
             
+=======
+>>>>>>> de29f3349b0b77f06a809d7641570f20a5f7f0ea
     })
 
     $('button#create-postcard').click(function () {
         document.getElementById('create-postcard').style.display = 'none';
         document.getElementById('spinner2').style.display = 'inline';
-        var text = document.getElementById('text').innerHTML,
-            header = document.getElementById('header').innerHTML;
-            
+        var text = document.getElementById('text').textContent,
+            header = document.getElementById('header').textContent;
+
         if (header === 'Vykort med citat') {
-            post.text = text + "\n" + document.getElementById('author').innerHTML
+            post.text = text + document.getElementById('author').textContent
             post.tag = "quote"
         } else if (header === 'Vykort med fakta') {
             post.text = text
@@ -85,11 +102,13 @@ $(document).ready(function () {
 
         console.log(JSON.stringify(post))
         //Ska vi ändra anropet till /api/v1/postcards/create?
-        $.post('http://localhost:3000/createPostcard', post, function (data) {
+        $.post('http://localhost:3000/api/v1/postcards/create/', post, function (data) {
             if (data === 'error') {
                 alert('Någonting gick fel\nFörsök igen')
+                stopSpinner()
                 return
             }
+<<<<<<< HEAD
         
             
             document.getElementById('spinner2').style.display = 'none';
@@ -99,6 +118,15 @@ $(document).ready(function () {
             //$("#save-image").show()
             postcardUrl = data.url
     
+=======
+            postcardUrl = data.url
+            document.getElementById('save-image').style.display = 'inline'
+            document.getElementById('spinner2').style.display = 'none';
+            document.getElementById('next-image').disabled = true;
+            document.getElementById('get-image').disabled = true;
+            document.getElementById('preview-text').style.visibility = 'hidden'
+            document.getElementById('preview-image').src = postcardUrl
+>>>>>>> de29f3349b0b77f06a809d7641570f20a5f7f0ea
         })
 
     })
@@ -120,16 +148,16 @@ $(document).ready(function () {
             count = 0;
         document.getElementById("preview-image").src = imgList[count];
     })
-    
+
     $('button#save-image').click(function () {
         saveImage(postcardUrl)
     })
 
-	$('button#next-image').click(function () {
-		if (++count == imgList.length)
-			count = 0;
-		document.getElementById("preview-image").src = imgList[count];
-	})
+    $('button#next-image').click(function () {
+        if (++count == imgList.length)
+            count = 0;
+        document.getElementById("preview-image").src = imgList[count];
+    })
 })
 
 
@@ -156,4 +184,3 @@ jQuery.preload = function (array) {
         body.appendChild(object);
     }
 }
-

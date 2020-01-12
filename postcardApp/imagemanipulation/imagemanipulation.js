@@ -77,8 +77,12 @@ module.exports = {
         })
       .catch(err => {
         reject(err);
+<<<<<<< HEAD
       });
   
+=======
+      })
+>>>>>>> de29f3349b0b77f06a809d7641570f20a5f7f0ea
     })
   }  
 }

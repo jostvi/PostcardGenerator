@@ -60,12 +60,10 @@
         <button id="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
         <h2 id="preview-header">Förhandsvisning</h2>
         <div class="preview-image-box w-100">
-            <div id="author-quote-wrapper">
-                <img id="preview-image" src="" onload="stopSpinner()"/>
-                <div id="preview-text" class="preview-text">
-                    <h3 id="text"> "{{ quote }}"</h3>
-                    <h3 id="author"> - {{ author }}</h3>
-                </div>
+            <img id="preview-image" src="" onload='stopSpinner()'/>
+            <div id="preview-text" class="preview-text">
+                <h3 id="text">"{{quote}}"</h3>
+                <h3 id="author"> - {{ author }}</h3>
             </div>
         </div>
     </div>

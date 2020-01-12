@@ -33,10 +33,6 @@ function stopSpinner() {
     
 }
 
-function stopUserSpinner() {
-    document.getElementById('get-userinput-image').style.display = "inline";
-    document.getElementById('spinner1').style.display = 'none';  
-}
 
 /* function changeButton() {
     document.getElementById("create-postcard").style.display = 'none';

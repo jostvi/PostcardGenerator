@@ -45,36 +45,39 @@
 
     <div class="postcard-wrapper w-75">
 
-    <h1>Om tjänsten</h1>
-    <p>Vi saknade en tjänst som genererade traditionella vykort på ett kul och smidigt sätt. Därför bestämde vi oss
-        för att utveckla en tjänst där en användare genererar en text, antingen en egen eller en datorgenererad, och
-        sedan plockar ut en bild baserad på textinnehållet.</p>
-    <p>Vykortet kan delas med vänner på sociala medier, sparas som bildfil på datorn eller skrivas ut på ett fint papper
-        och skickas iväg som traditionellt vykort. </p>
+        <h1>Om tjänsten</h1>
+        <p>Vi saknade en tjänst som genererade traditionella vykort på ett kul och smidigt sätt. Därför bestämde vi oss
+            för att utveckla en tjänst där en användare genererar en text, antingen en egen eller en datorgenererad, och
+            sedan plockar ut en bild baserad på textinnehållet.</p>
+        <p>Vykortet kan delas med vänner på sociala medier, sparas som bildfil på datorn eller skrivas ut på ett fint
+            papper
+            och skickas iväg som traditionellt vykort. </p>
 
-    <h2>Om oss</h2>
-    <p>Christina Knepper, Johan Steen Vingren, Agnes Hägerstrand, Axel Hägglund och Iris Brinkborg har utvecklat
-        tjänsten som en del av kursen <em>Storskaliga webbtjänster</em> på Malmö universitet 2020. </p>
-    <h2>APIer som används</h2>
-    <ul>
-        <li>
-            <strong>Pixabay</strong> erbjuder bilder som inte är upphovsrättsskyddade, och därmed fria att använda utan
-            att kreditera fotografen. Det är här ifrån bilderna som används i vykorten hämtas.
-        </li>
-        <li>
-            <strong>ParallelDots Keywords</strong>. För att kunna matcha citatet med en relaterad bild använder vi oss
-            av det här APIet. Genom att skicka in citatet så returneras ett antal keywords från citatet, som vi sedan
-            använder för att söka efter en bild som är lämplig.
-        </li>
-        <li>
-            <strong>FavQs</strong> används för att generera slumpmässiga citat, som infogas över bilden för att skapa
-            vykortet.
-        </li>
-        <li>
-            <strong>UselessFacts</strong>. Ett API som tillhandahåller slumpmässiga fakta när man anropar det, vilket vi
-            gör när användaren väljer att generera ett vykort med fakta.
-        </li>
-    </ul>
+        <h2>Om oss</h2>
+        <p>Christina Knepper, Johan Steen Vingren, Agnes Hägerstrand, Axel Hägglund och Iris Brinkborg har utvecklat
+            tjänsten som en del av kursen <em>Storskaliga webbtjänster</em> på Malmö universitet 2020. </p>
+        <h2>APIer som används</h2>
+        <ul>
+            <li>
+                <strong>Pixabay</strong> erbjuder bilder som inte är upphovsrättsskyddade, och därmed fria att använda
+                utan
+                att kreditera fotografen. Det är här ifrån bilderna som används i vykorten hämtas.
+            </li>
+            <li>
+                <strong>WordPos</strong>. För att matcha en textsträng med en bild används det här APIet. När en text
+                skickas returneras samtliga substantiv i singular som keywords från texten som sedan används för att söka efter en bild.
+            </li>
+            <li>
+                <strong>FavQs</strong> används för att generera slumpmässiga citat, som infogas över bilden för att
+                skapa
+                vykortet.
+            </li>
+            <li>
+                <strong>UselessFacts</strong>. Ett API som tillhandahåller slumpmässiga fakta när man anropar det,
+                vilket vi
+                gör när användaren väljer att generera ett vykort med fakta.
+            </li>
+        </ul>
     </div>
 
     <!-- Optional JavaScript -->

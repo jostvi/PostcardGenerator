@@ -53,7 +53,11 @@ router.post('/', (req, res) => {
             url: result
         })
     })
+<<<<<<< HEAD
     .catch(err => { res.send(404) })
+=======
+    .catch(() => { res.send('error') })
+>>>>>>> de29f3349b0b77f06a809d7641570f20a5f7f0ea
 
     }
 
