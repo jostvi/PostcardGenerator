@@ -5,8 +5,6 @@ window.onload = function() {
     document.getElementById('preview-image').style.visibility = 'hidden'
     document.getElementById('spinner1').style.display = 'none';
     document.getElementById('spinner2').style.display = 'none';
-   
-    
   };
 
 
@@ -26,9 +24,9 @@ function saveImage() {
     a.click();
     document.body.removeChild(a);
 }
-/* 
+ 
 function changeButton() {
     document.getElementById("create-postcard").style.display = 'none';
     document.getElementById("save-image").style.display = 'inline'
 
-} */
+}
