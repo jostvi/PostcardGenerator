@@ -63,7 +63,7 @@ $(document).ready(function () {
 	$('button#get-userinput-image').click(function () {
         document.getElementById('get-userinput-image').style.display = 'none';
         document.getElementById('spinner1').style.display = 'inline';
-		let userinput = document.getElementById("userinput").value
+		let userinput = document.getElementById("text").value
         $.get('http://localhost:3000/topsecret/images', { text : userinput, keyCount : keyCount },
 			function (data, status) {
 				count = 0
