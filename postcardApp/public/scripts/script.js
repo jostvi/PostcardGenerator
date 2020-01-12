@@ -5,9 +5,15 @@ $(document).ready(function () {
         tag: ""
     },
         count = 0,
+<<<<<<< HEAD
+        keyCount = 0;
+        keyMax = 0;
+        imgList = [];
+=======
         keyCount = 0,
         keyMax = 0,
         imgList = [],
+>>>>>>> de29f3349b0b77f06a809d7641570f20a5f7f0ea
         postcardUrl = "";
 
     let text = document.getElementById('text'),
@@ -68,6 +74,11 @@ $(document).ready(function () {
                 document.getElementById('preview-image').src = imgList[0];
                 document.getElementById('preview-image').style.visibility = 'visible';
             })
+<<<<<<< HEAD
+            //trodde att detta skulle leda till att spinnern först slutar snurra när bilden faktiskt visas upp, men det funkar ändå inte...
+            
+=======
+>>>>>>> de29f3349b0b77f06a809d7641570f20a5f7f0ea
     })
 
     $('button#create-postcard').click(function () {
@@ -97,6 +108,17 @@ $(document).ready(function () {
                 stopSpinner()
                 return
             }
+<<<<<<< HEAD
+        
+            
+            document.getElementById('spinner2').style.display = 'none';
+            document.getElementById('next-image').disabled = true;
+            document.getElementById('get-image').disabled = true;
+            document.getElementById('save-image').style.display = 'inline';
+            //$("#save-image").show()
+            postcardUrl = data.url
+    
+=======
             postcardUrl = data.url
             document.getElementById('save-image').style.display = 'inline'
             document.getElementById('spinner2').style.display = 'none';
@@ -104,6 +126,7 @@ $(document).ready(function () {
             document.getElementById('get-image').disabled = true;
             document.getElementById('preview-text').style.visibility = 'hidden'
             document.getElementById('preview-image').src = postcardUrl
+>>>>>>> de29f3349b0b77f06a809d7641570f20a5f7f0ea
         })
 
     })

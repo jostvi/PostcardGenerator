@@ -19,7 +19,7 @@ router.get('/', (req, res, next) => {
         })        
     })
       .catch((error) => {
-        console.log(error)
+        res.send(404)
       })
       .then(postcard => {
         //console.log(images);
@@ -39,7 +39,7 @@ router.get('/', (req, res, next) => {
       })
       .then(postcard => {
         //console.log(images);
-        res.send(postcard)
+        res.send(404)
       })
     }
     else
@@ -52,17 +52,12 @@ router.get('/', (req, res, next) => {
         })        
     })
       .catch((error) => {
-        console.log(error)
+        res.send(404)
       })
       .then(postcard => {
         //console.log(images);
         res.send(postcard)
       })
     });
-
-module.exports = router;
-
-
-
 
 module.exports = router;
