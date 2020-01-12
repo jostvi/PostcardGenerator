@@ -14,9 +14,9 @@ $(document).ready(function () {
         author = document.getElementById('author')
 
     if (text.textContent.length > 200) {
-        text.style.fontSize = '75%'
+        text.style.fontSize = '36pt'
         if (author != null)
-            author.style.fontSize = '75%'
+            author.style.fontSize = '36pt'
     }
 
 
