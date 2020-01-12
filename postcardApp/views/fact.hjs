@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -43,15 +44,7 @@
         </div>
     </nav>
     <div class="postcard-wrapper w-75">
-
         <h1>Vykort med fakta</h1>
-        <h2 id="preview-header">Förhandsvisning</h2>
-        <div class="preview-image-box  w-100">
-            <img id="preview-image" src="" width="1000" height="760" />
-            <div id="preview-text" class="preview-text">
-                <h3 id="text"> {{fact}}</h3>
-            </div>
-        </div>
         <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
         <button id="spinner1" class="btn btn-primary" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -65,6 +58,13 @@
         </button>
         <button id="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
         <p hidden id="author" - {{author}} ></p> <!-- Tillfällig, ska placeras i preview box -->
+        <h2 id="preview-header">Förhandsvisning</h2>
+        <div class="preview-image-box  w-100">
+            <img id="preview-image" src="" width="1000" height="760" />
+            <div id="preview-text" class="preview-text">
+                <h3 id="text"> {{fact}}</h3>
+            </div>
+        </div>
     </div>
 
     <!-- Optional JavaScript -->
