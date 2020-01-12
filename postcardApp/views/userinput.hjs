@@ -45,28 +45,11 @@
     </nav>
 
     <div class="postcard-wrapper w-75">
-<<<<<<< HEAD
         <h1 id="header">Vykort med egen text</h1>
-        <form>
-        <label for="userinput">Ange egen text</label>
-        <input type="text" maxlength="300" id="userinput" name="userinput" value="" class="form-control"
-            placeholder="Skriv in en egen text">
-        </form>
-        <h2 id="preview-header">Förhandsvisning</h2>
-        <div class="preview-image-box w-100">
-            <img id="preview-image" src="" />
-            <div id="preview-text" class="preview-text">
-                <h3 id="text">{{userinput}}</h3>
-            </div>
-        </div>
-        <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
-=======
-        <h1>Vykort med egen text</h1>
         <label for="userinput">Ange egen text på engelska</label>
         <input type="userinput" maxlength="300" id="userinput" name="userinput" value="" class="form-control"
             placeholder="Write your text in English">
         <button id="get-userinput-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
->>>>>>> 97dae4cf06f740a7a3935e01bb8ffb06b0b62142
         <button id="spinner1" class="btn btn-primary" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             Hämtar...

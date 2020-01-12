@@ -48,11 +48,10 @@ router.post('/', (req, res) => {
             url: result
         })
     })
-    .catch(err => { res.send('error') })
+    .catch(() => { res.send('error') })
 
     }
 
 })
-//}) 
 
 module.exports = router;
