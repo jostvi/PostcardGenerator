@@ -27,8 +27,7 @@ $(document).ready(function () {
 	$('button#get-image').click(function () {
         document.getElementById('get-image').style.display = 'none';
         document.getElementById('spinner1').style.display = 'inline';
-        let text = document.getElementById("text").innerHTML
-
+		let text = document.getElementById("text").innerHTML
         $.get('http://localhost:3000/topsecret/images', { text : text, keyCount : keyCount },
 			function (data, status) {
 				count = 0
@@ -55,6 +54,35 @@ $(document).ready(function () {
 
 	})
 
+	$('button#get-userinput-image').click(function () {
+        document.getElementById('get-userinput-image').style.display = 'none';
+        document.getElementById('spinner1').style.display = 'inline';
+		let userinput = document.getElementById("userinput").value
+        $.get('http://localhost:3000/topsecret/images', { text : userinput, keyCount : keyCount },
+			function (data, status) {
+				count = 0
+				imgList = []
+				data.urlList.forEach(function (item) {
+                    imgList.push(item.url)
+                    
+                })
+                keyMax = data.keys
+                if(++keyCount == keyMax)
+                    keyCount = 0
+				$.preload(imgList);
+                document.getElementById("preview-image").src = imgList[0];
+                document.getElementById('preview-image').style.visibility = 'visible';
+                
+            })
+            //trodde att detta skulle leda till att spinnern först slutar snurra när bilden faktiskt visas upp, men det funkar ändå inte...
+            .done(function() {
+                
+                document.getElementById('get-userinput-image').style.display = 'inline';
+                document.getElementById('spinner1').style.display = 'none';
+            })
+
+	})
+
 	$('button#create-postcard').click(function () {
         document.getElementById('create-postcard').style.display = 'none';
         document.getElementById('spinner2').style.display = 'inline';
@@ -66,7 +94,8 @@ $(document).ready(function () {
         else {
             post.text = document.getElementById("text").innerHTML
             post.tag = "fact"
-        }
+		}
+		
 
         post.url = imgList[count];
         
@@ -78,22 +107,9 @@ $(document).ready(function () {
             document.getElementById('spinner2').style.display = 'none';
             document.getElementById('next-image').disabled = true;
             document.getElementById('get-image').disabled = true;
-            //document.getElementById("fb-button").setAttribute('data-href', data.url)
         })
         
-    })
-    
-   /* OBS! här ska vykorts-url skickas in som parameter, hur får vi tag i det?  
-    $('button#save-image').click(function(url) {
-        var a = document.createElement('a');
-        imgurl = data.url//document.getElementById("preview-image").src
-        a.href = imgurl;
-        a.target="_blank"
-        a.download = "postcard.png";
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-    }) */
+	})
 
 	$('button#next-image').click(function () {
 		if (++count == imgList.length)
