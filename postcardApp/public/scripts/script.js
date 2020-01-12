@@ -13,12 +13,11 @@ $(document).ready(function () {
     let text = document.getElementById('text'),
         author = document.getElementById('author')
 
-    if (text.textContent.length > 200) {
+    /* if (text.textContent.length > 200) {
         text.style.fontSize = '36pt'
         if (author != null)
-            author.style.fontSize = '36pt'
-    }
-
+            author.style.fontSize = '36pt' 
+    }*/
 
     $("img.bigImage").on("click", function () {
         var src = $(this).attr("src");
@@ -34,7 +33,7 @@ $(document).ready(function () {
                 $("#imageModal").remove();
             }, 500);
         })
-    })
+    });
 
     $('button#get-image').click(function () {
         document.getElementById('get-image').style.display = 'none';

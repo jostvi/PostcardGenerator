@@ -1,0 +1,33 @@
+{
+  "name": "PostcardGenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "hjs": "^0.0.6",
+    "jimp": "^0.9.3",
+    "paralleldots": "^3.2.4",
+    "promise": "^8.0.3",
+    "request": "^2.88.0",
+    "serve-favicon": "^2.5.0",
+    "text2png": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jostvi/PostcardGenerator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jostvi/PostcardGenerator/issues"
+  },
+  "homepage": "https://github.com/jostvi/PostcardGenerator#readme"
+}

@@ -1,4 +1,5 @@
-// const ul = require('../../cloudinary-test/imageupload')
+//Module which takes an image url, a text-string and an optional tag as a parameter
+//Image is resized and filtered, text is added and the final image file is uploaded to the cloudinary server
 const jimp = require('jimp')
 const cloudinary = require('cloudinary').v2;
 

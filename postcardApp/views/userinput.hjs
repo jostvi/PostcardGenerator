@@ -60,7 +60,7 @@
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             Skapar...
         </button>
-        <button id="save-image" class="btn btn-primary" type="button">Spara vykort</button>
+        <button id="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
         <h2 id="preview-header">Förhandsvisning</h2>
         <div class="preview-image-box w-100">
             <img id="preview-image" src="" onload="stopSpinner()">
