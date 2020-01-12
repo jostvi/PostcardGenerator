@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     var post = {
         text: "",
@@ -14,7 +13,7 @@ $(document).ready(function () {
     let text = document.getElementById('text'),
         author = document.getElementById('author')
 
-    if (text.textContent.length > 250) {
+    if (text.textContent.length > 200) {
         text.style.fontSize = '75%'
         if (author != null)
             author.style.fontSize = '75%'
@@ -162,4 +161,3 @@ jQuery.preload = function (array) {
         body.appendChild(object);
     }
 }
-

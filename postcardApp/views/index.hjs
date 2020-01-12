@@ -58,7 +58,7 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img class="d-block w-75"
-          src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578477771/pkwrjm6jetrg9s1p0ime.jpg"
+          src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578846204/j5pzverd35kcw2vd6d8t.jpg"
           alt="First slide">
       </div>
       {{#images.urlList}}
@@ -82,7 +82,7 @@
     <div class="button-container w-75 p-3">
       <div class="card-deck">
         <div class="card meme-image">
-          <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578757362/wzskfi1h9modynhkj0dh.jpg"
+          <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578846242/l37no21ayqup1okevg4b.jpg"
             class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Vykort med quote</h5>
@@ -90,7 +90,7 @@
           </div>
         </div>
         <div class="card meme-image">
-          <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578674321/siz23oykrdpmalioluxp.jpg"
+          <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578844436/secynd6gtybyvcomsqxw.jpg"
             class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Vykort med fakta</h5>
@@ -98,7 +98,7 @@
           </div>
         </div>
         <div class="card meme-image">
-          <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578489421/zornh34kf8bb31xpajgc.jpg"
+          <img src="https://res.cloudinary.com/dqhlic2nx/image/upload/v1578845718/rvep5qwdtbk8brvdrd2h.jpg"
             class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Vykort med egen text</h5>
