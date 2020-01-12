@@ -5,8 +5,6 @@ window.onload = function() {
     document.getElementById('preview-image').style.visibility = 'hidden'
     document.getElementById('spinner1').style.display = 'none';
     document.getElementById('spinner2').style.display = 'none';
-   
-    
   };
 
 
