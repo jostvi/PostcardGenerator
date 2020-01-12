@@ -62,7 +62,7 @@
         <div class="preview-image-box w-100">
             <img id="preview-image" src="" onload='stopSpinner()'/>
             <div id="preview-text" class="preview-text">
-                <h3 id="text"> "{{quote}}"</h3>
+                <h3 id="text">"{{quote}}"</h3>
                 <h3 id="author"> - {{ author }}</h3>
             </div>
         </div>

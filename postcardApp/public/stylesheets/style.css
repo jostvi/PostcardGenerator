@@ -183,6 +183,7 @@ padding-top: 2%;
  text-align: center;
 }
 
+
 .preview {
   width:1000px;
   height:760px;
@@ -218,15 +219,16 @@ h3 {
    font-family: Arial, Helvetica, sans-serif;
    display: inline-table;
     vertical-align:middle;
-    margin: 15%;
+    margin: 3% 15% 10% 15%;
     font-family: 'Didact Gothic', sans-serif;
     font-size: 3.8rem;
     font-weight: 800;
+    overflow: hidden;
 }
 
 /* Quote */
 #author {
-  margin-top: -800px;
+  margin-top: -850px;
 }
 
 /* Userinput */
@@ -243,7 +245,7 @@ h3 {
   font-size: 2.85rem;
 }
 #author {
-  margin-top: -600px;
+  margin-top: -637px;
 }
 
 #preview-image {
