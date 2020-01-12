@@ -5,15 +5,12 @@ window.onload = function() {
     document.getElementById('preview-image').style.visibility = 'hidden'
     document.getElementById('spinner1').style.display = 'none';
     document.getElementById('spinner2').style.display = 'none';
-
   };
-
 
 function enableButton() {
     document.getElementById('create-postcard').disabled = false;
     document.getElementById('next-image').disabled = false;
 }
-
 
 function saveImage(imgurl) {
     
@@ -29,13 +26,5 @@ function saveImage(imgurl) {
 
 function stopSpinner() {
     document.getElementById('get-image').style.display = 'inline';
-    document.getElementById('spinner1').style.display = 'none';  
-    
+    document.getElementById('spinner1').style.display = 'none';    
 }
-
-
-/* function changeButton() {
-    document.getElementById("create-postcard").style.display = 'none';
-    document.getElementById("save-image").style.display = 'inline'
-
-} */

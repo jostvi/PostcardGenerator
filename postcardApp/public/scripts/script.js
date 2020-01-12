@@ -90,7 +90,6 @@ $(document).ready(function () {
         post.url = imgList[count];
 
         console.log(JSON.stringify(post))
-        //Ska vi ändra anropet till /api/v1/postcards/create?
         $.post('http://localhost:3000/api/v1/postcards/create/', post, function (data) {
             if (data === 'error') {
                 alert('Någonting gick fel\nFörsök igen')
