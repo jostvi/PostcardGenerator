@@ -61,7 +61,7 @@
         <h2 id="preview-header">Förhandsvisning</h2>
         <div class="preview-image-box w-100">
             <div id="author-quote-wrapper">
-                <img id="preview-image" src="" />
+                <img id="preview-image" src="" onload="stopSpinner()"/>
                 <div id="preview-text" class="preview-text">
                     <h3 id="text"> "{{quote}}" - {{author}}</h3>
                     <h3 id="author"> {{}}</h3>

@@ -16,15 +16,20 @@ function enableButton() {
 function saveImage(imgurl) {
     
     var a = document.createElement('a');
-    imgurl = imgurl//document.getElementById("preview-image").src
+    imgurl = imgurl
     a.href = imgurl;
-    a.target="_blank"
+    a.target="_blank";
     a.download = "postcard.png";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
 }
- 
+
+function stopSpinner() {
+    document.getElementById('get-image').style.display = 'inline';
+    document.getElementById('spinner1').style.display = 'none';  
+}
+
 function changeButton() {
     document.getElementById("create-postcard").style.display = 'none';
     document.getElementById("save-image").style.display = 'inline'

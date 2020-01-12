@@ -6,13 +6,13 @@ const manipulator = require('../../../../imagemanipulation/imagemanipulation');
 //https://stackoverflow.com/questions/7676264/how-can-i-send-back-response-headers-with-node-js-express (i headern kan man ev. styra att det öppnas en download dialog???)
 
 router.post('/', (req, res) => {
-    manipulator.generate(req.body.url, req.body.quote, "quote")
+    manipulator.generate(req.body.url, req.body.text, req.body.tag)
     .then(result => {
         res.send({
             url: result
         })
     })
-    .catch(err => { res.send(err) })
+    .catch(err => { res.send('error') })
 }) 
 
 module.exports = router;

@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
+    
     var post = { 
         text: "",
         url: "" ,
@@ -8,6 +9,8 @@ $(document).ready(function () {
         keyCount = 0;
         imgList = [];
         postcardUrl = "";
+    
+    
 
     $("img.bigImage").on("click", function () {
         var src = $(this).attr("src");
@@ -26,8 +29,9 @@ $(document).ready(function () {
     })
 
 	$('button#get-image').click(function () {
-        document.getElementById('get-image').style.display = 'none';
-        document.getElementById('spinner1').style.display = 'inline';
+            document.getElementById('get-image').style.display = 'none';
+            document.getElementById('spinner1').style.display = 'inline';
+
         let text = document.getElementById('text').innerHTML
         $.get('http://localhost:3000/topsecret/images', { text : text, keyCount : keyCount },
 			function (data) {
@@ -51,7 +55,10 @@ $(document).ready(function () {
                 document.getElementById('get-image').style.display = 'inline';
                 document.getElementById('spinner1').style.display = 'none';  
             })
-	})
+    })
+    
+    
+    
 
 	$('button#get-userinput-image').click(function () {
         document.getElementById('get-userinput-image').style.display = 'none';
@@ -148,6 +155,6 @@ jQuery.preload = function (array) {
 		object.data = array[length];
 		object.width = object.height = 0;
 		body.appendChild(object);
-	}
+    }
 }
 
