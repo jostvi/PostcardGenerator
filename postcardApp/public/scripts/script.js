@@ -74,7 +74,7 @@ $(document).ready(function () {
 
     $('button#create-postcard').click(function () {
         document.getElementById('create-postcard').style.display = 'none';
-        document.getElementById('spinner2').style.display = 'inline';
+		document.getElementById('spinner2').style.display = 'inline';
         var text = document.getElementById('text').textContent,
             header = document.getElementById('header').textContent;
 
@@ -105,9 +105,9 @@ $(document).ready(function () {
             document.getElementById('next-image').disabled = true;
             document.getElementById('get-image').disabled = true;
             document.getElementById('preview-text').style.visibility = 'hidden'
-            document.getElementById('preview-image').src = postcardUrl
+			document.getElementById('preview-image').src = postcardUrl
+			document.getElementById('preview-header').innerHTML = "Ditt vykort";
         })
-
     })
 
     /* OBS! här ska vykorts-url skickas in som parameter, hur får vi tag i det?  

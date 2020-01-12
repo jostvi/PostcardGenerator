@@ -54,7 +54,7 @@
             och skickas iväg som traditionellt vykort. </p>
 
         <h2>Om oss</h2>
-        <p>Christina Knepper, Johan Steen Vingren, Agnes Hägerstrand, Axel Hägglund och Iris Brinkborg har utvecklat
+        <p>Christina Knepper, Johan Steen Vingren, Agnes Hägnestrand, Axel Hägglund och Iris Brinkborg har utvecklat
             tjänsten som en del av kursen <em>Storskaliga webbtjänster</em> på Malmö universitet 2020. </p>
         <h2>APIer som används</h2>
         <ul>
@@ -90,6 +90,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script src="/scripts/script.js"></script>
+
 </body>
 
 </html>
