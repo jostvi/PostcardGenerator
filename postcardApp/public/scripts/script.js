@@ -13,12 +13,11 @@ $(document).ready(function () {
     let text = document.getElementById('text'),
         author = document.getElementById('author')
 
-    if (text.textContent.length > 200) {
+    /* if (text.textContent.length > 200) {
         text.style.fontSize = '36pt'
         if (author != null)
-            author.style.fontSize = '36pt'
-    }
-
+            author.style.fontSize = '36pt' 
+    }*/
 
     $("img.bigImage").on("click", function () {
         var src = $(this).attr("src");
@@ -34,7 +33,7 @@ $(document).ready(function () {
                 $("#imageModal").remove();
             }, 500);
         })
-    })
+    });
 
     $('button#get-image').click(function () {
         document.getElementById('get-image').style.display = 'none';
@@ -46,20 +45,20 @@ $(document).ready(function () {
                 count = 0
                 imgList = []
 
+                if (data === 'error') {
+                    alert('Fel vid hämtning av bild\nVänligen ladda om sidan')
+                    stopSpinner()
+                    return
+                }
+
+                data.urlList.forEach(function (item) {
+                    imgList.push(item.url)
+                })
+                $.preload(imgList)
+
                 if (++keyCount == keyMax)
                     keyCount = 0
 
-                try {
-                    data.urlList.forEach(function (item) {
-                        imgList.push(item.url)
-                    })
-                    $.preload(imgList);
-                } catch (TypeError) {
-                    alert('Fel vid hämtning av bild\nFörsök igen!')
-                    stopSpinner()
-                    keyCount--
-                    return
-                }
                 keyMax = data.keys
 
                 if (keyMax == 1)
@@ -68,8 +67,11 @@ $(document).ready(function () {
                 document.getElementById('preview-image').src = imgList[0];
                 document.getElementById('preview-image').style.visibility = 'visible';
             })
+<<<<<<< HEAD
             //trodde att detta skulle leda till att spinnern först slutar snurra när bilden faktiskt visas upp, men det funkar ändå inte...
             
+=======
+>>>>>>> c6b2ada82521402dd0f58fb4d2c71e0f697de513
     })
 
     $('button#create-postcard').click(function () {
@@ -91,36 +93,30 @@ $(document).ready(function () {
 
         post.url = imgList[count];
 
-        console.log(JSON.stringify(post))
-        //Ska vi ändra anropet till /api/v1/postcards/create?
         $.post('http://localhost:3000/api/v1/postcards/create/', post, function (data) {
             if (data === 'error') {
-                alert('Någonting gick fel\nFörsök igen')
-                stopSpinner()
+                alert('Någonting gick fel\nVänligen ladda om sidan')
                 return
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c6b2ada82521402dd0f58fb4d2c71e0f697de513
             postcardUrl = data.url
-            document.getElementById('save-image').style.display = 'inline'
             document.getElementById('spinner2').style.display = 'none';
             document.getElementById('next-image').disabled = true;
             document.getElementById('get-image').disabled = true;
+            document.getElementById('save-image').style.display = 'inline';
             document.getElementById('preview-text').style.visibility = 'hidden'
+<<<<<<< HEAD
 			document.getElementById('preview-image').src = postcardUrl
 			document.getElementById('preview-header').innerHTML = "Ditt vykort";
+=======
+            document.getElementById('preview-image').src = postcardUrl;
+
+>>>>>>> c6b2ada82521402dd0f58fb4d2c71e0f697de513
         })
     })
-
-    /* OBS! här ska vykorts-url skickas in som parameter, hur får vi tag i det?  
-     $('button#save-image').click(function(url) {
-         var a = document.createElement('a');
-         imgurl = data.url//document.getElementById("preview-image").src
-         a.href = imgurl;
-         a.target="_blank"
-         a.download = "postcard.png";
-         document.body.appendChild(a);
-         a.click();
-         document.body.removeChild(a);
-     }) */
 
     $('button#next-image').click(function () {
         if (++count == imgList.length)
@@ -130,12 +126,7 @@ $(document).ready(function () {
 
     $('button#save-image').click(function () {
         saveImage(postcardUrl)
-    })
-
-    $('button#next-image').click(function () {
-        if (++count == imgList.length)
-            count = 0;
-        document.getElementById("preview-image").src = imgList[count];
+        location.reload()
     })
 })
 

@@ -1,23 +1,25 @@
+//Takes optional quote- and fact- query parameters
+//Returns a JSON-object containing a random image url
+//Refactoring needed if time allows
+
 var express = require('express');
 var router = express.Router();
 const imageGallery = require('../../../../getimages/getImages.js')
-//getImages ska döpas om till getPostcards
-//OBS! Effektivisera koden, gör en ifsats som gör en check på taggen!!!
-//kolla upp vilken information som ska skickas med i api responsen
+
 
 router.get('/', (req, res, next) => {
-    var tag = req.query.tag;
-    console.log(tag)
-    if (tag === 'quote') {
-      console.log('Retrieving quotes')
-      imageGallery.getQuoteImages()
+  var tag = req.query.tag;
+  console.log(tag)
+  if (tag === 'quote') {
+    console.log('Retrieving quotes')
+    imageGallery.getQuoteImages()
       .then((result) => {
-        return new Promise ((resolve, reject) => {
+        return new Promise((resolve, reject) => {
 
-            let postcard = result.resources[Math.floor(Math.random() * result.resources.length)].url;
-            resolve({ 'urlList' : [{'url' : postcard}]})
-        })        
-    })
+          let postcard = result.resources[Math.floor(Math.random() * result.resources.length)].url;
+          resolve({ 'urlList': [{ 'url': postcard }] })
+        })
+      })
       .catch((error) => {
         res.send(404)
       })
@@ -25,14 +27,14 @@ router.get('/', (req, res, next) => {
         //console.log(images);
         res.send(postcard)
       })
-      
-    } else if (tag === 'fact') {
-      imageGallery.getFactImages().then((result) => {
-        return new Promise ((resolve, reject) => {
 
-            let postcard = result.resources[Math.floor(Math.random() * result.resources.length)].url;
-            resolve({ 'urlList' : [{'url' : postcard}]})
-        })        
+  } else if (tag === 'fact') {
+    imageGallery.getFactImages().then((result) => {
+      return new Promise((resolve, reject) => {
+
+        let postcard = result.resources[Math.floor(Math.random() * result.resources.length)].url;
+        resolve({ 'urlList': [{ 'url': postcard }] })
+      })
     })
       .catch((error) => {
         console.log(error)
@@ -41,16 +43,16 @@ router.get('/', (req, res, next) => {
         //console.log(images);
         res.send(404)
       })
-    }
-    else
+  }
+  else
     imageGallery.getImages()
-    .then((result) => {
-        return new Promise ((resolve, reject) => {
+      .then((result) => {
+        return new Promise((resolve, reject) => {
 
-            let postcard = result.resources[Math.floor(Math.random() * result.resources.length)].url;
-            resolve({ 'urlList' : [{'url' : postcard}]})
-        })        
-    })
+          let postcard = result.resources[Math.floor(Math.random() * result.resources.length)].url;
+          resolve({ 'urlList': [{ 'url': postcard }] })
+        })
+      })
       .catch((error) => {
         res.send(404)
       })
@@ -58,6 +60,6 @@ router.get('/', (req, res, next) => {
         //console.log(images);
         res.send(postcard)
       })
-    });
+});
 
 module.exports = router;
