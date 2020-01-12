@@ -42,6 +42,7 @@ router.post('/', (req, res) => {
     console.log(req.body.url)
     console.log(req.body.text)
     console.log(req.body.tag)
+     //lägg till felhantering i manipulator om det är ett felaktigt url, just nu skickas ingen felkod
     manipulator.generate(req.body.url, req.body.text, req.body.tag)
     .then(result => {
         res.send({
