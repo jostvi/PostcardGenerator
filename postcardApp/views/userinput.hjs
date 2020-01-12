@@ -44,7 +44,7 @@
     </nav>
 
     <div class="postcard-wrapper w-75">
-        <h1>Vykort med egen text</h1>
+        <h1 id="header">Vykort med egen text</h1>
         <form>
         <label for="userinput">Ange egen text</label>
         <input type="text" maxlength="300" id="userinput" name="userinput" value="" class="form-control"

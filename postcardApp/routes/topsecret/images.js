@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
                 keys: keys.length
             })
         })
-        .catch(err => { res.send('error') })
+        .catch(err => { res.send(err) })
     })
 });
 
