@@ -14,9 +14,9 @@ cloudinary.config({
 function checkIf(text) {
   console.log("Quote.length: " + text.length)
   if(text.length < 200) 
-    font = jimp.FONT_SANS_64_BLACK
+    font = 'imagemanipulation/fonts/futura_64_darkgrey.fnt'
   else
-    font = jimp.FONT_SANS_32_BLACK
+    font = 'imagemanipulation/fonts/futura_48_darkgrey.fnt'
   console.log("Font: " + font)
   return font
 }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -44,6 +45,7 @@
     </nav>
 
     <div class="postcard-wrapper w-75">
+<<<<<<< HEAD
         <h1 id="header">Vykort med citat</h1>
         <h2 id="preview-header">Förhandsvisning</h2>
         <div class="preview-image-box w-100">
@@ -53,6 +55,9 @@
             </div>
            
         </div>
+=======
+        <h1>Vykort med citat</h1>
+>>>>>>> 97dae4cf06f740a7a3935e01bb8ffb06b0b62142
         <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
         <button id="spinner1" class="btn btn-primary" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -65,20 +70,29 @@
             Skapar...
         </button>
         <button id="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
-        <p hidden id="author" - {{author}} ></p>  <!-- Tillfällig, ska placeras i preview box -->
+        <h2 id="preview-header">Förhandsvisning</h2>
+        <div class="preview-image-box w-100">
+            <div id="author-quote-wrapper">
+                <img id="preview-image" src="" onload="stopSpinner()"/>
+                <div id="preview-text" class="preview-text">
+                    <h3 id="text"> "{{ quote }}"</h3>
+                    <h3 id="author"> - {{ author }}</h3>
+                </div>
+            </div>
+        </div>
     </div>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
-        <script src="/scripts/script.js"></script>
-        <script src="/scripts/javascript.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS, then local script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/javascript.js"></script>
 </body>
 
 </html>

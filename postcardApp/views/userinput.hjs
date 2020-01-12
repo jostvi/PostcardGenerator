@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -44,6 +45,7 @@
     </nav>
 
     <div class="postcard-wrapper w-75">
+<<<<<<< HEAD
         <h1 id="header">Vykort med egen text</h1>
         <form>
         <label for="userinput">Ange egen text</label>
@@ -58,17 +60,32 @@
             </div>
         </div>
         <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
+=======
+        <h1>Vykort med egen text</h1>
+        <label for="userinput">Ange egen text på engelska</label>
+        <input type="userinput" maxlength="300" id="userinput" name="userinput" value="" class="form-control"
+            placeholder="Write your text in English">
+        <button id="get-userinput-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
+>>>>>>> 97dae4cf06f740a7a3935e01bb8ffb06b0b62142
         <button id="spinner1" class="btn btn-primary" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             Hämtar...
         </button>
         <button id="next-image" class="btn btn-primary" type="button">Nästa</button>
-        <button id="create-postcard" class="btn btn-primary" type="button" onclick="changeButton()">Skapa kort</button>
+        <button id="create-postcard" class="btn btn-primary" type="button">Skapa kort</button>
         <button id="spinner2" class="btn btn-primary" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             Skapar...
         </button>
-        <button id="save-image" class="btn btn-primary" type="button" onclick="saveImage()">Spara vykort</button>
+        <button id="save-image" class="btn btn-primary" type="button">Spara vykort</button>
+        <h2 id="preview-header">Förhandsvisning</h2>
+        <div class="preview-image-box w-100">
+            <img id="preview-image" src="" onload="stopUserSpinner()">
+            <div id="preview-text" class="preview-text">
+                <h3 id="text">{{userinput}}</h3>
+            </div>
+        </div>
+       
     </div>
 
     <!-- Optional JavaScript -->

@@ -1,14 +1,16 @@
 
 $(document).ready(function () {
-    var post = {
+    
+    var post = { 
         text: "",
-        url: "",
-        tag: ""
-    },
-        count,
-        keyCount = 0,
-        keyMax = 0,
-        imgList;
+        url: "" ,
+        tag: "" },
+        count = 0,
+        keyCount = 0;
+        imgList = [];
+        postcardUrl = "";
+    
+    
 
     $("img.bigImage").on("click", function () {
         var src = $(this).attr("src");
@@ -96,7 +98,8 @@ $(document).ready(function () {
             document.getElementById('spinner2').style.display = 'none';
             document.getElementById('next-image').disabled = true;
             document.getElementById('get-image').disabled = true;
-            //document.getElementById("fb-button").setAttribute('data-href', data.url)
+            postcardUrl = data.url
+    
         })
 
     })
@@ -118,7 +121,18 @@ $(document).ready(function () {
             count = 0;
         document.getElementById("preview-image").src = imgList[count];
     })
+    
+    $('button#save-image').click(function () {
+        saveImage(postcardUrl)
+    })
+
+	$('button#next-image').click(function () {
+		if (++count == imgList.length)
+			count = 0;
+		document.getElementById("preview-image").src = imgList[count];
+	})
 })
+
 
 $("input").keyup(function () {
     var value = $(this).val();

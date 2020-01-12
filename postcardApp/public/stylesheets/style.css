@@ -187,7 +187,6 @@ padding-top: 2%;
 }
 
 .preview-image-box{
-cursor:pointer;
  position: relative;
  display: block;
  margin-bottom: 3%;
@@ -208,14 +207,29 @@ cursor:pointer;
 
 
 h3 {
-   color: rgb(0, 0, 0);
+   color: rgba(51, 51, 51);
    font-family: Arial, Helvetica, sans-serif;
    display: inline-table;
     vertical-align:middle;
-    line-height:100%;      
     margin: 15%;
-    font-size: 2.7rem;
-      
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 3.8rem;
+    font-weight: 800;
+}
+
+/* Quote */
+.thumbnail {
+  position: relative;
+}
+
+.caption {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  margin-right: 15%;
+  margin-left: 15%;
+
 }
 
 /* Userinput */
