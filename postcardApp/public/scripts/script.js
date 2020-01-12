@@ -13,7 +13,7 @@ $(document).ready(function () {
     let text = document.getElementById('text'),
         author = document.getElementById('author')
 
-    if (text.textContent.length > 250) {
+    if (text.textContent.length > 200) {
         text.style.fontSize = '36pt'
         if (author != null)
             author.style.fontSize = '36pt'
@@ -94,13 +94,15 @@ $(document).ready(function () {
                 alert('Någonting gick fel\nVänligen ladda om sidan')
                 return
             }
+
             postcardUrl = data.url
-            document.getElementById('save-image').style.display = 'inline'
             document.getElementById('spinner2').style.display = 'none';
             document.getElementById('next-image').disabled = true;
             document.getElementById('get-image').disabled = true;
+            document.getElementById('save-image').style.display = 'inline';
             document.getElementById('preview-text').style.visibility = 'hidden'
-            document.getElementById('preview-image').src = postcardUrl
+            document.getElementById('preview-image').src = postcardUrl;
+
         })
 
     })

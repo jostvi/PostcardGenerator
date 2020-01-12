@@ -51,7 +51,7 @@
             Hämtar...
         </button>
         <button id="next-image" class="btn btn-primary" type="button">Nästa</button>
-        <button id="create-postcard" class="btn btn-primary" type="button" onclick="changeButton()">Skapa kort</button>
+        <button id="create-postcard" class="btn btn-primary" type="button">Skapa kort</button>
         <button id="spinner2" class="btn btn-primary" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             Skapar...

@@ -6,63 +6,58 @@ const imageGallery = require('../../../../getimages/getImages.js')
 //kolla upp vilken information som ska skickas med i api responsen
 
 router.get('/', (req, res, next) => {
-    var tag = req.query.tag;
-    console.log(tag)
-    if (tag === 'quote') {
-      console.log('Retrieving quotes')
-      imageGallery.getQuoteImages()
+  var tag = req.query.tag;
+  console.log(tag)
+  if (tag === 'quote') {
+    console.log('Retrieving quotes')
+    imageGallery.getQuoteImages()
       .then((result) => {
-        return new Promise ((resolve, reject) => {
+        return new Promise((resolve, reject) => {
 
-            let postcard = result.resources[Math.floor(Math.random() * result.resources.length)].url;
-            resolve({ 'urlList' : [{'url' : postcard}]})
-        })        
+          let postcard = result.resources[Math.floor(Math.random() * result.resources.length)].url;
+          resolve({ 'urlList': [{ 'url': postcard }] })
+        })
+      })
+      .catch((error) => {
+        res.send(404)
+      })
+      .then(postcard => {
+        //console.log(images);
+        res.send(postcard)
+      })
+
+  } else if (tag === 'fact') {
+    imageGallery.getFactImages().then((result) => {
+      return new Promise((resolve, reject) => {
+
+        let postcard = result.resources[Math.floor(Math.random() * result.resources.length)].url;
+        resolve({ 'urlList': [{ 'url': postcard }] })
+      })
     })
       .catch((error) => {
         console.log(error)
       })
       .then(postcard => {
         //console.log(images);
-        res.send(postcard)
+        res.send(404)
       })
-      
-    } else if (tag === 'fact') {
-      imageGallery.getFactImages().then((result) => {
-        return new Promise ((resolve, reject) => {
-
-            let postcard = result.resources[Math.floor(Math.random() * result.resources.length)].url;
-            resolve({ 'urlList' : [{'url' : postcard}]})
-        })        
-    })
-      .catch((error) => {
-        console.log(error)
-      })
-      .then(postcard => {
-        //console.log(images);
-        res.send(postcard)
-      })
-    }
-    else
+  }
+  else
     imageGallery.getImages()
-    .then((result) => {
-        return new Promise ((resolve, reject) => {
+      .then((result) => {
+        return new Promise((resolve, reject) => {
 
-            let postcard = result.resources[Math.floor(Math.random() * result.resources.length)].url;
-            resolve({ 'urlList' : [{'url' : postcard}]})
-        })        
-    })
+          let postcard = result.resources[Math.floor(Math.random() * result.resources.length)].url;
+          resolve({ 'urlList': [{ 'url': postcard }] })
+        })
+      })
       .catch((error) => {
-        console.log(error)
+        res.send(404)
       })
       .then(postcard => {
         //console.log(images);
         res.send(postcard)
       })
-    });
-
-module.exports = router;
-
-
-
+});
 
 module.exports = router;
