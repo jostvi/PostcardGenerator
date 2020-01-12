@@ -50,11 +50,7 @@ $(document).ready(function () {
                 document.getElementById('preview-image').style.visibility = 'visible';
             })
             //trodde att detta skulle leda till att spinnern först slutar snurra när bilden faktiskt visas upp, men det funkar ändå inte...
-            .done(function() {
-                
-                document.getElementById('get-image').style.display = 'inline';
-                document.getElementById('spinner1').style.display = 'none';  
-            })
+        
     })
     
     
@@ -81,20 +77,15 @@ $(document).ready(function () {
                 
             })
             //trodde att detta skulle leda till att spinnern först slutar snurra när bilden faktiskt visas upp, men det funkar ändå inte...
-            .done(function() {
-                
-                document.getElementById('get-userinput-image').style.display = 'inline';
-                document.getElementById('spinner1').style.display = 'none';
-            })
 
 	})
 
 	$('button#create-postcard').click(function () {
         document.getElementById('create-postcard').style.display = 'none';
         document.getElementById('spinner2').style.display = 'inline';
-        var text = document.getElementById('text').innerHTML,
+        var text = document.getElementById('text').innerHTML;
             author = document.getElementById('author').innerHTML
-       
+        
         if(author != "") {
             post.text = text + "\n" + author
             post.tag = "quote"

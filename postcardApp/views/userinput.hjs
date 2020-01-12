@@ -63,7 +63,7 @@
         <button id="save-image" class="btn btn-primary" type="button">Spara vykort</button>
         <h2 id="preview-header">Förhandsvisning</h2>
         <div class="preview-image-box w-100">
-            <img id="preview-image" src="" />
+            <img id="preview-image" src="" onload="stopUserSpinner()">
             <div id="preview-text" class="preview-text">
                 <h3 id="text">{{userinput}}</h3>
             </div>

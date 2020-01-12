@@ -12,14 +12,15 @@ function enableButton() {
     document.getElementById('create-postcard').disabled = false;
     document.getElementById('next-image').disabled = false;
 }
-//översätt detta till jquery så att man kan utnyttja data.url
+
+
 function saveImage(imgurl) {
     
     var a = document.createElement('a');
     imgurl = imgurl
     a.href = imgurl;
     a.target="_blank";
-    a.download = "postcard.png";
+    a.download = "postcard.jpg";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -27,6 +28,12 @@ function saveImage(imgurl) {
 
 function stopSpinner() {
     document.getElementById('get-image').style.display = 'inline';
+    document.getElementById('spinner1').style.display = 'none';  
+    
+}
+
+function stopUserSpinner() {
+    document.getElementById('get-userinput-image').style.display = "inline";
     document.getElementById('spinner1').style.display = 'none';  
 }
 
