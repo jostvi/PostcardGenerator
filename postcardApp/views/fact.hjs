@@ -45,6 +45,13 @@
     </nav>
     <div class="postcard-wrapper w-75">
         <h1 id="header">Vykort med fakta</h1>
+        <h2 id="preview-header">Förhandsvisning</h2>
+        <div class="preview-image-box  w-100">
+            <img id="preview-image" src="" width="1000" height="760" />
+            <div id="preview-text" class="preview-text">
+                <h3 id="text"> {{fact}}</h3>
+            </div>
+        </div>
         <button id="get-image" class="btn btn-primary" type="button" onclick="enableButton()">Hämta bild</button>
         <button id="spinner1" class="btn btn-primary" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -60,7 +67,7 @@
         <p hidden id="author" - {{author}} ></p> <!-- Tillfällig, ska placeras i preview box -->
         <h2 id="preview-header">Förhandsvisning</h2>
         <div class="preview-image-box  w-100">
-            <img id="preview-image" src="" width="1000" height="760" />
+            <img id="preview-image" src="" onload="stopSpinner()"/>
             <div id="preview-text" class="preview-text">
                 <h3 id="text"> {{fact}}</h3>
             </div>
