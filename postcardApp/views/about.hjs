@@ -17,7 +17,7 @@
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -25,7 +25,7 @@
                         Skapa nytt vykort
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="/quote">Quote</a>
+                        <a class="dropdown-item" href="/quote">Citat</a>
                         <a class="dropdown-item" href="/fact">Fakta</a>
                         <a class="dropdown-item" href="/userinput">Egen text</a>
                     </div>
@@ -52,10 +52,10 @@
     <p>Vykortet kan delas med vänner på sociala medier, sparas som bildfil på datorn eller skrivas ut på ett fint papper
         och skickas iväg som traditionellt vykort. </p>
 
-    <h3>Om oss</h3>
+    <h2>Om oss</h2>
     <p>Christina Knepper, Johan Steen Vingren, Agnes Hägerstrand, Axel Hägglund och Iris Brinkborg har utvecklat
         tjänsten som en del av kursen <em>Storskaliga webbtjänster</em> på Malmö universitet 2020. </p>
-    <h3>APIer som används</h3>
+    <h2>APIer som används</h2>
     <ul>
         <li>
             <strong>Pixabay</strong> erbjuder bilder som inte är upphovsrättsskyddade, och därmed fria att använda utan

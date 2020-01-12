@@ -1,11 +1,13 @@
 body {
-  padding: 50px;
   font-size: 1.5rem;
   background-color:rgb(245, 230, 220) !important;
 }
 h1 {
-  padding-top: 0%;
+  padding-top: 5%;
   padding-bottom: 5%;
+}
+h2 {
+  margin: 50px 0px 20px 0px;
 }
 
 /* Startsidan */
@@ -151,7 +153,7 @@ padding-top: 2%;
   /* quote, userinput and fact pages */
 .postcard-wrapper {
   margin: 0 auto;
-  margin-top: 5%;
+  margin-top: 60px;
 }
 
   /* Preview */
@@ -160,19 +162,23 @@ padding-top: 2%;
   font-size: 1.25rem;
 }
 
+#preview-image {
+  width: 1000px;
+  height: 760px; 
+}
+
 .preview-wrapper{
-  width:500px;
-  height:380px;
+  width: 1000px;
+  height: 760px;
   position: relative;
  padding: 0;
  margin: 0;
  text-align: center;
-
 }
 
 .preview {
-  width:500px;
-  height:380px;
+  width:1000px;
+  height:760px;
   position: relative;
  padding: 0;
  margin: 0;
@@ -191,42 +197,101 @@ cursor:pointer;
    position: absolute;
    top: 0; right: 0;
    bottom: 0; left: 0;
-   width: 500px;
-   height: 380px; 
+   width: 1000px;
+   height: 760px; 
    text-align: center;
    background-color: rgba(255, 255, 255, 0.651);
     vertical-align:bottom;
-    line-height:380px;
+    line-height:760px;
     box-shadow: 10px 10px 8px grey;
   }
 
-h3{
+
+h3 {
    color: rgb(0, 0, 0);
    font-family: Arial, Helvetica, sans-serif;
    display: inline-table;
     vertical-align:middle;
     line-height:100%;      
-    margin: 50px;
+    margin: 15%;
+    font-size: 2.7rem;
       
 }
+
 /* Userinput */
 form{
   margin-bottom: 5%;
 }
 
 #userinput{
-  width: 500px;
+  width: 1000px;
 }
+@media (max-width: 1350px){
+
+h3 {
+  font-size: 2.0rem;
+}
+
+#preview-image {
+  width: 750px;
+  height: 570px; 
+}
+.preview-wrapper{
+  width: 750px;
+  height: 570px; 
+}
+.preview {
+  width: 750px;
+  height: 570px; 
+}
+
+.preview-text{
+  width: 750px;
+  height: 570px; 
+  line-height: 570px;
+}
+#userinput{
+  width: 750px;
+}
+}
+@media (max-width: 1000px){
+  .postcard-wrapper {
+    margin: 0 auto;
+    margin-top: 80px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+  #preview-image {
+    width: 500px;
+    height: 380px; 
+  }
+  .preview-wrapper{
+    width: 500px;
+    height: 380px; 
+  }
+  .preview {
+    width: 500px;
+    height: 380px; 
+  }
+  
+  .preview-text{
+    width: 500px;
+    height: 380px; 
+    line-height: 380px;
+  }
+  #userinput{
+    width: 500px;
+  }
+  }
 
 @media (max-width: 800px) {
   #carouselExampleIndicators {
     height:380px;
   }
 
-    .postcard-wrapper {
-      margin: 0 auto;
-      margin-top: 10%;
-    }
+
 }
 @media (max-width: 615px) {
   #carouselExampleIndicators {

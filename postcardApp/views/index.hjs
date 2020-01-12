@@ -18,7 +18,7 @@
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
@@ -26,7 +26,7 @@
             Skapa nytt vykort
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="/quote">Quote</a>
+            <a class="dropdown-item" href="/quote">Citat</a>
             <a class="dropdown-item" href="/fact">Fakta</a>
             <a class="dropdown-item" href="/userinput">Egen text</a>
           </div>

@@ -24,9 +24,9 @@ function saveImage() {
     a.click();
     document.body.removeChild(a);
 }
-/* 
+ 
 function changeButton() {
     document.getElementById("create-postcard").style.display = 'none';
     document.getElementById("save-image").style.display = 'inline'
 
-} */
+}
