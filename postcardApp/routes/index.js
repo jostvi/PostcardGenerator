@@ -23,7 +23,6 @@ router.get('/', (req, res, next) => {
       console.log(error)
     })
     .then(images => {
-      //console.log(images);
       res.render('index', {
         title: 'Postcard Generator', images
       })

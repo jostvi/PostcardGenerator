@@ -65,7 +65,7 @@ $(document).ready(function () {
     a URL (on server-side success) to the created image on the 'cloudinary' cloud storage service. */
     $('button#create-postcard').click(function () {
         document.getElementById('create-postcard').style.display = 'none';
-        document.getElementById('spinner2').style.display = 'inline';
+		document.getElementById('spinner2').style.display = 'inline';
         var text = document.getElementById('text').textContent,
             header = document.getElementById('header').textContent;
 
@@ -89,17 +89,15 @@ $(document).ready(function () {
                 stopSpinner2()
                 return
             }
-
             postcardUrl = data.url
             document.getElementById('spinner2').style.display = 'none';
             document.getElementById('next-image').disabled = true;
             document.getElementById('get-image').disabled = true;
             document.getElementById('save-image').style.display = 'inline';
             document.getElementById('preview-text').style.visibility = 'hidden'
-            document.getElementById('preview-image').src = postcardUrl;
-
+			document.getElementById('preview-image').src = postcardUrl
+			document.getElementById('preview-header').innerHTML = "Ditt vykort";
         })
-
     })
     /* Iterates through the image array when #next-image is clicked and shows the next image
     in the preview box */

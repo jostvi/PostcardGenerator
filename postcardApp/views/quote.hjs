@@ -38,7 +38,7 @@
                     <a class="nav-link" href="/about">Om oss</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">API</a>
+                    <a class="nav-link" href="https://app.swaggerhub.com/apis/agneshagnes/PostcardGenerator/0.1" target="_blank">API</a>
                 </li>
             </ul>
         </div>

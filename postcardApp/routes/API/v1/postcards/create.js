@@ -44,9 +44,9 @@ router.post('/', (req, res) => {
         })
     }
     else {
-        console.log(req.body.url)
-        console.log(req.body.text)
-        console.log(req.body.tag)
+    console.log(req.body.url)
+    console.log(req.body.text)
+    console.log(req.body.tag)
         manipulator.generate(req.body.url, req.body.text, req.body.tag)
             .then(result => {
                 res.send({ url: result })
