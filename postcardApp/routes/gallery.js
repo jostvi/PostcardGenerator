@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const imageGallery = require('../getimages/getImages.js')
 
+/* Render gallery page */
 router.get('/', (req, res, next) => {
 
   imageGallery.getImages()
@@ -24,6 +25,10 @@ router.get('/', (req, res, next) => {
       res.render('gallery', {
         title: 'Postcard Gallery', images
       })
+    })
+    .catch(err => { 
+      console.log.err
+      res.send(err)
     })
 });
 

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET userinput. */
+/* Render userinput page */
 router.get('/', function(req, res){
 
     res.render('userinput', {

@@ -1,3 +1,6 @@
+/* Script used by the quote-, fact- and userInput-pages. It contains jQuery functions that handles
+user input and a preload function to speed up the image rendering process. */
+
 $(document).ready(function () {
     var post = {
         text: "",
@@ -19,6 +22,10 @@ $(document).ready(function () {
             author.style.fontSize = '175%'
     }
 
+    /* Function called when the #get-image-button is clicked. It calls the jQuery.get-function 
+    with a JSON-object containing the 'text' elements content, together with a 'key' index. 
+    When the .get-function returns, there are a number of checks (error, key counter incrementation)
+    and assignments before the first image (in the returned image array) is displayed in the preview box */ 
     $('button#get-image').click(function () {
         document.getElementById('get-image').style.display = 'none';
         document.getElementById('spinner1').style.display = 'inline';
@@ -42,7 +49,7 @@ $(document).ready(function () {
                 $.preload(imgList)
                 keyMax = data.keys
 
-                if (keyMax === 1)
+                if (keyMax < 2)
                     document.getElementById('get-image').disabled = true;
 
                 if (++keyCount === keyMax)
@@ -53,6 +60,9 @@ $(document).ready(function () {
             })
     })
 
+    /* Function called when #create-postcard-button is clicked. The function populates a JSON-object
+    with a text-, tag- and url-attribute to be posted with a jQuery.post call. The .post call returns
+    a URL (on server-side success) to the created image on the 'cloudinary' cloud storage service. */
     $('button#create-postcard').click(function () {
         document.getElementById('create-postcard').style.display = 'none';
         document.getElementById('spinner2').style.display = 'inline';
@@ -91,25 +101,27 @@ $(document).ready(function () {
         })
 
     })
-
+    /* Iterates through the image array when #next-image is clicked and shows the next image
+    in the preview box */
     $('button#next-image').click(function () {
         if (++count == imgList.length)
             count = 0;
         document.getElementById("preview-image").src = imgList[count];
     })
-
+    /* Calls the saveImage(p)-function (javascript.js) and reloads the page */
     $('button#save-image').click(function () {
         saveImage(postcardUrl)
         location.reload()
     })
 })
 
+/* Mirrors the text in the 'input'-field to the text element in the preview box */
 $("input").keyup(function () {
     var value = $(this).val();
     $("h3").text(value);
 }).keyup();
 
-
+/* 3rd-party function that preloads the image array for faster loading when #next-image is clicked */
 jQuery.preload = function (array) {
     var length = array.length,
         document = window.document,

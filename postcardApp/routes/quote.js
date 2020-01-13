@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const helper = require('../API_helper');
 
+/* Render quote page */
 router.get('/', (req, res) => {
 
     helper.standardCall('https://favqs.com/api/qotd')
@@ -11,11 +12,10 @@ router.get('/', (req, res) => {
                 quote: result.quote.body,
                 author: result.quote.author
             })
-        })
-        .catch(err => {
+        }).catch(err => {
+            console.log(err)
             res.send(err)
         })
-
-});
+})
 
 module.exports = router;
