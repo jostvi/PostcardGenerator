@@ -44,23 +44,9 @@ router.post('/', (req, res) => {
         })
     }
     else {
-<<<<<<< HEAD
     console.log(req.body.url)
     console.log(req.body.text)
     console.log(req.body.tag)
-     //lägg till felhantering i manipulator om det är ett felaktigt url, just nu skickas ingen felkod
-    manipulator.generate(req.body.url, req.body.text, req.body.tag)
-    .then(result => {
-        res.send({
-            url: result
-        })
-    })
-    .catch(err => { res.send(404) })
-
-=======
-        console.log(req.body.url)
-        console.log(req.body.text)
-        console.log(req.body.tag)
         manipulator.generate(req.body.url, req.body.text, req.body.tag)
             .then(result => {
                 res.send({
@@ -70,7 +56,6 @@ router.post('/', (req, res) => {
             .catch(err => {
                 res.send('error')
             })
->>>>>>> c6b2ada82521402dd0f58fb4d2c71e0f697de513
     }
 })
 

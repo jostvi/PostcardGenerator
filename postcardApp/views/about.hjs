@@ -46,18 +46,20 @@
     <div class="postcard-wrapper w-75">
 
         <h1>Om tjänsten</h1>
-        <p>Vi saknade en tjänst som genererade traditionella vykort på ett kul och smidigt sätt. Därför bestämde vi oss
-            för att utveckla en tjänst där en användare genererar en text, antingen en egen eller en datorgenererad, och
-            sedan plockar ut en bild baserad på textinnehållet.</p>
+        <p>PostcardGenerator skapar vykort på ett kul och smidigt sätt. Du som användare kan skapa en text, antingen en
+            egen eller en datorgenererad, och sedan plockar tjänsten ut en bild baserad på textinnehållet.</p>
         <p>Vykortet kan delas med vänner på sociala medier, sparas som bildfil på datorn eller skrivas ut på ett fint
-            papper
-            och skickas iväg som traditionellt vykort. </p>
+            papper och skickas iväg som ett vanligt vykort. </p>
 
         <h2>Om oss</h2>
         <p>Christina Knepper, Johan Steen Vingren, Agnes Hägnestrand, Axel Hägglund och Iris Brinkborg har utvecklat
-            tjänsten som en del av kursen <em>Storskaliga webbtjänster</em> på Malmö universitet 2020. </p>
+            tjänsten under kursen <em>Storskaliga webbtjänster</em> på Malmö universitet 2020. </p>
         <h2>APIer som används</h2>
         <ul>
+            <li><strong>Cloudinary</strong> har flera olika funktioner och PostcardGenerator använder molnlagringen de
+                erbjuder. Dels laddas de färdiga vykorten upp i molnet och dels hämtar vi bilder från molnet för att
+                visa i bildgalleriet i klienten.
+            </li>
             <li>
                 <strong>Pixabay</strong> erbjuder bilder som inte är upphovsrättsskyddade, och därmed fria att använda
                 utan
@@ -65,17 +67,16 @@
             </li>
             <li>
                 <strong>WordPos</strong>. För att matcha en textsträng med en bild används det här APIet. När en text
-                skickas returneras samtliga substantiv i singular som keywords från texten som sedan används för att söka efter en bild.
+                skickas returneras samtliga substantiv i singular som keywords från texten som sedan används för att
+                söka efter en bild.
             </li>
             <li>
-                <strong>FavQs</strong> används för att generera slumpmässiga citat, som infogas över bilden för att
-                skapa
-                vykortet.
+                <strong>FavQs</strong> används för att generera slumpmässiga citat som infogas på en bild när vykortet
+                skapas.
             </li>
             <li>
-                <strong>UselessFacts</strong>. Ett API som tillhandahåller slumpmässiga fakta när man anropar det,
-                vilket vi
-                gör när användaren väljer att generera ett vykort med fakta.
+                <strong>UselessFacts</strong> används för att generera onödig fakta som infogas på en bild när vykortet
+                skapas.
             </li>
         </ul>
     </div>

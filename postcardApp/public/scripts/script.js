@@ -67,11 +67,6 @@ $(document).ready(function () {
                 document.getElementById('preview-image').src = imgList[0];
                 document.getElementById('preview-image').style.visibility = 'visible';
             })
-<<<<<<< HEAD
-            //trodde att detta skulle leda till att spinnern först slutar snurra när bilden faktiskt visas upp, men det funkar ändå inte...
-            
-=======
->>>>>>> c6b2ada82521402dd0f58fb4d2c71e0f697de513
     })
 
     $('button#create-postcard').click(function () {
@@ -98,23 +93,14 @@ $(document).ready(function () {
                 alert('Någonting gick fel\nVänligen ladda om sidan')
                 return
             }
-<<<<<<< HEAD
-=======
-
->>>>>>> c6b2ada82521402dd0f58fb4d2c71e0f697de513
             postcardUrl = data.url
             document.getElementById('spinner2').style.display = 'none';
             document.getElementById('next-image').disabled = true;
             document.getElementById('get-image').disabled = true;
             document.getElementById('save-image').style.display = 'inline';
             document.getElementById('preview-text').style.visibility = 'hidden'
-<<<<<<< HEAD
 			document.getElementById('preview-image').src = postcardUrl
 			document.getElementById('preview-header').innerHTML = "Ditt vykort";
-=======
-            document.getElementById('preview-image').src = postcardUrl;
-
->>>>>>> c6b2ada82521402dd0f58fb4d2c71e0f697de513
         })
     })
 

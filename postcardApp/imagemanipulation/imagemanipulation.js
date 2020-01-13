@@ -76,16 +76,10 @@ module.exports = {
             }
           })
         })
-<<<<<<< HEAD
-      .catch(err => {
-        reject(err);
-      });
-=======
         .catch(err => {
           reject(err);
         });
 
->>>>>>> c6b2ada82521402dd0f58fb4d2c71e0f697de513
     })
   }
 }
