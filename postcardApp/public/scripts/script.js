@@ -4,36 +4,20 @@ $(document).ready(function () {
         url: "",
         tag: ""
     },
-        count = 0,
+        count,
+        imgList,
         keyCount = 0,
-        keyMax = 0,
-        imgList = [],
+        keyMax = 1,
         postcardUrl = "";
 
     let text = document.getElementById('text'),
         author = document.getElementById('author')
 
-    /* if (text.textContent.length > 200) {
-        text.style.fontSize = '36pt'
+    if (text.textContent.length > 200) {
+        text.style.fontSize = '175%'
         if (author != null)
-            author.style.fontSize = '36pt' 
-    }*/
-
-    $("img.bigImage").on("click", function () {
-        var src = $(this).attr("src");
-        $("body").prepend("<img src='" + src + "' style='position: fixed; width: 60%; top: 10%; left: 20%; z-index: 2000; border: 10px solid #fff; background-color: white; display: none;' id='imageModal'>")
-        $("body").prepend("<div id='backgroundModal' style='top: 0; bottom: 0; left: 0; right: 0; position: fixed; background-color: rgba(0,0,0,0.7); display:none; z-index: 1999;'></div>");
-        $("#backgroundModal").fadeIn(500);
-        $("#imageModal").fadeIn(500);
-        $("#backgroundModal").on("click", function () {
-            $("#backgroundModal").fadeOut(500);
-            $("#imageModal").fadeOut(500);
-            setTimeout(function () {
-                $("#backgroundModal").remove();
-                $("#imageModal").remove();
-            }, 500);
-        })
-    });
+            author.style.fontSize = '175%'
+    }
 
     $('button#get-image').click(function () {
         document.getElementById('get-image').style.display = 'none';
@@ -46,7 +30,8 @@ $(document).ready(function () {
                 imgList = []
 
                 if (data === 'error') {
-                    alert('Fel vid hämtning av bild\nVänligen ladda om sidan')
+                    alert('Förlåt. Det gick inte att hämta bilder.' +
+                        '\nVänligen ladda om sidan eller försök igen.')
                     stopSpinner()
                     return
                 }
@@ -55,14 +40,13 @@ $(document).ready(function () {
                     imgList.push(item.url)
                 })
                 $.preload(imgList)
-
-                if (++keyCount == keyMax)
-                    keyCount = 0
-
                 keyMax = data.keys
 
-                if (keyMax == 1)
+                if (keyMax === 1)
                     document.getElementById('get-image').disabled = true;
+
+                if (++keyCount === keyMax)
+                    keyCount = 0
 
                 document.getElementById('preview-image').src = imgList[0];
                 document.getElementById('preview-image').style.visibility = 'visible';
@@ -90,7 +74,9 @@ $(document).ready(function () {
 
         $.post('http://localhost:3000/api/v1/postcards/create/', post, function (data) {
             if (data === 'error') {
-                alert('Någonting gick fel\nVänligen ladda om sidan')
+                alert('Någonting gick FRUKTANSVÄRT FEL...' + 
+                '\nVänligen försök igen eller ladda om sidan\n\nHåller tummarna...')
+                stopSpinner2()
                 return
             }
 
@@ -117,7 +103,6 @@ $(document).ready(function () {
         location.reload()
     })
 })
-
 
 $("input").keyup(function () {
     var value = $(this).val();

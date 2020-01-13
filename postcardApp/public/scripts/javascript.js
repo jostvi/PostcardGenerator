@@ -34,3 +34,9 @@ function stopSpinner() {
 
 }
 
+function stopSpinner2() {
+    document.getElementById('create-postcard').style.display = 'inline';
+    document.getElementById('spinner2').style.display = 'none';
+
+}
+

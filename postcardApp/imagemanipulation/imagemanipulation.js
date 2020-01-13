@@ -3,8 +3,8 @@
 const jimp = require('jimp')
 const cloudinary = require('cloudinary').v2;
 
-let imgActive = 'imagemanipulation/active/image.jpg';
-let imgExported = 'public/images/image1.jpg';
+const imgActive = 'imagemanipulation/active/image.jpg';
+const imgExported = 'public/images/image1.jpg';
 
 cloudinary.config({
   cloud_name: 'dqhlic2nx',
@@ -29,7 +29,6 @@ module.exports = {
       console.log("before read")
       console.log(url)
       jimp.read(url)
-
         .then(tpl => {
           tpl
             .resize(1024, 768)
@@ -38,16 +37,17 @@ module.exports = {
 
           return tpl
         })
-
+        .catch(err => { console.log(err) })
         .then(tpl => (tpl.clone().write(imgActive)))
-
+        .catch(err => { console.log(err) })
         .then(() => (jimp.read(imgActive)))
-
+        .catch(err => { console.log(err) })
         .then(tpl => (
           jimp.loadFont(checkIf(text))
             .then(font => ([tpl, font]))
+            .catch(err => { console.log(err) })
         ))
-
+        .catch(err => { console.log(err) })
         .then(data => {
 
           tpl = data[0];
@@ -66,20 +66,19 @@ module.exports = {
             alignmentY: jimp.VERTICAL_ALIGN_MIDDLE
           }, textData.maxWidth, textData.maxHeight);
         })
-
+        .catch(err => { console.log(err) })
         .then(tpl => {
           tpl.quality(100).write(imgExported)
-          cloudinary.uploader.upload(imgExported, { tags: [tag] }, function (error, result) {
-            resolve(result.url)
-            if (error) {
-              console.log(error)
-            }
-          })
+          console.log("Uploading to cloudinary: " + imgExported + ", tags: " + tag)
+          cloudinary.uploader.upload(imgExported, { tags: [tag] })
+            .then(result => {
+              resolve(result.url)
+            }, reason => {
+              console.log(reason)
+              reject(reason)
+            })
         })
-        .catch(err => {
-          reject(err);
-        });
-
+        .catch(err => { console.log(err) })
     })
   }
 }

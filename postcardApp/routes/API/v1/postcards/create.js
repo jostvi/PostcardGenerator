@@ -31,7 +31,7 @@ router.post('/', (req, res) => {
 
                     return url
                 }).then(url => {
-                    manipulator.generate(url, req.body.text, "user generated")
+                    manipulator.generate(url, req.body.text, "user generated", key)
 
                         .then(url => {
 
@@ -49,11 +49,8 @@ router.post('/', (req, res) => {
         console.log(req.body.tag)
         manipulator.generate(req.body.url, req.body.text, req.body.tag)
             .then(result => {
-                res.send({
-                    url: result
-                })
-            })
-            .catch(err => {
+                res.send({ url: result })
+            }, () => {
                 res.send('error')
             })
     }
