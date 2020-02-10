@@ -40,7 +40,14 @@ $(document).ready(function () {
                     alert('Förlåt. Det gick inte att hämta bilder.' +
                         '\nVänligen ladda om sidan eller försök igen.')
                     stopSpinner()
+                    document.getElementById('next-image').disabled = true;
+                    document.getElementById('save-image').disabled = true;
+                    if (++keyCount === keyMax)
+                        keyCount = 0
                     return
+                } else {
+                    if (++keyCount === keyMax)
+                        keyCount = 0
                 }
 
                 data.urlList.forEach(function (item) {
@@ -52,8 +59,7 @@ $(document).ready(function () {
                 if (keyMax < 2)
                     document.getElementById('get-image').disabled = true;
 
-                if (++keyCount === keyMax)
-                    keyCount = 0
+                
 
                 document.getElementById('preview-image').src = imgList[0];
                 document.getElementById('preview-image').style.visibility = 'visible';
@@ -65,7 +71,7 @@ $(document).ready(function () {
     a URL (on server-side success) to the created image on the 'cloudinary' cloud storage service. */
     $('button#create-postcard').click(function () {
         document.getElementById('create-postcard').style.display = 'none';
-		document.getElementById('spinner2').style.display = 'inline';
+        document.getElementById('spinner2').style.display = 'inline';
         var text = document.getElementById('text').textContent,
             header = document.getElementById('header').textContent;
 
@@ -89,15 +95,17 @@ $(document).ready(function () {
                 stopSpinner2()
                 return
             }
+
             postcardUrl = data.url
             document.getElementById('spinner2').style.display = 'none';
             document.getElementById('next-image').disabled = true;
             document.getElementById('get-image').disabled = true;
             document.getElementById('save-image').style.display = 'inline';
             document.getElementById('preview-text').style.visibility = 'hidden'
-			document.getElementById('preview-image').src = postcardUrl
-			document.getElementById('preview-header').innerHTML = "Ditt vykort";
+            document.getElementById('preview-image').src = postcardUrl;
+
         })
+
     })
     /* Iterates through the image array when #next-image is clicked and shows the next image
     in the preview box */
