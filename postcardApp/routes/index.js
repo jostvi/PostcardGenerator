@@ -24,7 +24,8 @@ router.get('/', (req, res, next) => {
     })
     .then(images => {
       res.render('index', {
-        title: 'Postcard Generator', images
+        title: 'Postcard Generator',
+        images
       })
     })
     .catch(err => {

@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     helper.standardCall('https://uselessfacts.jsph.pl//random.json?language=en')
         .then(result => {
             result.text = result.text.replace(/`/g, "'")
-            res.render('fact.hjs', {
+            res.render('fact', {
                 title: 'FactGenerator',
                 fact: result.text,
             })

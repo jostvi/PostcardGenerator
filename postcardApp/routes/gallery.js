@@ -23,7 +23,8 @@ router.get('/', (req, res, next) => {
     .then(images => {
       //console.log(images);
       res.render('gallery', {
-        title: 'Postcard Gallery', images
+        title: 'Postcard Gallery', 
+        images
       })
     })
     .catch(err => { 

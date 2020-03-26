@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 
 /* Render userinput page */
-router.get('/', function(req, res){
+router.get('/', (req, res) => {
 
     res.render('userinput', {
-        title: 'Postcard Generator'
+        title: 'CustomGenerator'
     })
 });
 
