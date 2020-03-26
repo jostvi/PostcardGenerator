@@ -1,18 +1,18 @@
-
+var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');
 var cors = require('cors');
 var indexRouter = require('./routes/index');
 var quoteRouter = require('./routes/quote');
-var galleryRouter = require('./routes/gallery')
-var factRouter = require('./routes/fact')
-var aboutRouter = require('./routes/about')
-var apiGalleryRouter = require('./routes/api/v1/postcards/gallery')
-var apiRandomRouter = require('./routes/api/v1/postcards/random')
-var apiCreateRouter = require('./routes/api/v1/postcards/create')
-var userInputRouter = require('./routes/userinput')
-var imageRouter = require('./routes/topsecret/images')
+var galleryRouter = require('./routes/gallery');
+var factRouter = require('./routes/fact');
+var aboutRouter = require('./routes/about');
+var apiGalleryRouter = require('./routes/api/v1/postcards/gallery');
+var apiRandomRouter = require('./routes/api/v1/postcards/random');
+var apiCreateRouter = require('./routes/api/v1/postcards/create');
+var userInputRouter = require('./routes/userinput');
+var imageRouter = require('./routes/topsecret/images');
 
 var app = express();
 
@@ -28,14 +28,14 @@ app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/quote', quoteRouter);
-app.use('/gallery', galleryRouter)
-app.use('/fact', factRouter)
-app.use('/api/v1/postcards/gallery', apiGalleryRouter)
-app.use('/api/v1/postcards/random', apiRandomRouter)
-app.use('/api/v1/postcards/create', apiCreateRouter)
-app.use('/about', aboutRouter)
-app.use('/topsecret/images', imageRouter)
-app.use('/userinput', userInputRouter)
+app.use('/gallery', galleryRouter);
+app.use('/fact', factRouter);
+app.use('/api/v1/postcards/gallery', apiGalleryRouter);
+app.use('/api/v1/postcards/random', apiRandomRouter);
+app.use('/api/v1/postcards/create', apiCreateRouter);
+app.use('/about', aboutRouter);
+app.use('/topsecret/images', imageRouter);
+app.use('/userinput', userInputRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
